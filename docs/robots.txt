@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Every HTML page has noindex metadata. This is a public review proposal.

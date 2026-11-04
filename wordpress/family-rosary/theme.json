@@ -1,0 +1,223 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        {
+          "slug": "royal",
+          "name": "Family Rosary royal blue",
+          "color": "#0047BA"
+        },
+        {
+          "slug": "gold",
+          "name": "Family Rosary gold",
+          "color": "#85754E"
+        },
+        {
+          "slug": "dark",
+          "name": "Deep green",
+          "color": "#142c2b"
+        },
+        {
+          "slug": "parchment",
+          "name": "Parchment",
+          "color": "#f7f5ef"
+        },
+        {
+          "slug": "white",
+          "name": "White",
+          "color": "#ffffff"
+        }
+      ]
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "rem",
+        "em",
+        "%",
+        "vw",
+        "vh"
+      ],
+      "spacingSizes": [
+        {
+          "slug": "20",
+          "name": "Small",
+          "size": "0.75rem"
+        },
+        {
+          "slug": "30",
+          "name": "Medium",
+          "size": "1.25rem"
+        },
+        {
+          "slug": "40",
+          "name": "Large",
+          "size": "2rem"
+        },
+        {
+          "slug": "50",
+          "name": "Section",
+          "size": "4rem"
+        },
+        {
+          "slug": "60",
+          "name": "Generous",
+          "size": "6rem"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "slug": "sans",
+          "name": "Sans serif",
+          "fontFamily": "\"Source Sans 3\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+        },
+        {
+          "slug": "serif",
+          "name": "Serif",
+          "fontFamily": "\"Newsreader\", Georgia, \"Times New Roman\", serif"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "Small",
+          "size": "0.875rem"
+        },
+        {
+          "slug": "medium",
+          "name": "Body",
+          "size": "1rem"
+        },
+        {
+          "slug": "large",
+          "name": "Large",
+          "size": "1.25rem"
+        },
+        {
+          "slug": "x-large",
+          "name": "Heading",
+          "size": "2rem"
+        },
+        {
+          "slug": "xx-large",
+          "name": "Display",
+          "size": "3.5rem",
+          "fluid": {
+            "min": "2.5rem",
+            "max": "3.5rem"
+          }
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|parchment",
+      "text": "var:preset|color|dark"
+    },
+    "spacing": {
+      "blockGap": "1.5rem"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|sans",
+      "fontSize": "var:preset|font-size|medium",
+      "lineHeight": "1.65"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|serif",
+          "fontWeight": "500",
+          "lineHeight": "1.1"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var:preset|color|royal"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var:preset|color|royal",
+          "text": "var:preset|color|white"
+        },
+        "border": {
+          "radius": "4px"
+        },
+        "typography": {
+          "fontWeight": "600"
+        },
+        "spacing": {
+          "padding": {
+            "top": "0.85rem",
+            "right": "1.25rem",
+            "bottom": "0.85rem",
+            "left": "1.25rem"
+          }
+        }
+      }
+    },
+    "blocks": {
+      "core/navigation": {
+        "typography": {
+          "fontSize": "0.9375rem",
+          "fontWeight": "500"
+        }
+      }
+    }
+  },
+  "customTemplates": [
+    {
+      "name": "page-rosary",
+      "title": "Rosary guide",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "page-resources",
+      "title": "Family prayer resources",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "page-story",
+      "title": "Our story",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "page-media",
+      "title": "Watch & Listen",
+      "postTypes": [
+        "page"
+      ]
+    }
+  ],
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}

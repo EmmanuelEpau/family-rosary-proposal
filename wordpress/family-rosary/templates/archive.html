@@ -1,0 +1,30 @@
+<!-- wp:template-part {"slug":"header","tagName":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","anchor":"main-content","className":"fr-main","layout":{"type":"default"}} -->
+<main class="wp-block-group fr-main" id="main-content"><!-- wp:group {"align":"wide","className":"fr-content-shell","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide fr-content-shell"><!-- wp:query-title {"type":"archive","showPrefix":false} /-->
+<!-- wp:term-description /-->
+<!-- wp:query {"queryId":1,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:group {"className":"fr-post-summary","layout":{"type":"constrained"}} -->
+<div class="wp-block-group fr-post-summary"><!-- wp:post-title {"isLink":true,"level":2} /-->
+<!-- wp:post-date {"fontSize":"small"} /-->
+<!-- wp:post-excerpt {"moreText":"Read more"} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+<!-- wp:query-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"space-between"}} -->
+<!-- wp:query-pagination-previous /-->
+<!-- wp:query-pagination-numbers /-->
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination -->
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>No results found. Try another search or explore the prayer resources.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","area":"footer"} /-->
+
