@@ -65,6 +65,25 @@
 </div><!-- /wp:group -->
 </div><!-- /wp:group -->
 </section><!-- /wp:group -->
+<!-- wp:group {"className":"fr-age-band","layout":{"type":"default"},"tagName":"section"} --><section class="wp-block-group fr-age-band"><!-- wp:group {"className":"fr-wrap fr-section","layout":{"type":"default"}} --><div class="wp-block-group fr-wrap fr-section"><!-- wp:group {"className":"fr-age-intro","layout":{"type":"default"}} --><div class="wp-block-group fr-age-intro"><!-- wp:heading {"level":2} --><h2 class="wp-block-heading">Prayer that grows<br> with your children.</h2><!-- /wp:heading -->
+<!-- wp:paragraph --><p>A busy toddler, a curious child, a teenager with big questions. There is a place for each of them in family prayer.</p><!-- /wp:paragraph -->
+</div><!-- /wp:group -->
+<!-- wp:group {"className":"fr-age-options","layout":{"type":"default"}} --><div class="wp-block-group fr-age-options"><!-- wp:details --><details class="wp-block-details"><summary>Babies & preschoolers</summary><!-- wp:paragraph --><p>Start with one small moment: hold your baby while you pray, or invite your preschooler to name someone they love.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p><a class="text-link" href="<?php echo esc_url( home_url( '/prayerresources/#resource-companion' ) ); ?>">Explore the Family Rosary Companion</a></p><!-- /wp:paragraph -->
+</details><!-- /wp:details -->
+<!-- wp:details --><details class="wp-block-details"><summary>Primary school children</summary><!-- wp:paragraph --><p>Let your child hold the beads, offer an intention and take a turn leading a familiar prayer.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p><a class="text-link" href="<?php echo esc_url( home_url( '/how-to-pray-the-rosary/#guided-prayer' ) ); ?>">Follow the prayers together</a></p><!-- /wp:paragraph -->
+</details><!-- /wp:details -->
+<!-- wp:details --><details class="wp-block-details"><summary>Tweens</summary><!-- wp:paragraph --><p>Invite them to choose an intention from their day. Read a mystery together and make room for their questions.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p><a class="text-link" href="https://blog.familyrosary.org/10-creative-tips-for-praying-as-a-family-0">Find creative family prayer ideas</a></p><!-- /wp:paragraph -->
+</details><!-- /wp:details -->
+<!-- wp:details --><details class="wp-block-details"><summary>Teenagers</summary><!-- wp:paragraph --><p>Ask what is on their mind. Let them help choose the time, the intention and a prayer they would like to lead.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p><a class="text-link" href="https://cta-redirect.hubspot.com/cta/redirect/275132/8b2cc709-cd25-4fd5-838b-c70df6b985bf">Explore prayer as children grow</a></p><!-- /wp:paragraph -->
+</details><!-- /wp:details -->
+</div><!-- /wp:group -->
+<!-- wp:paragraph {"className":"fr-age-note"} --><p class="fr-age-note">Start wherever fits your family. Follow your child’s interest and attention. With mixed ages, give everyone one small way to take part.</p><!-- /wp:paragraph -->
+</div><!-- /wp:group -->
+</section><!-- /wp:group -->
 <!-- wp:group {"className":"fr-home-media-band","layout":{"type":"default"},"tagName":"section"} --><section class="wp-block-group fr-home-media-band"><!-- wp:group {"className":"fr-wrap fr-section","layout":{"type":"default"}} --><div class="wp-block-group fr-wrap fr-section"><!-- wp:group {"className":"fr-home-watch-feature","layout":{"type":"default"}} --><div class="wp-block-group fr-home-watch-feature"><!-- wp:image {"className":"fr-home-watch-photo"} --><figure class="wp-block-image fr-home-watch-photo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/family-rosary.webp' ) ); ?>" alt="A family holding Rosary beads beside a statue of Father Peyton."/></figure><!-- /wp:image -->
 <!-- wp:group {"className":"fr-home-watch-copy","layout":{"type":"default"}} --><div class="wp-block-group fr-home-watch-copy"><!-- wp:heading {"level":2} --><h2 class="wp-block-heading">Press play.<br> Pray <span class="fr-script">together.</span></h2><!-- /wp:heading -->
 <!-- wp:paragraph {"className":"fr-lead"} --><p class="fr-lead">Follow the Rosary with Father Peyton, or discover a conversation that brings faith into family life.</p><!-- /wp:paragraph -->
