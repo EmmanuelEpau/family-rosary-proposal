@@ -11,4 +11,6 @@ Ministry photographs, marks and media covers retain their respective rights. Thi
 
 Logo: https://www.familyrosary.org/hubfs/FamilyRosaryWebsite/FRLogos/family-rosary-color-logo.svg
 
-Newsreader and Source Sans 3 are proposed fonts; SIL OFL licenses are included in assets/fonts. Media cover provenance is in the repository content/media.json. Video/audio is served by the original providers, not rehosted.
+Whitney, Calluna and PlaylistScript are referenced through HCFM’s existing public font delivery at https://hcfm.org/wp-content/themes/hcfm/build/fonts/. No licensed font binaries are distributed in this package. Confirm the final authorized delivery route before production. The superseded proposal’s Newsreader and Source Sans 3 files have been removed. Media cover provenance is in the repository content/media.json. Video/audio is served by the original providers, not rehosted.
+
+Companion preview: https://www.familyrosary.org/hubfs/FamilyRosaryCompanion-ButtonFinal%20%281%29-1.jpg , published ministry resource image referenced unchanged. Production reuse clearance remains required.

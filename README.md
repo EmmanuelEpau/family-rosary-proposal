@@ -2,22 +2,22 @@
 
 [Open the review website](https://emmanuelepau.github.io/family-rosary-proposal/)
 
-Five connected pages: home, Rosary guide, prayer resources, Watch & Listen, and our story. Includes a guided decade, resource filters, media search, browsing rows and players. Daily Mass/Rosary remains visible on phones.
+Version 1.1.0, redesigned November 9, 2026 from HCFM.org’s established identity at Emmy’s request. White reading surfaces, exact HCFM blue, black media areas, restrained gold accents, Whitney display/navigation, Calluna reading and brief PlaylistScript accents. The actual Family Rosary logo is unchanged. Supersedes the rejected cream/green/brown direction.
 
-The library contains 35 episodes currently listed on two active podcast series pages and nine selected videos. It is not the complete historical archive. External players load only after a visitor chooses to load them.
+Five connected pages: home, Rosary guide, prayer resources, Watch & Listen and our story. Prayer walkthrough, resource filters and 44 media entries (35 currently listed podcasts and nine selected videos). This is a proposal, not the complete historic archive or a production migration.
 
-## WordPress and preview
+## Source and build
 
-`wordpress/family-rosary/` is a native block theme; `docs/` is its static GitHub Pages counterpart. Follow the theme README-WORDPRESS.md for installation and page/template assignment. Current Family Rosary is hosted on HubSpot; WordPress is the requested future target, not a completed migration.
+Base commit: ec51442d82a3161047664731c5d9b65d308c1ca8. Native WordPress patterns and parts are canonical in wordpress/family-rosary; docs is their static review export. Run npm ci, then npm run build. The build packages downloads/family-rosary-theme-1.1.0.zip. Catalog JSON is a source record, not an automatic publishing feed.
 
-Run `npm install`, `npm run build`, then `npm run check`. Requires Python 3, Node.js and installed Google Chrome. Theme patterns and parts are canonical. The catalog JSON is a source record, not an automatic publishing feed.
+## Fresh verification, November 9
 
-## Validation and limits
+In-app browser: 20 static route/width checks (1440, 768, 390, 320), no document overflow and one H1 each; 10 local WordPress desktop/phone route checks, one main and H1 each. WordPress’s actual editor parser: 338 blocks, 18 documents, zero invalid blocks. Guided decade completion/reset, resource query/empty/reset, phone menu/Escape, all 44 media dialogs and explicit YouTube mount/unload checked. All media artwork finished loading without a broken image in the exercised library. Independent visual/code review: ship the nonproduction proposal after gutter/evidence fixes. Source whitespace and JavaScript syntax checks passed.
 
-Theme activated in WordPress Playground 7.1.4 / PHP 8.3.36. Twelve routes passed; 321 blocks across 18 documents validated. Static checks cover five pages at four viewport sizes, accessibility scans and prayer/resource/media interactions. Continuous playback of all media, every runtime version and editor save/restore are not certified.
+The existing npm run check launches an external browser and was not rerun after the user required in-app browser use. Historical accessibility scans are not fresh scans. Continuous media playback and ordinary-editor save/reopen are not certified. Research notes and detailed evidence are kept separately in the dated task folder, not on the visitor-facing website.
 
-Proposal only. The live site remains unchanged. Donations, prayer requests and deeper resources open existing ministry services. No fake submissions or accounts. All preview pages carry noindex and a proposal notice. Research and account evidence stay separate.
+## Limits
 
-Before production: editorial and image-rights approval, full migration/redirect mapping, hosting and integration setup. Search rankings are not guaranteed.
+Current ministry site remains unchanged. Current HubSpot content/URLs, PDFs, QR destinations and archives require a reviewed migration map before any separately authorized production release. No accounts, fake submissions or live-status claims added. Public review retains noindex and proposal notice. Font files are referenced through existing HCFM delivery and not redistributed; final production delivery and image rights require confirmation. No ranking, traffic or AI-citation guarantee.
 
-New standalone repository; no inherited base commit. Theme code GPL-2.0-or-later; fonts retain SIL OFL licenses. Ministry images and marks retain their owners’ rights; see ASSET-CREDITS.md.
+Theme code GPL-2.0-or-later; photographs, marks and media remain their owners’ material. See the theme ASSET-CREDITS.md.

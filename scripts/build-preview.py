@@ -3,7 +3,7 @@ import re,json,shutil,html
 ROOT=Path(__file__).resolve().parents[1];T=ROOT/'wordpress/family-rosary';OUT=ROOT/'docs';OUT.mkdir(exist_ok=True)
 if (OUT/'assets').exists():shutil.rmtree(OUT/'assets')
 shutil.copytree(T/'assets',OUT/'assets')
-routes={'home':('','Family Rosary — Prayer belongs in family life','Find a welcoming place to learn the Rosary, pray together and discover resources for your family.'),'rosary-guide':('how-to-pray-the-rosary','How to Pray the Rosary, Step by Step | Family Rosary','Learn the steps and mysteries of the Rosary, follow a guided decade and find printable prayer guides.'),'resources':('prayerresources','Family Prayer Resources & Rosary Guides | Family Rosary','Find guides, printables and reflections to help your family pray together. Browse by topic and format.'),'story':('our-story','Our Story: Father Peyton and Family Prayer | Family Rosary','Discover Father Peyton’s invitation to family prayer and the worldwide mission of Family Rosary.'),'media':('watch-and-listen','Watch & Listen: Prayer, Podcasts and Reflections | Family Rosary','Watch daily prayer, explore reflections and listen to Family Rosary podcasts.')}
+routes={'home':('','Family Rosary | Pray Together as a Family','Find a welcoming place to learn the Rosary, pray together and discover resources for your family.'),'rosary-guide':('how-to-pray-the-rosary','How to Pray the Rosary, Step by Step | Family Rosary','Learn the steps and mysteries of the Rosary, follow a guided decade and find printable prayer guides.'),'resources':('prayerresources','Family Prayer Resources & Rosary Guides | Family Rosary','Find guides, printables and reflections to help your family pray together. Browse by topic and format.'),'story':('our-story','Our Story: Father Peyton and Family Prayer | Family Rosary','Discover Father Peyton’s invitation to family prayer and the worldwide mission of Family Rosary.'),'media':('watch-and-listen','Watch & Listen: Prayer, Podcasts and Reflections | Family Rosary','Watch daily prayer, explore reflections and listen to Family Rosary podcasts.')}
 def convert(s,prefix):
  s=re.sub(r'<\?php\s*/\*\*.*?\*/\s*\?>','',s,flags=re.S)
  s=re.sub(r"<\?php echo esc_url\( get_theme_file_uri\( 'assets/(.*?)' \) \); \?>",lambda m:prefix+'assets/'+m.group(1),s)
@@ -29,3 +29,7 @@ for slug,(path,title,desc) in routes.items():
 (OUT/'.nojekyll').touch();(OUT/'robots.txt').write_text('User-agent: *\nAllow: /\n# Every HTML page has noindex metadata. This is a public review proposal.\n')
 (OUT/'404.html').write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta name="robots" content="noindex"><title>Page not found | Family Rosary proposal</title></head><body><main><h1>This page isn’t part of the proposal.</h1><p>Use your browser’s Back button to return to the design, or <a href="/family-rosary-proposal/">open the homepage</a>.</p></main></body></html>')
 print('Static review exported from WordPress patterns and template parts.')
+
+# Package the current native theme alongside the static review.
+(OUT/"downloads").mkdir(exist_ok=True)
+shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.1.0"),"zip",root_dir=T.parent,base_dir=T.name)

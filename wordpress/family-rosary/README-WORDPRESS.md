@@ -51,13 +51,13 @@ The custom templates are registered for pages in `theme.json`. Assign them in th
 ## Structure and assets
 
 - `style.css` contains WordPress theme metadata only.
-- `theme.json` supplies native editor settings, styles, template names, and the palette: royal `#0047BA`, gold `#85754E`, dark `#142c2b`, parchment `#f7f5ef`, and white.
+- `theme.json` supplies native editor settings, styles, template names, and the HCFM-derived proposal palette: blue `#0047BB`, gold `#FFB500`, black and white. The original Family Rosary logo is unchanged.
 - `functions.php` enqueues `assets/site.css` and deferred `assets/site.js`, adds editor CSS, and registers the pattern category.
 - `parts/header.html` and `parts/footer.html` use native Group, Columns, Site Logo, Heading, Paragraph, and Navigation blocks.
 - The Site Logo block renders `assets/logo.svg` as a fallback until an editor chooses a logo. It does not enable arbitrary SVG uploads. The fallback is a theme asset, not a Media Library attachment.
 - Starter native navigation URLs are resolved through WordPress `home_url()` for subdirectory installations. Editor-entered absolute URLs remain unchanged. Review all content links when assigning final URLs.
 - Presentation templates own the single main landmark; patterns should not add nested main elements.
-- Newsreader and Source Sans 3 are proposed open-font substitutes. They are not the approved Whitney/Calluna brand font files. The asset package must carry its font licenses.
+- Whitney, Calluna and PlaylistScript use HCFM’s existing public font delivery. No licensed binaries are bundled. Confirm production licensing and delivery before migration.
 - The Live Mass & Rosary starter button links to the verified Family Rosary YouTube streams page. It names the program; it does not claim a stream is live now.
 - Core WordPress handles the native mobile navigation. The static-preview navigation adapter is a separate preview concern.
 
@@ -93,3 +93,7 @@ Reviewed on 4 November 2026:
 - [Including theme assets](https://developer.wordpress.org/themes/core-concepts/including-assets/)
 - [Official Playground CLI](https://developer.wordpress.org/playground/developers/local-development/wp-playground-cli/)
 
+
+## November 9 redesign verification
+
+Version 1.1.0 replaces the rejected cream/green/brown proposal with the user-requested HCFM foundation. Fresh in-app browser checks covered five static routes at four widths and five local WordPress routes at desktop/phone widths. WordPress’s actual editor parser validated 338 blocks across 18 documents with zero invalid blocks after correcting three image-markup errors. Existing historical 321-block evidence above describes version 1.0.0, not the current result. Full editor save/reopen, image rights and production migration remain unverified.

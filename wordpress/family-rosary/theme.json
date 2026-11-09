@@ -13,23 +13,23 @@
       "palette": [
         {
           "slug": "royal",
-          "name": "Family Rosary royal blue",
-          "color": "#0047BA"
+          "name": "HCFM Blue",
+          "color": "#0047BB"
         },
         {
           "slug": "gold",
-          "name": "Family Rosary gold",
-          "color": "#85754E"
+          "name": "HCFM Yellow Gold",
+          "color": "#FFB500"
         },
         {
           "slug": "dark",
-          "name": "Deep green",
-          "color": "#142c2b"
+          "name": "Black",
+          "color": "#000000"
         },
         {
           "slug": "parchment",
-          "name": "Parchment",
-          "color": "#f7f5ef"
+          "name": "White reading surface",
+          "color": "#FFFFFF"
         },
         {
           "slug": "white",
@@ -80,13 +80,13 @@
       "fontFamilies": [
         {
           "slug": "sans",
-          "name": "Sans serif",
-          "fontFamily": "\"Source Sans 3\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+          "name": "Whitney",
+          "fontFamily": "Whitney, \"Helvetica Neue\", Arial, sans-serif"
         },
         {
           "slug": "serif",
-          "name": "Serif",
-          "fontFamily": "\"Newsreader\", Georgia, \"Times New Roman\", serif"
+          "name": "Calluna",
+          "fontFamily": "Calluna, Georgia, serif"
         }
       ],
       "fontSizes": [
@@ -138,8 +138,8 @@
     "elements": {
       "heading": {
         "typography": {
-          "fontFamily": "var:preset|font-family|serif",
-          "fontWeight": "500",
+          "fontFamily": "var:preset|font-family|sans",
+          "fontWeight": "700",
           "lineHeight": "1.1"
         }
       },
