@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1];T=ROOT/'wordpress/family-rosary';OUT=RO
 if (OUT/'assets').exists():shutil.rmtree(OUT/'assets')
 shutil.copytree(T/'assets',OUT/'assets')
 ASSET_VERSION=hashlib.sha256(b''.join(p.read_bytes() for p in sorted(T.rglob('*')) if p.is_file())).hexdigest()[:10]
-routes={'home':('','Family Rosary | Pray Together as a Family','Find a welcoming place to learn the Rosary, pray together and discover resources for your family.'),'rosary-guide':('how-to-pray-the-rosary','How to Pray the Rosary, Step by Step | Family Rosary','Learn the steps and mysteries of the Rosary, follow a guided decade and find printable prayer guides.'),'resources':('prayerresources','Family Prayer Resources & Rosary Guides | Family Rosary','Find guides, printables and reflections to help your family pray together. Browse by topic and format.'),'story':('our-story','Our Story: Father Peyton and Family Prayer | Family Rosary','Discover Father Peyton’s invitation to family prayer and the worldwide mission of Family Rosary.'),'media':('watch-and-listen','Watch & Listen: Prayer, Podcasts and Reflections | Family Rosary','Watch daily prayer, explore reflections and listen to Family Rosary podcasts.')}
+routes={'home':('','Family Rosary | Pray Together as a Family','Find a welcoming place to learn the Rosary, pray together and discover resources for your family.'),'rosary-guide':('how-to-pray-the-rosary','How to Pray the Rosary, Step by Step | Family Rosary','Learn the steps and mysteries of the Rosary, follow a guided decade and find printable prayer guides.'),'resources':('prayerresources','Family Prayer Resources & Rosary Guides | Family Rosary','Find Rosary guides, prayer book downloads and activities for children. Browse family prayer resources for home, school and parish.'),'story':('our-story','Our Story: Father Peyton and Family Prayer | Family Rosary','Discover Father Peyton’s invitation to family prayer and the worldwide mission of Family Rosary.'),'media':('watch-and-listen','Watch & Listen: Prayer, Podcasts and Reflections | Family Rosary','Watch daily prayer, explore reflections and listen to Family Rosary podcasts.')}
 def convert(s,prefix,home=False):
  s=re.sub(r'<\?php\s*/\*\*.*?\*/\s*\?>','',s,flags=re.S)
  s=re.sub(r"<\?php echo esc_url\( get_theme_file_uri\( 'assets/(.*?)' \) \); \?>",lambda m:prefix+'assets/'+m.group(1),s)
@@ -41,4 +41,4 @@ print('Static review exported from WordPress patterns and template parts.')
 
 # Package the current native theme alongside the static review.
 (OUT/"downloads").mkdir(exist_ok=True)
-shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.4.2"),"zip",root_dir=T.parent,base_dir=T.name)
+shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.4.3"),"zip",root_dir=T.parent,base_dir=T.name)

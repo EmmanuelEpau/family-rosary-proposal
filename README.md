@@ -2,9 +2,11 @@
 
 [Open the review website](https://emmanuelepau.github.io/family-rosary-proposal/)
 
-Version 1.4.2, 9 November 2026. The five-page WordPress proposal follows HCFM.org's identity: white reading and browsing surfaces, HCFM blue, selective yellow, Whitney/Calluna typography and the actual Family Rosary logo. This release adds program-led streaming discovery and the exact Children's Storybooks image Emmy selected from the Canva concept.
+Version 1.4.3, 9 November 2026. The five-page WordPress proposal follows HCFM.org's identity: white reading and browsing surfaces, HCFM blue, selective yellow, Whitney/Calluna typography and the actual Family Rosary logo. This release adds program-led streaming discovery and the exact Children's Storybooks image Emmy selected from the Canva concept.
 
 ## What changed
+
+- Search demand and existing rankings inform the page/topic map in [SEARCH-DISCOVERY.md](SEARCH-DISCOVERY.md). The guide now uses clearer answer headings and direct section links; the resources preview description identifies downloads and children’s activities. Existing ranking paths and review noindex protection are retained.
 
 - Typography was checked against the live HCFM.org homepage on 9 November. Home/story editorial headlines now use the actual Calluna Bold face (700), navigation uses Whitney Bold, and script accents retain PlaylistScript. Interface and library titles retain Whitney.
 
@@ -18,9 +20,11 @@ Version 1.4.2, 9 November 2026. The five-page WordPress proposal follows HCFM.or
 
 ## Source and build
 
-Repository: EmmanuelEpau/family-rosary-proposal. Revision base 5f09b4f. Earlier bases 99e43a4, 736460f and ec51442. Canonical native patterns/parts are in wordpress/family-rosary; docs is their static review export. Run npm ci and npm run build. The build emits downloads/family-rosary-theme-1.4.2.zip and content-hashed asset URLs plus release identifiers on internal preview links, so entering through a fresh versioned review link keeps subsequent navigation on this release. Previously loaded tabs need that fresh link or a refresh. Catalog JSON is a source record, not an automatic publishing feed.
+Repository: EmmanuelEpau/family-rosary-proposal. Revision base caf9825. Earlier bases 99e43a4, 736460f and ec51442. Canonical native patterns/parts are in wordpress/family-rosary; docs is their static review export. Run npm ci and npm run build. The build emits downloads/family-rosary-theme-1.4.3.zip and content-hashed asset URLs plus release identifiers on internal preview links, so entering through a fresh versioned review link keeps subsequent navigation on this release. Previously loaded tabs need that fresh link or a refresh. Catalog JSON is a source record, not an automatic publishing feed.
 
 ## Verification
+
+The 1.4.3 search-content revision passed internal-browser checks on all five pages at390/1440: unique descriptive titles/descriptions, oneH1, no overflow and review noindex retained. All guide fragment links resolve; native WordPress parser563blocks/18documents has zero invalid blocks. Build, JSsyntax and whitespace passed; the focused guide detector returned no findings. Connected Ahrefs supplied30ranking rows and8keyword demand estimates; report dates and limitations are in SEARCH-DISCOVERY.md.
 
 The 1.4.2 typography revision passed 30 internal-browser route/width checks: all five pages at 320, 390, 768, 781, 1440 and 2560px, with no horizontal overflow. Calluna Bold loaded successfully. JavaScript syntax, static build and whitespace checks passed. The design detector returned only the two existing chevron-border false positives. Desktop and phone home/story captures were reviewed. This CSS-only revision retains the previous native block validation; it does not claim a new WordPress editor run.
 
