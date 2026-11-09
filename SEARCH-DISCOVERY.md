@@ -56,3 +56,7 @@ Baseline Search Console landing pages and queries, country/device, clicks, impre
 ## Implemented in 1.4.3
 
 Guide H2s now identify Rosary prayers in English, mysteries by day and questions about praying the Rosary. Opening links go directly to those three answers. Resources preview description explicitly identifies prayer book downloads and children's activities. Existing strong guide title, paths, actual prayer content and visual brand remain. This brief is a continuing requirement for subsequent sections and page work, not a claim that a five-page proposal alone can achieve first place.
+
+## 1.5.0 continuity
+
+Watch & Listen keeps its existing route and crawlable source links while adding attributed program descriptions and complete series navigation. Media detail URLs select a dialog; dedicated production watch pages, rights-cleared transcripts and verified structured data remain a separate implementation decision. The new /rosary-prayer-guide/ is a usable reading/printing companion; retain the main how-to guide as the primary topic owner and decide canonical/indexing treatment on the ministry domain before production. All six proposal routes remain deliberately noindex. No new Ahrefs rank measurement or engagement result is claimed by this design release.

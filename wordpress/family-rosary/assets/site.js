@@ -84,7 +84,7 @@
   const selectors=[...carousel.querySelectorAll('[data-feature-select]')];
   const toggle=carousel.querySelector('[data-feature-toggle]');
   const status=carousel.querySelector('[data-feature-status]');
-  const dialog=document.getElementById('media-dialog');
+  const dialog=document.querySelector('#media-dialog, #cinema-dialog');
   if(slides.length<2||!toggle)return;
   let index=0,paused=motion.matches,hovered=matchMedia('(hover: hover)').matches&&carousel.matches(':hover'),inView=true,resumedOnToggle=false,timer,toggleIntent;
   const canRotate=()=>!paused&&!hovered&&inView&&!document.hidden&&!dialog?.open&&(!carousel.contains(document.activeElement)||(resumedOnToggle&&document.activeElement===toggle));

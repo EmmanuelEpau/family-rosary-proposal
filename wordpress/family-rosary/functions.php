@@ -72,3 +72,14 @@ function family_rosary_navigation_urls( $parsed_block ) {
 	return $parsed_block;
 }
 add_filter( 'render_block_data', 'family_rosary_navigation_urls' );
+
+/** Additional media discovery is isolated from the other prayer pages. */
+function family_rosary_cinema_assets() {
+ wp_enqueue_script( 'family-rosary-cinema', get_theme_file_uri( 'assets/cinema.js' ), array( 'family-rosary-site' ), wp_get_theme()->get( 'Version' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
+}
+add_action( 'wp_enqueue_scripts', 'family_rosary_cinema_assets' );
+
+function family_rosary_prayer_experience_assets() {
+ wp_enqueue_script( 'family-rosary-prayer-experience', get_theme_file_uri( 'assets/prayer-experience.js' ), array( 'family-rosary-site' ), wp_get_theme()->get( 'Version' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
+}
+add_action( 'wp_enqueue_scripts', 'family_rosary_prayer_experience_assets' );

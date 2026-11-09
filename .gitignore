@@ -3,3 +3,5 @@ qa/
 .DS_Store
 __pycache__/
 *.pyc
+
+.impeccable/review/

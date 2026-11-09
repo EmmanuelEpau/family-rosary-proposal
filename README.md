@@ -2,40 +2,37 @@
 
 [Open the review website](https://emmanuelepau.github.io/family-rosary-proposal/)
 
-Version 1.4.3, 9 November 2026. The five-page WordPress proposal follows HCFM.org's identity: white reading and browsing surfaces, HCFM blue, selective yellow, Whitney/Calluna typography and the actual Family Rosary logo. This release adds program-led streaming discovery and the exact Children's Storybooks image Emmy selected from the Canva concept.
+Version 1.5.0, 9 November 2026. Six-page WordPress proposal using HCFM.org’s Whitney, Calluna and PlaylistScript typography, official Family Rosary marks, white reading surfaces, HCFM blue and selective yellow. This is the public design proposal; the ministry website is unchanged.
 
-## What changed
+## This revision
 
-- Search demand and existing rankings inform the page/topic map in [SEARCH-DISCOVERY.md](SEARCH-DISCOVERY.md). The guide now uses clearer answer headings and direct section links; the resources preview description identifies downloads and children’s activities. Existing ranking paths and review noindex protection are retained.
-
-- Typography was checked against the live HCFM.org homepage on 9 November. Home/story editorial headlines now use the actual Calluna Bold face (700), navigation uses Whitney Bold, and script accents retain PlaylistScript. Interface and library titles retain Whitney.
-
-- The homepage photo now begins directly below the blue affiliate strip. The official reverse-white logo and white primary navigation overlay the photo, with a full-width top fade for contrast. Phone/tablet menus open as a white panel with blue links; other pages retain the positive logo and white header.
-
-- Home and Watch & Listen feature four editorial selections in a 9-second carousel with named selectors, previous/next and Pause/Resume. Manual selection and keyboard entry stop rotation; pointer hover, background/offscreen state and an open player pause it. Reduced-motion preference starts paused. Video/audio does not autoplay.
-- Actual program artwork replaces the generic media hero. Shelves separate the four popular Rosary films, short reflections, beginner prayer videos, dated recorded community prayer and two podcast series.
-- The four leading videos in the official channel's Videos>Popular list show real YouTube views, checked 9 November 2026: Joyful 2,663,055; Glorious 2,392,498; Sorrowful 2,061,636; Luminous 1,107,584. Counts are views, not unique people/families, and are dated snapshots. No invented ratings, matches or likes.
-- All 44 existing media records remain; the Sorrowful and Luminous films bring the library to 46 programs (11 videos, 35 podcast episodes). Twelve native resource cards and four flexible child-age pathways remain.
-- The exact child-reading image leads the children's invitation on home/resources, with actual Companion and Gospel-activity destinations. Canva itself was not edited. Asset identity and remaining production licensing requirements are in the theme's ASSET-CREDITS.md.
+- Watch & Listen now opens with a four-selection cinematic carousel, manual selectors, pause/resume and explicit Watch/Listen actions. Horizontal shelves use visible next-item peeks, scroll controls and quiet popularity numerals.
+- The catalog contains 57 programs: 22 videos and 35 podcast episodes. All 46 prior IDs remain. Eleven FTP additions cover family testimony, prayer at home and Digital Age Family Safety. Two lead family interviews use actual footage frames. Publisher/series metadata stays attributed; unavailable production credits are not invented.
+- Program details include synopsis, source information, series episodes, deliberately selected related programs and provider playback. Episode changes hand focus to the new heading; Back/Escape restore browsing context. Providers load only after an explicit action and unload on close.
+- The four Rosary popularity counts are dated YouTube snapshots, checked 9 November 2026, not first-party audience figures or live personalized rankings. No invented ratings, matches, likes or viewer recommendations.
+- Resource artwork is composed for its wide frames, with the complete Companion cover, Emmy’s selected Canva child photograph, and cross-only prayer artwork. Age groups open short usable activities and prayers on-site. Preteens and Teenagers are distinct options. The intention route is named separately from finding a prayer.
+- The guide uses a lit, interactive Three.js Rosary with deterministic anatomy: 59 beads, 53 Hail Mary and six Our Father; opening cross → one → three → one → medal; five ten-bead groups separated by four Our Father beads. Accessible prayer controls remain equivalent to canvas interaction. This is a 3D model, not a claim of photographic or ecclesiastically certified artwork.
+- Print a Guide opens a readable on-site page with prayer words and all four mystery sets, plus print styling. Original PDF destinations remain available where relevant; PDFs have not all been converted.
 
 ## Source and build
 
-Repository: EmmanuelEpau/family-rosary-proposal. Revision base caf9825. Earlier bases 99e43a4, 736460f and ec51442. Canonical native patterns/parts are in wordpress/family-rosary; docs is their static review export. Run npm ci and npm run build. The build emits downloads/family-rosary-theme-1.4.3.zip and content-hashed asset URLs plus release identifiers on internal preview links, so entering through a fresh versioned review link keeps subsequent navigation on this release. Previously loaded tabs need that fresh link or a refresh. Catalog JSON is a source record, not an automatic publishing feed.
+Repository: EmmanuelEpau/family-rosary-proposal. Base commit a47f7232fb683cd8baab90506d10c27e3e3c6d03. Native patterns, parts and assets live in wordpress/family-rosary; docs is their static review export. Development work is isolated in the dated task-folder clone.
 
-## Verification
+Run npm ci, then npm run build. The build bundles the same-origin Rosary module and exports six review routes plus downloads/family-rosary-theme-1.5.0.zip. Historical packages remain. Edit content/media.json and the media generator together; run python3 scripts/build-cinema.py before building after media-template changes. Three.js and esbuild versions are pinned in package-lock.json. Bundled library notices are retained.
 
-The 1.4.3 search-content revision passed internal-browser checks on all five pages at390/1440: unique descriptive titles/descriptions, oneH1, no overflow and review noindex retained. All guide fragment links resolve; native WordPress parser563blocks/18documents has zero invalid blocks. Build, JSsyntax and whitespace passed; the focused guide detector returned no findings. Connected Ahrefs supplied30ranking rows and8keyword demand estimates; report dates and limitations are in SEARCH-DISCOVERY.md.
+## Verification for 1.5.0
 
-The 1.4.2 typography revision passed 30 internal-browser route/width checks: all five pages at 320, 390, 768, 781, 1440 and 2560px, with no horizontal overflow. Calluna Bold loaded successfully. JavaScript syntax, static build and whitespace checks passed. The design detector returned only the two existing chevron-border false positives. Desktop and phone home/story captures were reviewed. This CSS-only revision retains the previous native block validation; it does not claim a new WordPress editor run.
+- Static build, JavaScript syntax and git whitespace checks pass.
+- scripts/check-rosary.mjs verifies total and prayer bead counts, opening strand order, all five decade mappings and four loop separators.
+- Internal-browser checks cover all six routes at 320, 390, 768, 781, 1256, 1440 and 2560 pixels: 42 checks, no horizontal overflow, one H1 per route and no broken initial eager images.
+- WordPress’s actual editor parser validates 595 blocks across 20 pattern/template/part documents with zero invalid blocks.
+- Details, keyboard episode selection, curated related programs, Back/Escape focus restoration, search empty/reset, 35-podcast filtering, explicit provider mounting/unloading, age activities and prayer-step selection were exercised in the internal browser. Desktop/phone captures include the media page, details, home, resources, prayer reader and printable web guide.
+- A fresh independent finish review returned ship after editorial relationships and in-dialog focus were corrected. Design documentation records the observed system.
 
-The 1.4.1 header revision passed eight homepage widths from 320 through 3440px, plus all four inner pages at desktop/phone widths. The photo starts exactly at the blue strip’s bottom, spans the full width and clears the navigation/heading. Native WordPress rendering was checked at 1440/768/390px; native menus have 44px controls, blue-on-white open panels, Escape dismissal and same-page prayer navigation. The parser still reports 563 blocks across 18 documents with zero invalid blocks. Independent review findings were resolved.
+The retained npm run check launches an external browser, so it was not run under Emmy’s internal-browser-only instruction. Its selectors/counts were updated and syntax checked; this is not a claim that its accessibility scans passed. Reduced-motion behavior was inspected in source, not emulated. Full provider viewing/listening, physical printing, field Core Web Vitals, complete editor save/reopen and production licensing are not certified.
 
-Previous 1.4.0 streaming-release internal-browser checks: 40 route/width combinations (all five pages at 320, 390, 768, 781, 1024, 1440, 2560, 3440), no horizontal overflow and oneH1; initial and manual transition frames also fit on phone/tablet after containing the slide animation. Actual WordPress editor parser: 563 blocks, 18 documents, zero invalid blocks. Carousel automatic advance, manual selection/pause, player entry and visible focus return, media format counts 11/35/46, search empty/reset and existing family resource filtering were exercised. JavaScript syntax, whitespace and static build pass. Independent source/visual review findings were resolved.
+## Search and release limits
 
-The retained npm run check opens an external browser and was not run under the internal-browser-only instruction. Its updated 46-program selectors/counts are maintained for future use. Reduced-motion behavior was inspected in source, not emulated in the internal browser. Full accessibility certification, ordinary-editor save/reopen, complete provider playback, production licensing and migration are not certified. Detailed evidence/research stays in the dated task folder, not the visitor-facing proposal.
+SEARCH-DISCOVERY.md retains the Ahrefs-informed topic map, existing ranking paths and AEO/SEO requirements. The prayer guide owns the main how-to intent. Query-selected media details are not a substitute for final dedicated indexable watch pages/transcripts. The new print route needs a production canonical/indexing decision.
 
-## Limits
-
-Only the public review proposal is released. The live ministry site, HubSpot content and Canva design remain unchanged. Existing pages/PDFs/QR destinations need a reviewed migration map before a separately authorized production release. No accounts, fake submissions, live-status claims or recommendation algorithms were added. The proposal retains noindex and its review notice. No traffic, ranking or engagement lift is guaranteed.
-
-Theme code GPL-2.0-or-later; photographs, marks and media retain their owners' rights. Fonts use existing HCFM delivery and are not redistributed.
+Only the GitHub review proposal is released. HubSpot, Canva and the live ministry site remain unchanged. Review pages retain noindex and the proposal notice. No traffic, ranking, AI-citation or engagement lift is guaranteed. Fonts use existing HCFM delivery and are not redistributed; marks, photography and media retain their owners’ rights.

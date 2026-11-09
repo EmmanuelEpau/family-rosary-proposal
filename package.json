@@ -1,1 +1,17 @@
-{"name":"family-rosary-proposal","version":"0.1.0","private":true,"scripts":{"build":"python3 scripts/build-preview.py","check":"node scripts/check.mjs"},"devDependencies":{"@playwright/test":"^1.56.1","@axe-core/playwright":"^4.11.0"}}
+{
+  "name": "family-rosary-proposal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-rosary.mjs && python3 scripts/build-preview.py",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@playwright/test": "^1.56.1",
+    "esbuild": "0.28.2"
+  },
+  "dependencies": {
+    "three": "0.187.0"
+  }
+}

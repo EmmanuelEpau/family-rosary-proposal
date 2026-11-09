@@ -116,3 +116,13 @@ The exact Canva child photograph is included at Emmy's explicit direction for th
 The homepage primary header overlays the hero photograph immediately beneath the blue ministry strip. The bundled default logo uses the official reverse-white variant on the front page; editor-selected custom Site Logos remain respected and should be chosen for this background. Other pages retain their standard positive logo/header. A top fade provides contrast without changing the photograph. The homepage native Navigation opens its mobile overlay through 780px, matching the review preview; open/close targets are 44px and the expanded menu is blue on white. The phone reading panel remains HCFM blue with a yellow primary action.
 
 Actual WordPress parser: 563 blocks/18 documents, zero invalid. Homepage image boundary, white-logo source, native 768px menu and 390px menu contrast/Escape were checked in the internal browser. This is a proposal release, not a production migration or editor save/reopen certification.
+
+## Version 1.5.0 — cinema and guided prayer
+
+Six presentation routes now include /rosary-prayer-guide/ using the Prayer Guide custom template (page-print-guide.html). The bundled media pattern contains the 57-program cinema collection and its native HTML dialog. Program data comes from content/media.json through scripts/build-cinema.py; provider frames mount only after an explicit action. Update the generator and catalog together rather than editing only the exported docs HTML.
+
+The same-origin rosary-scene.js module is bundled from Three.js with its license notice. prayer-experience.js loads it when a Rosary stage approaches the viewport; readable prayer controls and a cross-only fallback remain. Anatomy is tested with node scripts/check-rosary.mjs. Do not replace the geometry with generated bead arrangements. Build bundled assets before creating a theme package.
+
+Print a Guide now opens an on-site reading page; Print this Guide invokes the browser print dialog. It is not a new PDF download. The complete prayer words/mystery sets are visible in HTML and print styles hide site navigation.
+
+Current verification supersedes the historical counts above: the actual editor parser reports 595 blocks in 20 documents, zero invalid blocks. Six static routes passed 42 internal-browser width checks. Complete editor save/reopen, physical printing, every provider’s full playback and production migration remain unverified. The ministry’s production content and settings are unchanged.
