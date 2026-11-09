@@ -14,3 +14,14 @@ Logo: https://www.familyrosary.org/hubfs/FamilyRosaryWebsite/FRLogos/family-rosa
 Whitney, Calluna and PlaylistScript are referenced through HCFM’s existing public font delivery at https://hcfm.org/wp-content/themes/hcfm/build/fonts/. No licensed font binaries are distributed in this package. Confirm the final authorized delivery route before production. The superseded proposal’s Newsreader and Source Sans 3 files have been removed. Media cover provenance is in the repository content/media.json. Video/audio is served by the original providers, not rehosted.
 
 Companion preview: https://www.familyrosary.org/hubfs/FamilyRosaryCompanion-ButtonFinal%20%281%29-1.jpg , published ministry resource image referenced unchanged. Production reuse clearance remains required.
+
+## Additional archival and resource references in1.2.0
+
+New archival images remain externally served from official Father Peyton and Family Rosary sources. They are historical documents, not cleared production masters:
+- Peyton parents: https://fatherpeyton.org/wp-content/uploads/sites/5/2025/08/Peyton_Parents.webp
+- 1942 ministry work: https://www.familyrosary.org/hs-fs/hubfs/assets/Timeline/1942-min.png?width=960&name=1942-min.png
+- Family Theater radio: https://fatherpeyton.org/wp-content/uploads/sites/5/2025/08/FamilyTheaterOfTheAir1950s.jpg
+- Life of Christ production: https://fatherpeyton.org/wp-content/uploads/sites/5/2025/08/Life-of-Christ-filming.webp
+- 1959 Manila gathering: https://www.familyrosary.org/hs-fs/hubfs/assets/Timeline/1959-min-1.png?width=965&name=1959-min-1.png
+
+Actual resource art URLs are retained in content/resource-previews.json from the bounded November4 source inventory. The preview uses selected relevant art, not the known mismatched Rosary-in-25-Days image. Affiliate material remains credited by its original artwork/destination. A source URL and previous publication do not grant a new production license.

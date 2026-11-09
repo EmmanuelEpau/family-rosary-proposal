@@ -16,35 +16,40 @@
   const toggle=$('.fr-mobile-toggle'),nav=$('.fr-nav');
   toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));nav.classList.toggle('fr-menu-open',open);});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('fr-menu-open')){nav.classList.remove('fr-menu-open');toggle.setAttribute('aria-expanded','false');toggle.focus();}});
+  nav?.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('fr-menu-open');toggle.setAttribute('aria-expanded','false');}});
  }
  if($('#resource-filters')){
-  const form=$('#resource-filters'), search=$('#resource-search'), topic=$('#resource-topic'), format=$('#resource-format'), items=[...document.querySelectorAll('[data-resource]')];
+  const form=$('#resource-filters'), search=$('#resource-search'), topic=$('#resource-topic'), format=$('#resource-format'), items=[...document.querySelectorAll('[data-resource], .fr-resource-gallery-card')];
   const params=new URLSearchParams(location.search);
   search.value=params.get('q')||'';topic.value=params.get('topic')||'';format.value=params.get('format')||'';
   const filter=()=>{
    const term=search.value.trim().toLocaleLowerCase(); let count=0;
-   items.forEach(item=>{const matches=(!term||item.textContent.toLocaleLowerCase().includes(term))&&(!topic.value||item.dataset.topics.split(' ').includes(topic.value))&&(!format.value||item.dataset.format===format.value);item.hidden=!matches;if(matches)count++;});
+   items.forEach(item=>{const matches=(!term||item.textContent.toLocaleLowerCase().includes(term))&&(!topic.value||(item.dataset.topics?.split(' ').includes(topic.value)||item.classList.contains('fr-topic-'+topic.value)))&&(!format.value||(item.dataset.format===format.value||item.classList.contains('fr-format-'+format.value.toLowerCase())));item.hidden=!matches;if(matches)count++;});
    $('#resource-count').textContent=count+' '+(count===1?'resource':'resources');$('#resource-empty').hidden=count>0;
    const next=new URL(location.href);for(const [key,value]of [['q',search.value],['topic',topic.value],['format',format.value]])value?next.searchParams.set(key,value):next.searchParams.delete(key);history.replaceState(null,'',next);
   };
   form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('submit',e=>{e.preventDefault();filter();});form.addEventListener('reset',()=>setTimeout(filter,0));filter();
  }
  if($('[data-prayer-reader]')){
-  const set=$('#mystery-set'), number=$('#mystery-number'); let step=0;
+  const set=$('#mystery-set'), number=$('#mystery-number'), jump=$('#prayer-jump'), beads=[...document.querySelectorAll('[data-prayer-step]')]; let step=0;
   const prayers={our:['Our Father','Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.'],hail:['Hail Mary','Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.'],glory:['Glory Be','Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.']};
   const render=(focus=false)=>{
    const m=mysteries[set.value],n=Number(number.value);$('#prayer-mystery').textContent=m.names[n];$('#prayer-reference').textContent=m.refs[n];
    const prayer=step===0?prayers.our:step<=10?prayers.hail:prayers.glory;
    const completed=step===12;
    $('#prayer-title').textContent=completed?'One decade, prayed together.':prayer[0];
-   $('#prayer-words').textContent=completed?'Take a moment for the intention you brought. You have completed this decade. You may continue to the next mystery, or close your prayer with the Sign of the Cross.':prayer[1];
+   $('#prayer-words').textContent=completed?'Take a moment for the intention you brought. You have completed this decade. You may continue to the next mystery, or close your prayer with the Sign of the Cross. The opening and closing prayer words are available below.':prayer[1];
    $('#prayer-progress-text').textContent=completed?'Decade complete':step===0?'Opening prayer · Our Father':step<=10?'Hail Mary '+step+' of 10':'Closing prayer · Glory Be';
    $('#prayer-progress').value=step;$('#prayer-progress').textContent=step+' of 12 prayers completed';
    $('#prayer-back').disabled=step===0;$('#prayer-next').textContent=completed?(n<4?'Next mystery':'Begin another decade'):step===11?'Complete this decade':'Next prayer';
+   if(jump)jump.value=String(Math.min(step,11));
+   beads.forEach(bead=>{const current=Number(bead.dataset.prayerStep)===step;if(current)bead.setAttribute('aria-current','step');else bead.removeAttribute('aria-current');bead.classList.toggle('is-complete',Number(bead.dataset.prayerStep)<step);});
    $('#prayer-status').textContent=$('#prayer-progress-text').textContent;
    if(focus)$('#prayer-title').focus({preventScroll:true});
   };
   const chooseSet=()=>{number.replaceChildren(...mysteries[set.value].names.map((n,i)=>new Option((i+1)+'. '+n,String(i))));step=0;render();};
+  jump?.addEventListener('change',()=>{step=Number(jump.value);render(true);});
+  beads.forEach(bead=>bead.addEventListener('click',()=>{step=Number(bead.dataset.prayerStep);render(true);}));
   set.value=todaySet;chooseSet();set.addEventListener('change',chooseSet);number.addEventListener('change',()=>{step=0;render();});
   $('#prayer-next').addEventListener('click',()=>{if(step<12)step++;else{number.value=String((Number(number.value)+1)%5);step=0;}render(true);});
   $('#prayer-back').addEventListener('click',()=>{step=Math.max(0,step-1);render(true);});$('#prayer-reset').addEventListener('click',()=>{step=0;render(true);});

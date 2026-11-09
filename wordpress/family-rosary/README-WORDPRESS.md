@@ -97,3 +97,7 @@ Reviewed on 4 November 2026:
 ## November 9 redesign verification
 
 Version 1.1.0 replaces the rejected cream/green/brown proposal with the user-requested HCFM foundation. Fresh in-app browser checks covered five static routes at four widths and five local WordPress routes at desktop/phone widths. WordPress’s actual editor parser validated 338 blocks across 18 documents with zero invalid blocks after correcting three image-markup errors. Existing historical 321-block evidence above describes version 1.0.0, not the current result. Full editor save/reopen, image rights and production migration remain unverified.
+
+## Version1.2.0, family journeys
+
+Native guide/details, story chapters, shared ministry navigation and nine named resource cards are editable blocks. Cards keep topic/format class tokens for the preview filter; a nontechnical editor workflow for changing classifications still needs acceptance testing. Interactive bead controls, filters and provider shelves remain scoped code, not ordinary prose blocks. All513blocks across18documents validated with the actual WordPress editor parser. Theme activation/rendering, five routes at desktop/phone, and source build passed. No production activation or complete editor save/reopen certification.

@@ -61,7 +61,7 @@ add_filter( 'render_block_core/site-logo', 'family_rosary_default_logo', 10, 2 )
 
 /** Resolve the theme's starter navigation relative to the WordPress site URL. */
 function family_rosary_navigation_urls( $parsed_block ) {
-	$routes = array( '/', '/#pray-today', '/how-to-pray-the-rosary/', '/prayerresources/', '/our-story/', '/watch-and-listen/' );
+	$routes = array( '/', '/#pray-today', '/#daily-prayer', '/how-to-pray-the-rosary/', '/prayerresources/', '/our-story/', '/watch-and-listen/' );
 	if (
 		'core/navigation-link' === $parsed_block['blockName'] &&
 		isset( $parsed_block['attrs']['url'] ) &&
