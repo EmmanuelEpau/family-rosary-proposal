@@ -109,3 +109,10 @@ Current source has 12 native resource cards, 46 unique programs (11 videos / 35 
 WordPress's actual parser checked 563 blocks across 18 documents with zero invalid blocks. Forty static route-width checks, carousel advance/manual pause, player entry/focus return, filters and phone transition containment passed in the internal browser. Reduced-motion branches were source-reviewed, not browser-emulated. Complete provider playback and normal editor save/reopen are not certified. Historical checks above apply to their named earlier versions.
 
 The exact Canva child photograph is included at Emmy's explicit direction for this public proposal. Original production reuse licensing remains to be confirmed; see ASSET-CREDITS.md. No production migration, ministry website or Canva edits occurred.
+
+
+## Version 1.4.1: homepage overlay header
+
+The homepage primary header overlays the hero photograph immediately beneath the blue ministry strip. The bundled default logo uses the official reverse-white variant on the front page; editor-selected custom Site Logos remain respected and should be chosen for this background. Other pages retain their standard positive logo/header. A top fade provides contrast without changing the photograph. The homepage native Navigation opens its mobile overlay through 780px, matching the review preview; open/close targets are 44px and the expanded menu is blue on white. The phone reading panel remains HCFM blue with a yellow primary action.
+
+Actual WordPress parser: 563 blocks/18 documents, zero invalid. Homepage image boundary, white-logo source, native 768px menu and 390px menu contrast/Escape were checked in the internal browser. This is a proposal release, not a production migration or editor save/reopen certification.

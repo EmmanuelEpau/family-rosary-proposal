@@ -52,7 +52,7 @@ function family_rosary_default_logo( $block_content, $block ) {
 	return sprintf(
 		'<div class="wp-block-site-logo"><a href="%1$s" class="custom-logo-link" rel="home"><img class="custom-logo" src="%2$s" width="%3$d" alt="%4$s" /></a></div>',
 		esc_url( home_url( '/' ) ),
-		esc_url( get_theme_file_uri( 'assets/logo.svg' ) ),
+		esc_url( get_theme_file_uri( is_front_page() ? 'assets/logo-white.svg' : 'assets/logo.svg' ) ),
 		$width,
 		esc_attr__( 'Family Rosary — home', 'family-rosary' )
 	);

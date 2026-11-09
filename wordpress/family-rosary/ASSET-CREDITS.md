@@ -31,3 +31,6 @@ Actual resource art URLs are retained in content/resource-previews.json from the
 - media/rosary-sorrowful.jpg: Family Rosary's YouTube thumbnail, https://www.youtube.com/watch?v=ngqZ0Vwn-Eg ; program title/channel attribution inspected 9 November 2026.
 - media/rosary-luminous.jpg: Family Rosary's YouTube thumbnail, https://www.youtube.com/watch?v=dgeZdrDu84U ; title/channel attribution inspected 9 November 2026. Source watch player displayed a preroll duration, so the catalog does not present an unverified exact program duration.
 - Four public YouTube view counts and popularity order were inspected 9 November 2026 on the official FamilyRosaryVideo channel's Videos>Popular list and each video's expanded details. Counts are video views, not unique people or families; they are dated snapshots, not a live feed. Exact totals are in content/media.json.
+
+1.4.1 homepage overlay header:
+- logo-white.svg: official reverse-white Family Rosary logo, https://www.familyrosary.org/hubfs/FamilyRosaryWebsite/FRLogos/family-rosary-white-logo.svg . Preserved from the original ministry asset inventory, unchanged; title FamRosary_logo1_rev_white. Used over the homepage photograph; other pages retain the official positive logo. An editor-selected custom Site Logo remains respected in WordPress.

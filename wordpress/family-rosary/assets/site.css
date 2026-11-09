@@ -102,3 +102,26 @@ html{scroll-padding-top:28px}body{font-size:19px;background:#fff;color:#000}h1,h
 @media(prefers-reduced-motion:reduce){.fr-feature-carousel.is-ready [data-feature-slide]:not([hidden]) .fr-feature-copy{animation:none}.fr-stream-library .fr-media-cover img{transition:none}}
 .fr-stream-library.fr-wrap{width:calc(100% - var(--fr-gap)*2);max-width:1320px;margin-inline:auto!important;padding:0}
 .fr-feature-slides{overflow:hidden}
+
+/* Homepage navigation sits over the photograph directly beneath the ministry bar. */
+.home .fr-header{background:transparent;position:relative;z-index:20}
+.home .fr-header:after{content:'';position:absolute;top:100%;left:0;right:0;height:190px;background:linear-gradient(180deg,rgba(0,14,32,.92),rgba(0,14,32,.58) 55%,rgba(0,14,32,0));pointer-events:none;z-index:0}
+.home .fr-ministry-bar{position:relative;z-index:2}
+.home .fr-header-inner{position:absolute;top:100%;left:0;right:0;z-index:1;background:transparent;border:0}
+.home .fr-nav a{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.25)}
+.home .fr-nav-pray a{color:#fff;border-color:#fff}
+.home .fr-nav-pray a:hover{background:#fff;color:#0047bb;text-shadow:none}
+.home .fr-header a:focus-visible,.home .fr-mobile-toggle:focus-visible{outline-color:#ffb500}
+.home .fr-mobile-toggle,.home .wp-block-navigation__responsive-container-open{color:#fff;border-color:#fff;background:transparent}
+.home .fr-header .fr-nav.fr-menu-open a,.home .fr-nav .wp-block-navigation__responsive-container.is-menu-open a{color:#0047bb;text-shadow:none}
+.home .fr-header .fr-nav.fr-menu-open .fr-nav-pray a,.home .fr-nav .is-menu-open .fr-nav-pray a{border-color:#0047bb}
+.home .fr-nav .wp-block-navigation__responsive-container.is-menu-open{background:#fff;color:#0047bb}
+.home .fr-nav .wp-block-navigation__responsive-container-close{color:#0047bb}
+@media(min-width:781px){.home .fr-cinematic-hero .fr-hero-copy{padding-top:166px;padding-bottom:70px}}
+@media(max-width:780px){.home .fr-header:after{height:175px}.home .fr-header .fr-nav.fr-menu-open{top:100%;left:calc(-1 * var(--fr-gap));right:calc(-1 * var(--fr-gap));background:#fff}.home .fr-header .custom-logo{width:155px}}
+@media(max-width:780px){.home .fr-cinematic-hero{background:#0047bb}.home .fr-cinematic-hero .wp-block-button:not(.is-style-outline) .wp-block-button__link{background:#ffb500;color:#000;border-color:#ffb500}}
+.home .fr-nav{color:#fff}
+.home .fr-cinematic-hero .fr-hero-art,.home .fr-cinematic-hero .fr-hero-photo{width:100%;max-width:none}
+@media(max-width:780px){.home .fr-nav .wp-block-navigation__responsive-container:not(.is-menu-open){display:none}.home .fr-nav .wp-block-navigation__responsive-container-open{display:flex}}
+.home .fr-nav .wp-block-navigation__responsive-container-open,.home .fr-nav .wp-block-navigation__responsive-container-close{min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.home .fr-nav .is-menu-open .wp-block-navigation__responsive-container-close{display:flex}
