@@ -84,3 +84,4 @@ html{scroll-padding-top:28px}body{font-size:19px;background:#fff;color:#000}h1,h
 .fr-media-feature{background:#0047bb}.fr-media-feature .fr-media-hero-image{opacity:1}.fr-media-feature .fr-media-hero-image img{filter:none}.fr-media-feature>.fr-media-hero-art:after{background:linear-gradient(90deg,rgba(0,32,87,.98),rgba(0,32,87,.85) 35%,rgba(0,32,87,.12) 78%)}.fr-media-feature-caption{background:linear-gradient(0deg,rgba(0,32,87,.9),rgba(0,32,87,.65) 70%,transparent)}.fr-media-feature-caption .wp-block-button:not(.is-style-outline) .wp-block-button__link{background:#ffb500;color:#000;border-color:#ffb500}
 @media(max-width:780px){.fr-media-feature-caption{background:#0047bb}}
 .fr-media-library .fr-media-play:hover{color:#0047bb}.fr-media-library .fr-media-archive a.text-link:hover{color:#0047bb}
+@media(min-width:781px) and (max-width:1100px){.fr-ministry-bar{overflow-x:auto}.fr-ministry-nav{min-width:max-content}}
