@@ -22,7 +22,7 @@ Run npm ci, then npm run build. The build bundles the same-origin Rosary module 
 
 ## Verification for 1.5.0
 
-- Static build, JavaScript syntax and git whitespace checks pass.
+- Static build, JavaScript syntax and authored-source whitespace checks pass. Generated Three.js bundles retain upstream GLSL string whitespace and are excluded from that cosmetic check.
 - scripts/check-rosary.mjs verifies total and prayer bead counts, opening strand order, all five decade mappings and four loop separators.
 - Internal-browser checks cover all six routes at 320, 390, 768, 781, 1256, 1440 and 2560 pixels: 42 checks, no horizontal overflow, one H1 per route and no broken initial eager images.
 - WordPress’s actual editor parser validates 595 blocks across 20 pattern/template/part documents with zero invalid blocks.

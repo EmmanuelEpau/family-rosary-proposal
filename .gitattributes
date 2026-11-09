@@ -1,0 +1,4 @@
+# Generated Three.js bundle contains upstream GLSL shader string whitespace.
+# Keep those strings intact; whitespace checks apply to authored source files.
+/docs/assets/rosary-scene.js -whitespace
+/wordpress/family-rosary/assets/rosary-scene.js -whitespace
