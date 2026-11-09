@@ -34,3 +34,5 @@ Actual resource art URLs are retained in content/resource-previews.json from the
 
 1.4.1 homepage overlay header:
 - logo-white.svg: official reverse-white Family Rosary logo, https://www.familyrosary.org/hubfs/FamilyRosaryWebsite/FRLogos/family-rosary-white-logo.svg . Preserved from the original ministry asset inventory, unchanged; title FamRosary_logo1_rev_white. Used over the homepage photograph; other pages retain the official positive logo. An editor-selected custom Site Logo remains respected in WordPress.
+
+Typography rechecked against https://hcfm.org/ on 9 November 2026: editorial hero Calluna Bold 700, section/UI titles Whitney 700, reading Calluna, accents PlaylistScript 700. The added CallunaBold.woff2 face uses the same public HCFM theme font delivery; no font binary is redistributed.

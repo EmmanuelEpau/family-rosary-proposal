@@ -1,3 +1,4 @@
+@font-face{font-family:Calluna;src:local("CallunaBold"),url("https://hcfm.org/wp-content/themes/hcfm/build/fonts/Calluna/CallunaBold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:Whitney;src:local("WhitneyBook"),url("https://hcfm.org/wp-content/themes/hcfm/build/fonts/Whitney/WhitneyBook.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:Whitney;src:local("WhitneyMedium"),url("https://hcfm.org/wp-content/themes/hcfm/build/fonts/Whitney/WhitneyMedium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:Whitney;src:local("WhitneySemiBold"),url("https://hcfm.org/wp-content/themes/hcfm/build/fonts/Whitney/WhitneySemiBold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
@@ -125,3 +126,8 @@ html{scroll-padding-top:28px}body{font-size:19px;background:#fff;color:#000}h1,h
 @media(max-width:780px){.home .fr-nav .wp-block-navigation__responsive-container:not(.is-menu-open){display:none}.home .fr-nav .wp-block-navigation__responsive-container-open{display:flex}}
 .home .fr-nav .wp-block-navigation__responsive-container-open,.home .fr-nav .wp-block-navigation__responsive-container-close{min-width:44px;min-height:44px;align-items:center;justify-content:center}
 .home .fr-nav .is-menu-open .wp-block-navigation__responsive-container-close{display:flex}
+
+/* Match HCFM's editorial hero, reading, interface and script type roles. */
+.fr-cinematic-hero .fr-hero-copy h1,.fr-story-journey-copy h1{font-family:var(--fr-serif);font-weight:700;letter-spacing:-.02em;line-height:1.12;max-width:17ch}
+.fr-story-quote p{font-weight:700}
+.fr-nav{font-weight:700}
