@@ -14,7 +14,7 @@ Version 1.4.0, 9 November 2026. The five-page WordPress proposal follows HCFM.or
 
 ## Source and build
 
-Repository: EmmanuelEpau/family-rosary-proposal. Revision base 1705086. Earlier bases 99e43a4, 736460f and ec51442. Canonical native patterns/parts are in wordpress/family-rosary; docs is their static review export. Run npm ci and npm run build. The build emits downloads/family-rosary-theme-1.4.0.zip and content-hashed asset URLs so earlier open review tabs receive this revision. Catalog JSON is a source record, not an automatic publishing feed.
+Repository: EmmanuelEpau/family-rosary-proposal. Revision base 1705086. Earlier bases 99e43a4, 736460f and ec51442. Canonical native patterns/parts are in wordpress/family-rosary; docs is their static review export. Run npm ci and npm run build. The build emits downloads/family-rosary-theme-1.4.0.zip and content-hashed asset URLs plus release identifiers on internal preview links, so entering through a fresh versioned review link keeps subsequent navigation on this release. Previously loaded tabs need that fresh link or a refresh. Catalog JSON is a source record, not an automatic publishing feed.
 
 ## Verification
 
