@@ -100,4 +100,12 @@ Version 1.1.0 replaces the rejected cream/green/brown proposal with the user-req
 
 ## Version1.2.0, family journeys
 
-Native guide/details, story chapters, shared ministry navigation and nine named resource cards are editable blocks. Cards keep topic/format class tokens for the preview filter; a nontechnical editor workflow for changing classifications still needs acceptance testing. Interactive bead controls, filters and provider shelves remain scoped code, not ordinary prose blocks. All513blocks across18documents validated with the actual WordPress editor parser. Theme activation/rendering, five routes at desktop/phone, and source build passed. No production activation or complete editor save/reopen certification.
+Native guide/details, story chapters, shared ministry navigation and nine named resource cards are editable blocks. Cards keep topic/format class tokens for the preview filter; a nontechnical editor workflow for changing classifications still needs acceptance testing. Interactive bead controls, filters and provider shelves remain scoped code, not ordinary prose blocks. All513blocks across 18documents validated with the actual WordPress editor parser. Theme activation/rendering, five routes at desktop/phone, and source build passed. No production activation or complete editor save/reopen certification.
+
+## Version 1.4.0: streaming discovery and children
+
+Current source has 12 native resource cards, 46 unique programs (11 videos / 35 podcast episodes) and four featured selections on home/media. The carousel and media cards remain Custom HTML with scoped JavaScript; they are not native custom blocks or a media ingestion system. Manage feature artwork/title/provider payloads together in the patterns, retaining the catalog source record. The four YouTube counts are explicitly dated9 November 2026 snapshots; update their source evidence and visible date together. Do not present them as live counters.
+
+WordPress's actual parser checked 563 blocks across 18 documents with zero invalid blocks. Forty static route-width checks, carousel advance/manual pause, player entry/focus return, filters and phone transition containment passed in the internal browser. Reduced-motion branches were source-reviewed, not browser-emulated. Complete provider playback and normal editor save/reopen are not certified. Historical checks above apply to their named earlier versions.
+
+The exact Canva child photograph is included at Emmy's explicit direction for this public proposal. Original production reuse licensing remains to be confirmed; see ASSET-CREDITS.md. No production migration, ministry website or Canva edits occurred.
