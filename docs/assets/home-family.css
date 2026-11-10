@@ -75,8 +75,14 @@
 
 /* Each homepage invitation now has a distinct job: discover media, then pray. */
 .fr-age-family-photo{margin:24px 0 28px;border-radius:12px;overflow:hidden;background:#e8f0fc}
-.fr-age-family-photo img{display:block;width:100%;max-height:320px;object-fit:cover;object-position:center 45%}
+.fr-age-family-photo img{display:block;width:100%;height:auto;aspect-ratio:2.4;object-fit:cover;object-position:center 22%}
+@media(max-width:780px){.fr-age-family-photo img{aspect-ratio:3/2;object-fit:contain}}
 .fr-age-family-photo figcaption{padding:10px 16px;color:#244a79;font-size:14px}
+/* Keep the three collection gateways on the same artwork baseline. */
+.fr-home-collections .fr-collection-art{aspect-ratio:16/9;overflow:hidden}
+.fr-home-collections .fr-collection-art>a{display:block;width:100%;height:100%}
+.fr-home-collections .fr-collection-art>a>img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.fr-home-collections .fr-collection-art .fr-home-native-art{height:100%}
 .fr-today-preview{text-align:center;min-width:0;align-self:center}
 .fr-today-preview .fr-sacred-rosary{height:310px;min-height:0;width:100%;position:relative;background:#eaf2ff;margin-bottom:12px}
 .fr-today-preview canvas{display:block;width:100%;height:100%}

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build-rosary.mjs && python3 scripts/build-cinema.py && python3 scripts/build-resources.py && python3 scripts/build-preview.py",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "check:unit": "node scripts/check-media-recovery.mjs && node scripts/check-family-interactions.mjs && node scripts/check-home-photo-loading.mjs && python3 scripts/check-photo-role-sizes.py && node scripts/check-rosary.mjs && node scripts/check-rosary-journey.mjs && python3 scripts/check-site-content.py"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",

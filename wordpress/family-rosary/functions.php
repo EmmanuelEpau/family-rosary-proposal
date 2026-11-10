@@ -93,10 +93,26 @@ add_action( 'wp_enqueue_scripts', 'family_rosary_complete_experience_assets' );
 
 /** Responsive derivatives preserve original photography and its editorial crop. */
 function family_rosary_responsive_photos( $content ) {
- return preg_replace_callback( '~<img\b[^>]*\bsrc="([^" ]*/assets/photos/([^/" ]+)\.jpg)"[^>]*>~i', function( $match ) {
-  if ( strpos( $match[0], 'srcset=' ) !== false || ! file_exists( get_theme_file_path( 'assets/photos/' . $match[2] . '-640.webp' ) ) ) { return $match[0]; }
-  $base = preg_replace( '~\.jpg$~', '', $match[1] );
-  return str_replace( 'src="' . $match[1] . '"', 'src="' . esc_url( $base . '-1280.webp' ) . '" srcset="' . esc_url( $base . '-640.webp' ) . ' 640w, ' . esc_url( $base . '-1280.webp' ) . ' 1280w" sizes="100vw"', $match[0] );
+ static $layouts;
+ if ( ! isset( $layouts ) ) { $layouts = json_decode( file_get_contents( get_theme_file_path( 'assets/photo-layouts.json' ) ), true ); }
+ $role_size = function( $markup, $roles, $fallback ) {
+  if ( preg_match( '~\bclass="([^"]*)"~i', $markup, $classes ) ) {
+   foreach ( preg_split( '~\s+~', $classes[1] ) as $class ) { if ( isset( $roles[$class] ) ) { return $roles[$class]; } }
+  }
+  return $fallback;
+ };
+ $photos = function( $html, $figure_size ) use ( $layouts, $role_size ) {
+  return preg_replace_callback( '~<img\b[^>]*\bsrc="([^" ]*/assets/photos/([^/" ]+)\.jpg)"[^>]*>~i', function( $match ) use ( $layouts, $role_size, $figure_size ) {
+   if ( strpos( $match[0], 'srcset=' ) !== false || ! file_exists( get_theme_file_path( 'assets/photos/' . $match[2] . '-640.webp' ) ) ) { return $match[0]; }
+   $base = preg_replace( '~\.jpg$~', '', $match[1] );
+   $size = preg_match( '~\bsizes="[^"]*"~i', $match[0] ) ? '' : ' sizes="' . esc_attr( $role_size( $match[0], $layouts['images'], $figure_size ) ) . '"';
+   return str_replace( 'src="' . $match[1] . '"', 'src="' . esc_url( $base . '-1280.webp' ) . '" srcset="' . esc_url( $base . '-640.webp' ) . ' 640w, ' . esc_url( $base . '-1280.webp' ) . ' 1280w"' . $size, $match[0] );
+  }, $html );
+ };
+ // Core image blocks keep their saved serialization; sizes are added at render time.
+ $content = preg_replace_callback( '~<figure\b[^>]*>.*?</figure>~is', function( $match ) use ( $layouts, $role_size, $photos ) {
+  return $photos( $match[0], $role_size( substr( $match[0], 0, strpos( $match[0], '>' ) + 1 ), $layouts['figures'], $layouts['default'] ) );
  }, $content );
+ return $photos( $content, $layouts['default'] );
 }
 add_filter( 'render_block', 'family_rosary_responsive_photos' );

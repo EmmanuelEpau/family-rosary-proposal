@@ -23,3 +23,5 @@
 .fr-rosary-world .fr-optional-prayer p{font-size:1.05rem;line-height:1.65}
 .fr-rosary-world .fr-beads-return{display:none}
 @media(max-width:760px){.fr-rosary-world .fr-prayer-reader{scroll-margin-top:1rem}.fr-rosary-world .fr-beads-return{display:inline-flex;min-height:44px;align-items:center;margin-top:.5rem}}
+
+@media(max-width:760px){.fr-rosary-world #prayer-title{scroll-margin-top:1.5rem}.fr-rosary-world .fr-reader-controls{padding-bottom:max(1rem,env(safe-area-inset-bottom))}.fr-rosary-world .fr-prayer-words{overflow-wrap:break-word}}

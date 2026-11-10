@@ -3,7 +3,7 @@
  let api;
  function podbean(){
   if(typeof window.PB==='function')return Promise.resolve(window.PB);
-  if(!api)api=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='https://pbcdn1.podbean.com/fs1/player/api.js';script.onload=()=>typeof window.PB==='function'?resolve(window.PB):reject(new Error('Player unavailable'));script.onerror=reject;document.head.append(script);}).catch(error=>{api=null;throw error;});
+  if(!api)api=new Promise((resolve,reject)=>{const script=document.createElement('script'),fail=()=>{clearTimeout(deadline);script.remove();reject(new Error('Player unavailable'));},deadline=setTimeout(fail,8000);script.src='https://pbcdn1.podbean.com/fs1/player/api.js';script.onload=()=>{if(typeof window.PB!=='function'){fail();return;}clearTimeout(deadline);resolve(window.PB);};script.onerror=fail;document.head.append(script);}).catch(error=>{api=null;throw error;});
   return api;
  }
  document.addEventListener('click',event=>{
@@ -17,6 +17,6 @@
   const status=document.createElement('p');status.setAttribute('role','status');status.textContent='Loading audio…';box.append(status);
   const recover=()=>{if(!frame.isConnected)return;status.textContent='Use the player, retry, or open the original episode.';button.textContent='Retry audio';button.hidden=false;};
   const timeout=setTimeout(recover,8000);
-  podbean().then(PB=>{if(!frame.isConnected)return;const widget=new PB(frame);let started=false;const play=()=>{if(started||!frame.isConnected)return;started=true;widget.play();};widget.bind('PB.Widget.Events.READY',play);widget.isPaused(play);widget.bind('PB.Widget.Events.PLAY',()=>{if(!frame.isConnected)return;clearTimeout(timeout);status.textContent='Playing';button.hidden=true;});}).catch(()=>{clearTimeout(timeout);recover();});
+  podbean().then(PB=>{if(!frame.isConnected)return;const widget=new PB(frame);let started=false;const play=()=>{if(started||!frame.isConnected)return;started=true;widget.play();};widget.bind('PB.Widget.Events.PLAY',()=>{if(!frame.isConnected)return;clearTimeout(timeout);status.textContent='Playing';button.hidden=true;});widget.bind('PB.Widget.Events.READY',play);widget.isPaused(play);}).catch(()=>{clearTimeout(timeout);recover();});
  });
 })();

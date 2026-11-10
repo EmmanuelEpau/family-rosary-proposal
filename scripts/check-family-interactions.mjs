@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+const asset=name=>fs.readFileSync(new URL('../wordpress/family-rosary/assets/'+name,import.meta.url),'utf8');
+function control(dataset={}){return {dataset,hidden:false,disabled:false,listeners:{},attrs:{},classList:{add(){},toggle(){}},addEventListener(type,fn){this.listeners[type]=fn;},setAttribute(k,v){this.attrs[k]=v;},focus(){focus=this;},click(){this.listeners.click?.({preventDefault(){}});}};}
+let focus;
+const ages=['babies','primary','preteens','teens'],tabs=ages.map(age=>control({age}));
+const panels=ages.map(age=>{const panel=control({agePanel:age}),nodes=new Map();for(const key of ['start','controls','back','next','progress','restart','all'])nodes.set('[data-plan-'+key+']',control());const steps=Array.from({length:3},()=>{const step=control(),heading=control();step.querySelector=()=>heading;return step;});panel.querySelector=s=>nodes.get(s);panel.querySelectorAll=()=>steps;panel.steps=steps;panel.nodes=nodes;return panel;});
+const list=control();list.querySelectorAll=()=>tabs;
+vm.runInNewContext(asset('prayer-by-age.js'),{document:{querySelector:s=>s==='[data-age-tabs]'?list:control(),querySelectorAll:()=>panels},window:{addEventListener(){}},location:{href:'https://example.org/praying-with-children/?age=primary',search:'?age=primary',hash:''},history:{replaceState(){}},URL,URLSearchParams});
+const primary=panels[1],get=key=>primary.nodes.get('[data-plan-'+key+']');
+get('start').click();get('next').click();assert.equal(primary.steps[1].hidden,false);
+tabs[3].click();tabs[1].click();assert.equal(primary.steps[1].hidden,false,'Returning to an age keeps the prayer position');assert.equal(get('progress').textContent,'Part 2 of 3');
+tabs[1].click();assert.equal(get('progress').textContent,'Part 2 of 3','Selecting active age does not restart');
+get('next').click();get('next').click();assert.equal(get('next').disabled,true);assert.equal(focus,get('progress'),'Finish moves focus off the newly disabled button to completion status');assert.match(get('progress').textContent,/reached the end/);
+get('back').click();assert.equal(get('next').disabled,false);get('restart').click();assert.equal(get('progress').textContent,'Part 1 of 3');
+const listeners={},frames=[];let narrow=true,scrolls=0,bounds={top:-100,bottom:-60};
+const title={getBoundingClientRect:()=>bounds,scrollIntoView(){scrolls++;}};
+vm.runInNewContext(asset('prayer-experience.js'),{document:{currentScript:{src:'https://example.org/assets/prayer-experience.js'},querySelectorAll:()=>[],getElementById:()=>title,addEventListener(type,fn){listeners[type]=fn;}},window:{innerHeight:844,visualViewport:{height:844}},URL,matchMedia:()=>({matches:narrow}),requestAnimationFrame:fn=>frames.push(fn)});
+assert.equal(scrolls,0,'No automatic scroll on load');
+const click={target:{closest:()=>true}};listeners.click(click);listeners['fr-rosary-select']();assert.equal(frames.length,1,'Control and bead changes share one render frame');frames.shift()();assert.equal(scrolls,1,'Prayer above phone viewport is revealed');
+bounds={top:80,bottom:120};listeners.click(click);frames.shift()();assert.equal(scrolls,1,'Already visible prayer stays still');
+bounds={top:650,bottom:700};listeners.change({target:{matches:()=>true}});frames.shift()();assert.equal(scrolls,2,'Prayer below reading area is revealed');
+narrow=false;listeners.click(click);assert.equal(frames.length,0,'Desktop does not acquire phone scrolling');
+console.log('Family interactions: age progress retained, completion focus, explicit phone prayer reveal and no initial/desktop scroll verified.');
