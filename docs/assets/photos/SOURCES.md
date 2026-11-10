@@ -8,3 +8,7 @@ Selected from the user-authorized, signed-in HCFM Pixieset library in the intern
 - mother-children-relic.jpg: St-Bernadette-Relic-at-HCFM-Part-2_High-Resolution_EM_A2294.jpg; collection126529925.
 - family-daughters-prayer.jpg: St-Bernadette-Relic-at-HCFM-Part-2_High-Resolution_EM_A2401.jpg; collection126529925.
 - family-children-prayer.jpg: St-Bernadette-Relic-at-HCFM-Part-2_High-Resolution_EM_A2435.jpg; collection126529925.
+
+Additional November9 refinement: child-rosary-costume.jpg (All Souls EM_A7977), costume-children.jpg (All Souls EM_A8095), mary-may-crowning.jpg (MayCrowningCelebration-45). Exact gallery identifiers and observed download URLs are in ASSET-CREDITS.md. All are actual ministry photographs; no generated people or Rosary geometry.
+
+- family-festival-joy.jpg: HCFMFaithandFamilyDay-17.jpg, Sep13,2025, collection99488502/set142430065. Observed1600×1067 ministry photograph; exactURL in ASSET-CREDITS.md.

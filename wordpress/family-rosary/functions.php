@@ -87,7 +87,7 @@ add_action( 'wp_enqueue_scripts', 'family_rosary_prayer_experience_assets' );
 /** Shared resource and full Rosary experiences. */
 function family_rosary_complete_experience_assets() {
  $version = wp_get_theme()->get( 'Version' );
- foreach ( array( 'cinema-v3', 'resource-discovery', 'rosary-world', 'home-family', 'companion', 'prayer-by-age', 'print-guide-v3', 'cinema-preview' ) as $name ) {
+ foreach ( array( 'cinema-v3', 'resource-discovery', 'rosary-world', 'home-family', 'companion', 'prayer-by-age', 'print-guide-v3', 'cinema-preview', 'family-refinement' ) as $name ) {
   wp_enqueue_style( 'family-rosary-' . $name, get_theme_file_uri( 'assets/' . $name . '.css' ), array( 'family-rosary-site' ), $version );
  }
  foreach ( array( 'resource-discovery', 'rosary-journey', 'home-family', 'prayer-by-age', 'cinema-preview' ) as $name ) {
