@@ -1,0 +1,72 @@
+name: Refresh daily prayer broadcasts
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'wordpress/family-rosary/inc/live-prayer.php'
+      - 'wordpress/family-rosary/functions.php'
+      - 'wordpress/family-rosary/assets/live-prayer.js'
+      - 'scripts/check-live*'
+      - 'scripts/update-live-prayer.php'
+      - '.github/workflows/daily-prayer.yml'
+  schedule:
+    # Avoid the top-of-hour queue. Peak covers 11:30/noon Eastern in both DST seasons.
+    - cron: '7,12,17,22,27,32,37,42,47,52,57 15-18 * * 1-5'
+    - cron: '7 0-14,19-23 * * 1-5'
+    - cron: '7 * * * 0,6'
+permissions:
+  contents: read
+jobs:
+  checks:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/check-live-prayer.mjs
+      - run: php scripts/check-live-resolver.php
+      - run: php -l scripts/update-live-prayer.php
+  refresh:
+    if: github.event_name != 'pull_request' && vars.FR_LIVE_AUTOMATION_ENABLED == 'true'
+    permissions:
+      contents: write
+      pages: write
+    concurrency:
+      group: family-rosary-daily-prayer
+      cancel-in-progress: false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Resolve the Pacific quota day
+        id: date
+        run: echo "day=$(TZ=America/Los_Angeles date +%F)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache/restore@v4
+        with:
+          path: .live-state
+          key: daily-prayer-${{ steps.date.outputs.day }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: daily-prayer-${{ steps.date.outputs.day }}-
+      - name: Discover and verify current broadcasts
+        env:
+          FR_YOUTUBE_API_KEY: ${{ secrets.FR_YOUTUBE_API_KEY }}
+        run: php scripts/update-live-prayer.php
+      - name: Retain quota accounting even if the provider fails
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .live-state
+          key: daily-prayer-${{ steps.date.outputs.day }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Publish the small public metadata file
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/live/prayer.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Refresh verified daily prayer source'
+          git pull --rebase origin main
+          git push origin HEAD:main
+          # A token push does not trigger another workflow. Request the existing Pages build explicitly.
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" > /dev/null

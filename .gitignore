@@ -5,3 +5,6 @@ __pycache__/
 *.pyc
 
 .impeccable/review/
+
+# Local automatic-source cache contains only public metadata, never credentials.
+.live-state/
