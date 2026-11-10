@@ -1,0 +1,45 @@
+/* Watch & Listen opens at the image; the ministry strip remains the first surface. */
+body:has(.fr-cinema) .fr-header{background:transparent;position:relative;z-index:20}
+body:has(.fr-cinema) .fr-header:after{content:'';position:absolute;top:100%;left:0;right:0;height:190px;background:linear-gradient(180deg,#001029ed,#00102985 55%,transparent);pointer-events:none;z-index:0}
+body:has(.fr-cinema) .fr-ministry-bar{position:relative;z-index:2}
+body:has(.fr-cinema) .fr-header-inner{position:absolute;top:100%;left:0;right:0;z-index:1;background:transparent;border:0}
+body:has(.fr-cinema) .fr-brand img,body:has(.fr-cinema) .fr-header .custom-logo{filter:brightness(0) invert(1)}
+body:has(.fr-cinema) .fr-nav a{color:#fff;text-shadow:0 1px 6px #00102966}
+body:has(.fr-cinema) .fr-nav-pray a{color:#fff;border-color:#fff}
+body:has(.fr-cinema) .fr-nav-pray a:hover{background:#fff;color:#0047bb;text-shadow:none}
+body:has(.fr-cinema) .fr-mobile-toggle,body:has(.fr-cinema) .wp-block-navigation__responsive-container-open{color:#fff;border-color:#fff;background:transparent}
+body:has(.fr-cinema) .fr-header :focus-visible{outline-color:#ffb500}
+body:has(.fr-cinema) .fr-header .fr-nav.fr-menu-open a,body:has(.fr-cinema) .fr-nav .wp-block-navigation__responsive-container.is-menu-open a{color:#0047bb;text-shadow:none}
+body:has(.fr-cinema) .fr-nav .wp-block-navigation__responsive-container.is-menu-open{background:#fff;color:#0047bb}
+body:has(.fr-cinema) .fr-nav .wp-block-navigation__responsive-container-close{color:#0047bb}
+body:has(.fr-cinema) .fr-header .fr-nav.fr-menu-open .fr-nav-pray a,body:has(.fr-cinema) .fr-nav .is-menu-open .fr-nav-pray a{border-color:#0047bb}
+body:has(.fr-cinema) .fr-nav .is-menu-open :focus-visible,body:has(.fr-cinema) .fr-header .fr-menu-open :focus-visible{outline-color:#0047bb}
+.fr-cinema .cinema-feature-copy{padding-top:170px;padding-bottom:65px}
+.fr-cinema .cinema-feature-slide{min-height:650px}
+.fr-cinema .cinema-feature-image{width:100%}
+.fr-cinema .cinema-navigation{background:#0047bb;color:#fff}
+.fr-cinema .cinema-navigation>.fr-wrap{padding-block:12px;min-height:70px}
+.fr-cinema .cinema-navigation h1{font-size:20px;color:#fff;white-space:nowrap}
+.fr-cinema .cinema-navigation nav{font-size:15px;gap:24px}
+.fr-cinema .cinema-navigation a{color:#fff}
+.cinema-muted-preview{container-type:size;position:absolute;inset:0;overflow:hidden;pointer-events:none;opacity:0;transition:opacity .8s ease-out}
+.cinema-muted-preview.is-playing{opacity:1}
+.cinema-muted-preview iframe{position:absolute;top:50%;left:50%;width:max(100cqw,177.78cqh);height:max(56.25cqw,100cqh);transform:translate(-50%,-50%);border:0;pointer-events:none}
+.fr-cinema .cinema-feature-image,.fr-cinema .cinema-feature-shade,.fr-cinema .cinema-feature-copy{position:relative}
+.fr-cinema .cinema-feature-image{position:absolute;z-index:0}
+.fr-cinema .cinema-muted-preview{z-index:1}
+.fr-cinema .cinema-feature-shade{position:absolute;z-index:2}
+.fr-cinema .cinema-feature-copy{z-index:3}
+@media(max-width:780px){body:has(.fr-cinema) .fr-header:after{height:165px}body:has(.fr-cinema) .fr-header .fr-nav.fr-menu-open{top:100%;left:calc(-1 * var(--fr-gap));right:calc(-1 * var(--fr-gap));background:#fff}.fr-cinema .cinema-feature-slide{min-height:650px}.fr-cinema .cinema-feature-copy{padding-top:160px;padding-bottom:40px}.fr-cinema .cinema-feature-image{height:100%;width:100%;object-fit:cover;opacity:.75}.fr-cinema .cinema-feature-shade{background:linear-gradient(90deg,#001c49eb,#001c4980),linear-gradient(0deg,#001c49,transparent 80%)}.fr-cinema .cinema-navigation>.fr-wrap{display:block;padding-block:16px}.fr-cinema .cinema-navigation h1{margin-bottom:8px}.fr-cinema .cinema-navigation nav{display:flex;gap:8px 20px;flex-wrap:wrap}.fr-cinema .cinema-navigation nav a{font-size:14px;min-height:44px}}
+@media(prefers-reduced-motion:reduce){.cinema-muted-preview{display:none!important;transition:none}}
+@media print{.cinema-muted-preview{display:none!important}}
+/* Phone: preserve the wide source in an upper image window, then read on blue. */
+@media(max-width:780px){
+ .fr-cinema .cinema-feature .cinema-feature-slide{min-height:0;background:#001c49}
+ .fr-cinema .cinema-feature .cinema-feature-slide .cinema-feature-image{position:absolute;inset:0 0 auto;width:100%;height:330px;max-height:none;object-fit:cover;object-position:center;opacity:1}
+ .fr-cinema .cinema-feature .cinema-feature-slide .cinema-muted-preview{inset:0 0 auto;width:100%;height:330px}
+ .fr-cinema .cinema-feature .cinema-feature-slide .cinema-feature-shade{position:absolute;inset:0;width:100%;height:100%;max-height:none;background:linear-gradient(180deg,rgba(0,28,73,.12) 0,rgba(0,28,73,.16) 180px,rgba(0,28,73,.6) 255px,rgba(0,28,73,.96) 315px,#001c49 335px);z-index:2}
+ .fr-cinema .cinema-feature .cinema-feature-slide .cinema-feature-copy{padding-top:300px;padding-bottom:30px;width:auto}
+ .fr-cinema .cinema-feature .episode-feature-title .cinema-feature-image{object-fit:contain}
+ .fr-cinema .cinema-feature-bottom{padding-bottom:16px}
+}

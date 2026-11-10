@@ -79,3 +79,7 @@ Eight source-portrait compositions: Sonia Martinez-Trujillo, Stephen Driscoll, K
 All 23 episode backgrounds in `assets/episodes/audio-*.svg` are editable native editorial artwork, with blue and yellow/white series identity, a magnifying-glass motif and native page text for the series and episode hook. PlaylistScript supplies the “Mysteries” lettering through the existing authorized public font reference. They contain no fabricated guest portraits, quotations or session photographs. Original published episode artwork and source URLs remain in `content/media.json`; the native compositions do not claim to be original official covers.
 
 The previously credited Canva child photograph remains a baseline asset with the same source and licensing limitation above. This revision does not establish new photographer credits or blanket production licensing for any published third-party asset.
+
+## 1.6.1 photographic crucifix
+
+Sign of the Cross uses an actual photograph of the chapel crucifix at The Father Peyton Center, from Emmy’s Pixieset collection St. Bernadette Relic at HCFM Part 2, Nov4,2026. Original filename St-Bernadette-Relic-at-HCFM-Part-2_High-Resolution_EM_A1990.jpg, collection126529925/set182542383, photo34of167. Observed1600×2399preview at https://images.pixieset.com/529925621/5eee0a8c53d87e9dd894714a103ac468-xxlarge.jpg; localassetphotos/crucifix-peyton-center.jpg. This is genuine photographed religious artwork, not a generated corpus or geometric substitute.

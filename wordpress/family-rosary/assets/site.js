@@ -61,10 +61,11 @@
   const selectors=[...carousel.querySelectorAll('[data-feature-select]')];
   const toggle=carousel.querySelector('[data-feature-toggle]');
   const status=carousel.querySelector('[data-feature-status]');
+  const pauseOnHover=!carousel.classList.contains('cinema-feature');
   const dialog=document.querySelector('#media-dialog, #cinema-dialog');
   if(slides.length<2||!toggle)return;
   let index=0,paused=motion.matches,hovered=matchMedia('(hover: hover)').matches&&carousel.matches(':hover'),inView=true,resumedOnToggle=false,timer,toggleIntent;
-  const canRotate=()=>!paused&&!hovered&&inView&&!document.hidden&&!dialog?.open&&(!carousel.contains(document.activeElement)||(resumedOnToggle&&document.activeElement===toggle));
+  const canRotate=()=>!paused&&(!pauseOnHover||!hovered)&&inView&&!document.hidden&&!dialog?.open&&(!carousel.contains(document.activeElement)||(resumedOnToggle&&document.activeElement===toggle));
   const schedule=()=>{
    clearTimeout(timer);
    carousel.dataset.featurePaused=String(!canRotate());
@@ -73,7 +74,7 @@
    if(canRotate())timer=setTimeout(()=>{
     if(canRotate())render(index+1);
     schedule();
-   },9000);
+   },carousel.classList.contains('cinema-feature')?12000:9000);
   };
   const render=(next,announce=false)=>{
    index=(next+slides.length)%slides.length;
