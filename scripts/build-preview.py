@@ -41,4 +41,4 @@ print('Static review exported from WordPress patterns and template parts.')
 
 # Package the current native theme alongside the static review.
 (OUT/"downloads").mkdir(exist_ok=True)
-shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.5.0"),"zip",root_dir=T.parent,base_dir=T.name)
+shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.5.1"),"zip",root_dir=T.parent,base_dir=T.name)

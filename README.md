@@ -2,9 +2,17 @@
 
 [Open the review website](https://emmanuelepau.github.io/family-rosary-proposal/)
 
-Version 1.5.0, 9 November 2026. Six-page WordPress proposal using HCFM.org’s Whitney, Calluna and PlaylistScript typography, official Family Rosary marks, white reading surfaces, HCFM blue and selective yellow. This is the public design proposal; the ministry website is unchanged.
+Version 1.5.1, 9 November 2026. Six-page WordPress proposal using HCFM.org’s Whitney, Calluna and PlaylistScript typography, official Family Rosary marks, white reading surfaces, HCFM blue and selective yellow. This is the public design proposal; the ministry website is unchanged.
 
-## This revision
+## Playback correction — 1.5.1
+
+Episode cards and episode lists now start embedded playback directly. Explicit More details remains an information view. A single persistent audio player offers real Podbean playback controls while browsing Watch & Listen. The compact glass surface uses SVG play/pause, expand/collapse and stop icons, accessible labels and 44-pixel targets. Homepage episode links carry playback intent. Video selection unloads audio; audio selection unloads the prior player. Closing program details leaves active audio available; Stop unloads it. Audio continues within the current page, not across page navigation.
+
+Verified in the internal browser at desktop and 390-pixel phone width: actual YouTube playback advancing after one click, episode switching, actual Podbean playback, pause, stop, minimized state, details-to-episode navigation and homepage playback/one-click close. Build, JavaScript syntax, Rosary structure and whitespace checks passed. Provider or browser policies may require using the embedded player’s own Play control in other environments. No replacement instructional videos were published; a sample must be reviewed first.
+
+Base: 5cdba2cec3493573466e811be180d3001278180c. Implementation isolated in the task-folder playback-release clone. The larger revision 3 design remains in the separate repo clone and is not part of this focused release.
+
+## Previous design revision — 1.5.0
 
 - Watch & Listen now opens with a four-selection cinematic carousel, manual selectors, pause/resume and explicit Watch/Listen actions. Horizontal shelves use visible next-item peeks, scroll controls and quiet popularity numerals.
 - The catalog contains 57 programs: 22 videos and 35 podcast episodes. All 46 prior IDs remain. Eleven FTP additions cover family testimony, prayer at home and Digital Age Family Safety. Two lead family interviews use actual footage frames. Publisher/series metadata stays attributed; unavailable production credits are not invented.
@@ -18,7 +26,7 @@ Version 1.5.0, 9 November 2026. Six-page WordPress proposal using HCFM.org’s W
 
 Repository: EmmanuelEpau/family-rosary-proposal. Base commit a47f7232fb683cd8baab90506d10c27e3e3c6d03. Native patterns, parts and assets live in wordpress/family-rosary; docs is their static review export. Development work is isolated in the dated task-folder clone.
 
-Run npm ci, then npm run build. The build bundles the same-origin Rosary module and exports six review routes plus downloads/family-rosary-theme-1.5.0.zip. Historical packages remain. Edit content/media.json and the media generator together; run python3 scripts/build-cinema.py before building after media-template changes. Three.js and esbuild versions are pinned in package-lock.json. Bundled library notices are retained.
+Run npm ci, then npm run build. The build bundles the same-origin Rosary module and exports six review routes plus downloads/family-rosary-theme-1.5.1.zip. Historical packages remain. Edit content/media.json and the media generator together; run python3 scripts/build-cinema.py before building after media-template changes. Three.js and esbuild versions are pinned in package-lock.json. Bundled library notices are retained.
 
 ## Verification for 1.5.0
 
