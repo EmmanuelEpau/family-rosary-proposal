@@ -109,11 +109,3 @@
 <!-- wp:paragraph --><p><a class="text-link" href="https://www.fatherpeyton.org/">Explore Father Peyton’s life</a></p><!-- /wp:paragraph -->
 
 </section><!-- /wp:group -->
-<!-- wp:group {"className":"fr-wrap fr-section fr-giving","layout":{"type":"default"},"tagName":"section"} --><section class="wp-block-group fr-wrap fr-section fr-giving">
-<!-- wp:heading {"level":2} --><h2 class="wp-block-heading">Help another family<br>find its way to prayer.</h2><!-- /wp:heading -->
-<!-- wp:paragraph --><p>Your support helps Family Rosary share the gift of prayer with families.</p><!-- /wp:paragraph -->
-<!-- wp:group {"className":"fr-actions","layout":{"type":"default"}} --><div class="wp-block-group fr-actions">
-<!-- wp:button {"className":"is-style-outline"} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="https://www.familyrosary.org/support-family-rosary">Support Family Rosary</a></div><!-- /wp:button -->
-</div><!-- /wp:group -->
-
-</section><!-- /wp:group -->

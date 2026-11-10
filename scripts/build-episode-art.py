@@ -1,4 +1,5 @@
-"""Build editable native SVG textures for title-led audio compositions.
+"""Build editable legacy series marks used as compact selectors/fallbacks.
+Photographic topic covers are composed by build-cinema from real image assets.
 No participant imagery is generated. Exact episode titles remain native HTML.
 """
 from pathlib import Path

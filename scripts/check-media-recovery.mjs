@@ -17,7 +17,7 @@ class Node {
  focus(){}
 }
 function environment(){
- let now=0,next=1;const timers=new Map(),scripts=[],document={head:new Node('head'),body:new Node('body'),createElement:tag=>new Node(tag),addEventListener(k,v){this[k]=v;}};
+ let now=0,next=1;const timers=new Map(),scripts=[],document={head:new Node('head'),body:new Node('body'),dispatched:[],createElement:tag=>new Node(tag),addEventListener(k,v){this[k]=v;},dispatchEvent(event){this.dispatched.push(event.type);this[event.type]?.(event);return true;}};
  document.head.append=script=>scripts.push(script);
  const clock={setTimeout(fn,delay){const id=next++;timers.set(id,{fn,at:now+delay});return id;},clearTimeout(id){timers.delete(id);},advance(ms){const end=now+ms;for(;;){const entry=[...timers].sort((a,b)=>a[1].at-b[1].at)[0];if(!entry||entry[1].at>end)break;timers.delete(entry[0]);now=entry[1].at;entry[1].fn();}now=end;}};
  return {document,scripts,clock,window:{},flush:async()=>{for(let i=0;i<8;i++)await Promise.resolve();}};
@@ -38,9 +38,9 @@ function provider({respond=false,synchronousPlay=true}={}){
 function cinema(){
  const env=environment(),dock=new Node(),dockProvider=new Node(),dockToggle=new Node('button'),dockStatus=new Node(),mount=new Node();
  dock.parts={'.cinema-dock-minimize':new Node('button'),'.cinema-dock-title':new Node()};
- const context=vm.createContext({window:env.window,document:env.document,URL,Promise,setTimeout:env.clock.setTimeout,clearTimeout:env.clock.clearTimeout,dock,dockProvider,dockToggle,dockStatus,mount,dialog:{open:false},el:(tag,text,cls)=>Object.assign(new Node(tag),{textContent:text||'',className:cls||''}),dockIcon:(button,kind,label)=>{button.kind=kind;button.label=label;},setDockCompact:compact=>dock.classList.toggle('is-minimized',compact)});
- vm.runInContext(`let audioWidget=null,activeAudio=null,widgetPromise=null,audioReady=false,audioReadyTimer=0,audioStartTimer=0,closingForAudio=false;\n${between(' function stopAudio()',' dock.querySelector(\'.cinema-dock-stop\')')}\n${between(" dockToggle.addEventListener('click'",' // Editorial selections')}\n${between(' function loadAudio(m)',' function playProgram')}\nthis.controller={loadAudio,get ready(){return audioReady;}};`,context);
- return {...env,dock,dockProvider,dockToggle,dockStatus,controller:context.controller};
+ const context=vm.createContext({window:env.window,document:env.document,URL,Promise,Event:class{constructor(type){this.type=type;}},setTimeout:env.clock.setTimeout,clearTimeout:env.clock.clearTimeout,dock,dockProvider,dockToggle,dockStatus,mount,dialog:{open:false},el:(tag,text,cls)=>Object.assign(new Node(tag),{textContent:text||'',className:cls||''}),dockIcon:(button,kind,label)=>{button.kind=kind;button.label=label;},setDockCompact:compact=>dock.classList.toggle('is-minimized',compact)});
+ vm.runInContext(`let audioWidget=null,activeAudio=null,widgetPromise=null,audioReady=false,audioReadyTimer=0,audioStartTimer=0,closingForAudio=false;\n${between(' function stopAudio()',' dock.querySelector(\'.cinema-dock-stop\')')}\n${between(" dockToggle.addEventListener('click'",' // Editorial selections')}\n${between(' function loadAudio(m)',' function playProgram')}\n${source.split('\n').find(line=>line.includes("document.addEventListener('fr-live-prayer-open'"))||''}\nthis.controller={loadAudio,get ready(){return audioReady;}};`,context);
+ return {...env,dock,dockProvider,dockToggle,dockStatus,mount,controller:context.controller};
 }
 const episode=id=>({id,title:id,display_title:id,embed_url:'https://www.podbean.com/player-v2/?i='+id,episode_url:'https://example.com/'+id});
 let passed=0,failed=0;
@@ -89,5 +89,12 @@ await test('runtime photo candidates exist and switching to other artwork clears
  for(const path of context.photos){for(const width of [640,1280])assert.equal(fs.existsSync('wordpress/family-rosary/assets/'+path.slice(0,-4)+'-'+width+'.webp'),true);}
  const img={removeAttribute(name){delete this[name];}};context.apply(img,'photos/crucifix-peyton-center.jpg','144px');assert.match(img.srcset,/-640\.webp 640w/);assert.equal(img.sizes,'144px');
  context.apply(img,'episodes/audio.svg','1024px');assert.equal(img.src,'../assets/episodes/audio.svg');assert.equal(img.srcset,undefined);assert.equal(img.sizes,undefined);
+});
+await test('starting recorded audio announces exclusive media playback',async()=>{
+ const e=cinema(),p=provider({respond:true});e.window.PB=p.PB;e.controller.loadAudio(episode('a'));await e.flush();assert.equal(e.document.dispatched.filter(type=>type==='fr-recorded-media-play').length,1);
+});
+await test('opening live prayer unmounts the recorded providers and clears audio state',async()=>{
+ const e=cinema(),p=provider({respond:true});e.window.PB=p.PB;e.controller.loadAudio(episode('a'));await e.flush();const oldFrame=e.dockProvider.querySelector('iframe');e.mount.append(new Node('iframe'));
+ e.document.dispatchEvent({type:'fr-live-prayer-open'});assert.equal(e.dock.hidden,true);assert.equal(oldFrame.isConnected,false);assert.equal(e.mount.children.length,0);assert.equal(e.document.body.classList.contains('has-cinema-audio'),false);
 });
 console.log(`${passed} media recovery/state regressions passed; ${failed} failed; no browser or network used.`);if(failed)process.exitCode=1;

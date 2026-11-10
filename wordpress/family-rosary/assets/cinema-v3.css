@@ -226,3 +226,56 @@
 .fr-cinema .cinema-feature .episode-feature-title .cinema-feature-image{width:65%;height:100%;object-fit:cover;object-position:center bottom}
 .fr-cinema .cinema-feature .episode-feature-title .cinema-feature-shade{background:linear-gradient(90deg,#001c49 29%,rgba(0,28,73,.88) 40%,rgba(0,28,73,.12) 72%)}
 @media(max-width:780px){.fr-cinema .cinema-feature .episode-feature-title .cinema-feature-image{width:100%;height:330px}.fr-cinema .cinema-feature .episode-feature-title .cinema-feature-shade{background:linear-gradient(180deg,rgba(0,28,73,.1) 150px,#001c49 335px)}}
+
+/* Topic photographs bring the audio into family life; blue keeps the titles legible. */
+.topic-photograph{background:#0047bb}
+.topic-photograph>img,.cinema-card-art.topic-photograph>img,.episode-preview.topic-photograph>img{position:absolute;inset:0 0 0 31%;width:69%;height:100%;object-fit:cover;object-position:var(--episode-photo-position,center)}
+.topic-photograph:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0047bb 0%,#0047bb 35%,rgba(0,71,187,.95) 45%,rgba(0,71,187,.72) 57%,rgba(0,71,187,.12) 78%,transparent 94%);pointer-events:none}
+.topic-photograph .episode-native-copy{z-index:1;inset:8% 7%}
+.topic-photograph .episode-native-copy strong{max-width:59%;font-size:clamp(19px,7.2cqw,25px);color:#fff;line-height:1.08}
+.topic-photograph .episode-show{display:flex;align-items:center;gap:4px;max-width:none}
+.topic-photograph .episode-show>svg{flex:none;color:#ffb500;width:15px;height:15px;margin-left:3px}
+.episode-preview.topic-photograph .episode-native-copy strong{font-size:clamp(9px,7.5cqw,13px)}
+.episode-preview.topic-photograph .episode-show>svg{width:8px;height:8px;margin-left:0}
+.cinema-result .topic-photograph .episode-native-copy strong{font-size:clamp(19px,7.2cqw,25px)}
+.cinema-dialog[data-topic-photo="true"] .cinema-detail-art{background:#0047bb;overflow:hidden}
+.cinema-dialog[data-topic-photo="true"] .cinema-detail-art>img{inset:0 0 0 30%;width:70%;height:100%;object-fit:cover;object-position:var(--episode-photo-position,center)}
+.cinema-dialog[data-topic-photo="true"] .cinema-detail-art:after{display:block;background:linear-gradient(90deg,#0047bb 27%,rgba(0,71,187,.91) 44%,rgba(0,71,187,.15) 78%,transparent)}
+.cinema-dialog[data-topic-photo="true"] .cinema-detail-title{max-width:62%;z-index:1}
+
+/* Two faithful crops replace the room-heavy call rectangle; people remain unaltered. */
+.episode-session-art:has(.session-speakers)>img{visibility:hidden}
+.session-speakers{position:absolute;inset:23% 0 0;display:grid;grid-template-columns:1fr 1fr;gap:2px;overflow:hidden;background:#0047bb}
+.session-person{position:relative;min-width:0;overflow:hidden}
+.cinema-card-art.episode-session-art .session-person>img,.episode-preview.episode-session-art .session-person>img,.cinema-detail-art .session-person>img{position:absolute;inset:0 auto auto 0;width:200%;height:100%;max-width:none;object-fit:cover;object-position:25% 0;transform:none!important}
+.cinema-card-art.episode-session-art .session-person-host>img,.episode-preview.episode-session-art .session-person-host>img,.cinema-detail-art .session-person-host>img{left:-100%;object-position:75% 0}
+.session-person:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 68%,rgba(0,47,125,.65));pointer-events:none}
+.cinema-dialog[data-artwork-kind="session-composition"] .cinema-detail-art:has(.session-speakers)>img{display:none}
+.cinema-dialog[data-artwork-kind="session-composition"] .cinema-detail-art>.session-wordmark{height:clamp(76px,8vw,110px);padding:20px}
+.cinema-dialog[data-artwork-kind="session-composition"] .session-speakers{position:relative;inset:auto;width:100%;height:clamp(280px,38vw,440px)}
+.cinema-dialog.is-playing .cinema-detail-art>.session-speakers{display:none!important}
+
+/* The actual photographed corpus stays visible through a continuous blue/photo fade. */
+.instruction-art.instruction-crucifix>img,.fr-home-media-band .fr-home-native-art.instruction-crucifix>img{inset:0 0 0 35%;width:65%;height:100%;object-fit:cover;object-position:50% 20%;background:#0047bb}
+.instruction-crucifix:after{background:linear-gradient(90deg,#0047bb 0%,#0047bb 40%,rgba(0,71,187,.9) 47%,rgba(0,71,187,.3) 63%,transparent 79%)}
+.instruction-crucifix .instruction-copy strong{max-width:43%}
+.cinema-dialog[data-artwork-subject="crucifix"] .cinema-detail-art{position:relative;height:clamp(320px,45vw,480px);min-height:0;background:#0047bb;overflow:hidden}
+.cinema-dialog[data-artwork-subject="crucifix"] .cinema-detail-art>img{position:absolute;inset:0 0 0 35%;width:65%;height:100%;object-fit:cover;object-position:50% 20%}
+.cinema-dialog[data-artwork-subject="crucifix"] .cinema-detail-art:after{display:block;background:linear-gradient(90deg,#0047bb 35%,rgba(0,71,187,.9) 47%,rgba(0,71,187,.12) 75%,transparent)}
+.cinema-dialog[data-artwork-subject="crucifix"] .cinema-detail-title{position:absolute;inset:auto auto 32px 6%;max-width:43%;padding:0;background:transparent;z-index:1}
+
+/* Homepage Scott feature and collection gateway reuse the same faithful speaker crops. */
+.fr-home-media-band .fr-home-native-art.episode-session-art .session-person>img,.fr-home-media-band .fr-home-photo-session .session-person>img{position:absolute;inset:0 auto auto 0;width:200%;height:100%;max-width:none;margin:0;padding:0;object-fit:cover;object-position:25% 0;background:transparent;transform:none!important}
+.fr-home-media-band .fr-home-native-art.episode-session-art .session-person-host>img,.fr-home-media-band .fr-home-photo-session .session-person-host>img{left:-100%;object-position:75% 0}
+.fr-home-media-band .fr-home-photo-session .fr-feature-art:has(>.session-speakers)>img{visibility:hidden}
+.fr-home-media-band .fr-home-photo-session .fr-feature-art>.session-speakers{inset:0;max-width:1040px;height:100%;margin-inline:auto}
+@media(max-width:780px){.fr-home-media-band .fr-home-photo-session .fr-feature-art:has(>.session-speakers){aspect-ratio:16/10;height:auto}.fr-home-media-band .fr-home-photo-session .fr-feature-art>.session-speakers{max-width:none}}
+
+/* Canva supplies only alpha; each face/body retains the original session JPG pixels. */
+.session-person{--session-source-position:25% 0}
+.session-person-host{--session-source-position:75% 0}
+.session-speakers.session-cutout,.cinema-session-portraits.session-cutout{gap:0;background:#0047bb}
+.session-cutout .session-person>img{mask-image:var(--session-cutout-mask);-webkit-mask-image:var(--session-cutout-mask);mask-mode:alpha;mask-size:cover;-webkit-mask-size:cover;mask-repeat:no-repeat;-webkit-mask-repeat:no-repeat;mask-position:var(--session-source-position);-webkit-mask-position:var(--session-source-position)}
+.cinema-card-art.episode-session-art .session-person>img,.episode-preview.episode-session-art .session-person>img,.cinema-detail-art .session-person>img,.fr-home-media-band .fr-home-native-art.episode-session-art .session-person>img,.fr-home-media-band .fr-home-photo-session .session-person>img{object-position:var(--session-source-position)}
+.cinema-session-portraits.session-cutout .session-person>img{position:absolute;inset:0 auto auto 0;width:200%;height:100%;max-width:none;object-fit:cover;object-position:var(--session-source-position);transform:none!important}
+.cinema-session-portraits.session-cutout .session-person-host>img{left:-100%}
