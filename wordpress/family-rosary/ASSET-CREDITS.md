@@ -94,3 +94,7 @@ Four additional photographs were visually reviewed and downloaded through Emmy�
 - `photos/mary-may-crowning.jpg`: `MayCrowningCelebration-45.jpg`, May1,2026, collection113883582/set163466740, photo18467738344 (44of55). Observed1600×1124 preview: https://images.pixieset.com/285388311/42df973f75aa630de15bf6388f52141a-xxlarge.jpg. A front-facing statue of Mary with a blue and white flower crown replaces the away-facing profile in the homepage Joyful Mysteries feature.
 
 - `photos/family-festival-joy.jpg`: `HCFMFaithandFamilyDay-17.jpg`, Sep13,2025, collection99488502/set142430065, photograph17of274. Observed1600×1067 preview: https://images.pixieset.com/20588499/c107f14d68c081df4679c6af527997c2-xxlarge.jpg. A joyful outdoor family group provides a visual contrast to the chapel prayer photographs.
+
+
+### 1.7.0 optimized derivatives
+640/1280WebP derivatives preserve the credited ministry photos and crops; originals retained. through-mysteries.webp is the same existing texture optimized from1,827,669to68,794bytes. Split interview portrait windows use the actual credited session source; no generated faces or fabricated studio.

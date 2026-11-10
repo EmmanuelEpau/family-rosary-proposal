@@ -21,6 +21,8 @@
   };
   const render = () => {
     const term = normalized(fields.q.value.trim());
+    const active = ['topic','format','language','view'].filter(key=>fields[key].value);
+    const summary=form.querySelector('.rd-advanced summary');if(summary)summary.textContent=active.length?'Filters · '+active.map(key=>fields[key].selectedOptions[0].textContent).join(' · '):'Filter resources';
     matches = cards.filter(card => (!term || normalized(card.textContent).includes(term)) &&
       ['topic', 'format', 'language', 'view'].every(key => !fields[key].value ||
         (card.dataset[key === 'topic' ? 'topics' : key] || (key === 'language' ? 'unknown' : '')).split(' ').includes(fields[key].value)));

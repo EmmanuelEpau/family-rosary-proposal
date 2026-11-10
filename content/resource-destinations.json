@@ -17,10 +17,14 @@
   },
   "https://cta-redirect.hubspot.com/cta/redirect/275132/06b315e1-28fc-49a9-9fdb-44af2b2c11f6": {
     "url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/Laudato%20Si.pdf",
-    "format": "pdf"
+    "format": "pdf",
+    "description": "Simple ways to care for creation together, with activities and dinner-table questions."
   },
   "https://cta-redirect.hubspot.com/cta/redirect/275132/8cd18dfa-ee9f-4ce2-aa38-73f0fe7d50eb": {
-    "url": "https://howsyourprayerlife.podbean.com/"
+    "url": "../watch-and-listen/#listen-row-1-title",
+    "source_url": "https://howsyourprayerlife.podbean.com/",
+    "source_label": "Original podcast",
+    "action": "Explore episodes"
   },
   "https://cta-redirect.hubspot.com/cta/redirect/275132/8b67c7dc-458b-4f0a-b288-6fa7e3fd1a2e": {
     "url": "https://www.catholicmom.com/catholic-momcast"
@@ -42,7 +46,7 @@
   },
   "https://cta-redirect.hubspot.com/cta/redirect/275132/96983052-332c-41e8-96bd-b6c703f34bfd": {
     "url": "https://www.youtube.com/watch?v=bFWwsG5akIg&list=PLurQtwHuNc-MNiAP0Rl24qFFJwX6UsFmR",
-    "action": "Official series playlist",
+    "action": "View linked rally playlist",
     "description": "Explore the playlist linked by Family Rosary for this series. The source currently opens with a recording of the 75th Anniversary Rosary Rally on September 7, 2025."
   },
   "https://cta-redirect.hubspot.com/cta/redirect/275132/f387b8cc-c658-4b59-af94-f875882092ec": {
@@ -177,7 +181,10 @@
     "url": "https://www.youtube.com/watch?v=RjMuHG8JItE&feature=youtu.be"
   },
   "https://cta-redirect.hubspot.com/cta/redirect/275132/b7d58630-a23d-46f7-abf7-665fb6f239a0": {
-    "url": "https://www.familyrosary.org/through-the-mysteries"
+    "url": "../watch-and-listen/#listen-row-0-title",
+    "source_url": "https://www.familyrosary.org/through-the-mysteries",
+    "source_label": "Original series",
+    "action": "Explore episodes"
   },
   "https://cta-redirect.hubspot.com/cta/redirect/275132/a44b0023-fb7f-4682-8b52-e8f60918da17": {
     "url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/FamilyRosaryWebsite/September%20Minor%20Campaign%202022/The%20Chaplet%20of%20the%20Seven%20Sorrows%20Infographic.pdf",

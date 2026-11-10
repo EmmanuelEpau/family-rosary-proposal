@@ -73,25 +73,30 @@ function family_rosary_navigation_urls( $parsed_block ) {
 }
 add_filter( 'render_block_data', 'family_rosary_navigation_urls' );
 
-/** Additional media discovery is isolated from the other prayer pages. */
-function family_rosary_cinema_assets() {
- wp_enqueue_script( 'family-rosary-cinema', get_theme_file_uri( 'assets/cinema.js' ), array( 'family-rosary-site' ), wp_get_theme()->get( 'Version' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
-}
-add_action( 'wp_enqueue_scripts', 'family_rosary_cinema_assets' );
-
-function family_rosary_prayer_experience_assets() {
- wp_enqueue_script( 'family-rosary-prayer-experience', get_theme_file_uri( 'assets/prayer-experience.js' ), array( 'family-rosary-site' ), wp_get_theme()->get( 'Version' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
-}
-add_action( 'wp_enqueue_scripts', 'family_rosary_prayer_experience_assets' );
-
-/** Shared resource and full Rosary experiences. */
+/** Load the same route-specific bundles used by the review exporter. */
 function family_rosary_complete_experience_assets() {
+ $manifest = json_decode( file_get_contents( get_theme_file_path( 'assets/route-assets.json' ) ), true );
+ $route = 'story';
+ if ( is_page() && wp_get_post_parent_id( get_queried_object_id() ) && get_post_field( 'post_name', wp_get_post_parent_id( get_queried_object_id() ) ) === 'programs' ) { $route = 'program'; }
+ $pages = array( 'watch-and-listen' => 'media', 'prayerresources' => 'resources', 'how-to-pray-the-rosary' => 'rosary-guide', 'rosary-prayer-guide' => 'print-guide', 'family-rosary-companion' => 'companion', 'praying-with-children' => 'prayer-by-age' );
+ if ( is_front_page() ) { $route = 'home'; }
+ foreach ( $pages as $slug => $name ) { if ( is_page( $slug ) ) { $route = $name; } }
  $version = wp_get_theme()->get( 'Version' );
- foreach ( array( 'cinema-v3', 'resource-discovery', 'rosary-world', 'home-family', 'companion', 'prayer-by-age', 'print-guide-v3', 'cinema-preview', 'family-refinement' ) as $name ) {
+ foreach ( array_unique( array_merge( $manifest['routes'][$route]['styles'], array( 'family-refinement' ) ) ) as $name ) {
   wp_enqueue_style( 'family-rosary-' . $name, get_theme_file_uri( 'assets/' . $name . '.css' ), array( 'family-rosary-site' ), $version );
  }
- foreach ( array( 'resource-discovery', 'rosary-journey', 'home-family', 'prayer-by-age', 'cinema-preview' ) as $name ) {
+ foreach ( $manifest['routes'][$route]['scripts'] as $name ) {
   wp_enqueue_script( 'family-rosary-' . $name, get_theme_file_uri( 'assets/' . $name . '.js' ), array( 'family-rosary-site' ), $version, array( 'strategy' => 'defer', 'in_footer' => true ) );
  }
 }
 add_action( 'wp_enqueue_scripts', 'family_rosary_complete_experience_assets' );
+
+/** Responsive derivatives preserve original photography and its editorial crop. */
+function family_rosary_responsive_photos( $content ) {
+ return preg_replace_callback( '~<img\b[^>]*\bsrc="([^" ]*/assets/photos/([^/" ]+)\.jpg)"[^>]*>~i', function( $match ) {
+  if ( strpos( $match[0], 'srcset=' ) !== false || ! file_exists( get_theme_file_path( 'assets/photos/' . $match[2] . '-640.webp' ) ) ) { return $match[0]; }
+  $base = preg_replace( '~\.jpg$~', '', $match[1] );
+  return str_replace( 'src="' . $match[1] . '"', 'src="' . esc_url( $base . '-1280.webp' ) . '" srcset="' . esc_url( $base . '-640.webp' ) . ' 640w, ' . esc_url( $base . '-1280.webp' ) . ' 1280w" sizes="100vw"', $match[0] );
+ }, $content );
+}
+add_filter( 'render_block', 'family_rosary_responsive_photos' );

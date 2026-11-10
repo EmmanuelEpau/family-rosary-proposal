@@ -213,6 +213,13 @@
       "postTypes": [
         "page"
       ]
+    },
+    {
+      "name": "page-program",
+      "title": "Program details",
+      "postTypes": [
+        "page"
+      ]
     }
   ],
   "templateParts": [

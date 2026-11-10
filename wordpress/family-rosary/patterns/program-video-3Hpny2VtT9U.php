@@ -1,0 +1,9 @@
+<?php
+/**
+ * Title: Trusting God through hardship
+ * Slug: family-rosary/program-video-3Hpny2VtT9U
+ * Categories: family-rosary
+ * Inserter: no
+ */
+?>
+<!-- wp:html --><article class="fr-wrap fr-section"><p><a href="../../watch-and-listen/">Watch &amp; Listen</a> / Staying Together: Families Praying Together</p><h1>Trusting God through hardship</h1><p class="fr-lead">The Nicoloro family shares its experience of illness, loss and persevering in prayer.</p><div class="program-player"><button class="fr-primary" data-program-embed="https://www.youtube-nocookie.com/embed/3Hpny2VtT9U" data-program-title="Trusting God through hardship">Play</button></div><dl><dt><strong>Series</strong></dt><dd>Staying Together: Families Praying Together</dd><dt><strong>From</strong></dt><dd>Family Theater Productions</dd><dt><strong>Format</strong></dt><dd>Video</dd><dt><strong>Length</strong></dt><dd>9:01</dd></dl><section><h2>About this episode</h2><p>Family testimony; includes discussion of illness, loss and hardship. Parents should choose what fits their family.</p><p>Original title: From Cancer to Miracles: A Family’s Powerful Journey of Faith and Prayer</p><a href="https://www.youtube.com/watch?v=3Hpny2VtT9U">Original program on YouTube</a></section><section><h2>More from Staying Together: Families Praying Together</h2><ul><li><a href="../video-9IsIPuJNdHI/">Faith in the hardest moments</a></li><li><a href="../video-bG7r8HXWpk0/">Together, even when apart</a></li><li><a href="../video-8hAd27w4zP0/">Prayer through the storm</a></li><li><a href="../video-aO5K7tBFuaw/">Meet the families</a></li></ul></section></article><!-- /wp:html -->

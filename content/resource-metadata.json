@@ -1,0 +1,518 @@
+{
+  "legacy": {
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/49ae1e00-4855-4728-9d37-9f012c5247d6": {
+      "id": "resource-companion",
+      "format": "activity-collection",
+      "topics": "rosary children family",
+      "languages": [
+        "en",
+        "es"
+      ],
+      "section": "library",
+      "action": "Explore the Companion"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/b4ec0b4c-01d4-4d20-8ad4-05637a1d57e4": {
+      "id": "resource-mass-activities",
+      "format": "activity-collection",
+      "topics": "children family mass",
+      "languages": [
+        "en"
+      ],
+      "section": "library",
+      "action": "Explore activities",
+      "language_evidence": "Official source page/onsite source-verified English media catalog inspected2026-11-10."
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/06b315e1-28fc-49a9-9fdb-44af2b2c11f6": {
+      "id": "resource-creation",
+      "format": "pdf",
+      "topics": "creation family",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/8cd18dfa-ee9f-4ce2-aa38-73f0fe7d50eb": {
+      "id": "resource-8cd18dfa-ee9f-4ce2-aa38-73f0fe7d50eb",
+      "format": "podcast",
+      "topics": "prayer",
+      "languages": [
+        "en"
+      ],
+      "section": "library",
+      "action": "Listen to podcast",
+      "language_evidence": "Official source page/onsite source-verified English media catalog inspected2026-11-10."
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/8b67c7dc-458b-4f0a-b288-6fa7e3fd1a2e": {
+      "id": "resource-8b67c7dc-458b-4f0a-b288-6fa7e3fd1a2e",
+      "format": "podcast",
+      "topics": "family parenting",
+      "languages": [
+        "en"
+      ],
+      "section": "library",
+      "action": "Listen to podcast",
+      "language_evidence": "Official source page/onsite source-verified English media catalog inspected2026-11-10."
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/b57ab1ab-6e31-4c82-93d0-ea35fc507f28": {
+      "id": "resource-b57ab1ab-6e31-4c82-93d0-ea35fc507f28",
+      "format": "event",
+      "topics": "marriage parish",
+      "languages": [],
+      "section": "events",
+      "action": "View current dates and details"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/d60a398d-8802-4bf4-a1f4-40272a31f5ad": {
+      "id": "resource-d60a398d-8802-4bf4-a1f4-40272a31f5ad",
+      "format": "event",
+      "topics": "prayer fellowship",
+      "languages": [],
+      "section": "events",
+      "action": "View current dates and details"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/33fd5128-590e-4cda-a496-40b1b4a96ebe": {
+      "id": "resource-33fd5128-590e-4cda-a496-40b1b4a96ebe",
+      "format": "event",
+      "topics": "prayer rosary",
+      "languages": [],
+      "section": "events",
+      "action": "View current dates and details"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/7d0236fb-6804-4920-9ace-c9a3cdcf8be0": {
+      "id": "resource-7d0236fb-6804-4920-9ace-c9a3cdcf8be0",
+      "format": "livestream",
+      "topics": "rosary mass",
+      "languages": [],
+      "section": "library",
+      "action": "Join daily prayer"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/96983052-332c-41e8-96bd-b6c703f34bfd": {
+      "id": "resource-96983052-332c-41e8-96bd-b6c703f34bfd",
+      "format": "video",
+      "topics": "rosary",
+      "languages": [],
+      "section": "library",
+      "action": "Official series playlist"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/f387b8cc-c658-4b59-af94-f875882092ec": {
+      "id": "resource-f387b8cc-c658-4b59-af94-f875882092ec",
+      "format": "download",
+      "topics": "rosary novena peyton",
+      "languages": [],
+      "section": "library",
+      "action": "Explore download"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/7fcbe2d8-13b9-460d-9148-28e006aa749f": {
+      "id": "resource-7fcbe2d8-13b9-460d-9148-28e006aa749f",
+      "format": "pdf",
+      "topics": "rosary novena peyton",
+      "languages": [
+        "es"
+      ],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/2bae07eb-28d3-4e35-88a8-4972c688dd14": {
+      "id": "resource-2bae07eb-28d3-4e35-88a8-4972c688dd14",
+      "format": "video",
+      "topics": "rosary",
+      "languages": [],
+      "section": "library",
+      "action": "Watch videos"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/e93d0db8-9091-4b5d-a0d6-e72d3acb49af": {
+      "id": "resource-e93d0db8-9091-4b5d-a0d6-e72d3acb49af",
+      "format": "video",
+      "topics": "faith rosary",
+      "languages": [],
+      "section": "library",
+      "action": "Watch videos"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/22e0829d-8bc0-4130-92f5-1c3df46551cf": {
+      "id": "resource-22e0829d-8bc0-4130-92f5-1c3df46551cf",
+      "format": "video",
+      "topics": "sacred-art",
+      "languages": [],
+      "section": "library",
+      "action": "Watch videos"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/ec49b585-464f-4d88-b8d8-10a25457bd9f": {
+      "id": "resource-ec49b585-464f-4d88-b8d8-10a25457bd9f",
+      "format": "video",
+      "topics": "prayer homily",
+      "languages": [],
+      "section": "library",
+      "action": "Watch videos"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/bc6581d0-3fdc-4f58-b548-3a319563a7a5": {
+      "id": "resource-bc6581d0-3fdc-4f58-b548-3a319563a7a5",
+      "format": "pdf",
+      "topics": "rosary beginners peyton",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/1147362b-f8a9-4d20-9454-54307198bc81": {
+      "id": "resource-1147362b-f8a9-4d20-9454-54307198bc81",
+      "format": "guide",
+      "topics": "rosary beginners",
+      "languages": [
+        "en",
+        "es",
+        "pt"
+      ],
+      "section": "library",
+      "action": "Read the guide"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/13ed0921-b419-46ed-8012-592cb5f83ef2": {
+      "id": "resource-13ed0921-b419-46ed-8012-592cb5f83ef2",
+      "format": "pdf",
+      "topics": "rosary beginners",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/7d478eea-7ff4-4d10-acc4-49d88aab990e": {
+      "id": "resource-7d478eea-7ff4-4d10-acc4-49d88aab990e",
+      "format": "article",
+      "topics": "rosary glorious sacred-art peyton",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read article"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/76769c0e-eb05-4bb7-b3b6-7a11007849d8": {
+      "id": "resource-76769c0e-eb05-4bb7-b3b6-7a11007849d8",
+      "format": "pdf",
+      "topics": "rosary joyful scripture",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/472a384f-85a9-4bbf-9695-b923fe6fecf8": {
+      "id": "resource-472a384f-85a9-4bbf-9695-b923fe6fecf8",
+      "format": "pdf",
+      "topics": "rosary beginners",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/0653c94b-bb8c-4442-bdd1-e5fa5ec4bd59": {
+      "id": "resource-0653c94b-bb8c-4442-bdd1-e5fa5ec4bd59",
+      "format": "article",
+      "topics": "rosary sorrowful sacred-art",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read article"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/6474958d-231c-4183-8c27-aec60ed224fb": {
+      "id": "resource-6474958d-231c-4183-8c27-aec60ed224fb",
+      "format": "article",
+      "topics": "rosary joyful sacred-art",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read article"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/cf62e136-404a-4259-ae12-866d91192555": {
+      "id": "resource-cf62e136-404a-4259-ae12-866d91192555",
+      "format": "article",
+      "topics": "rosary joyful sacred-art peyton",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read article"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/93028e71-3ea3-47bf-9583-b278bee2597d": {
+      "id": "resource-93028e71-3ea3-47bf-9583-b278bee2597d",
+      "format": "article",
+      "topics": "rosary glorious sacred-art peyton",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read article"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/0c8e8637-f9b4-426d-99e3-5f37bef439ca": {
+      "id": "resource-0c8e8637-f9b4-426d-99e3-5f37bef439ca",
+      "format": "article",
+      "topics": "rosary luminous sacred-art",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read article"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/f1ed195a-4fda-4d3e-8b96-63174c2d7899": {
+      "id": "resource-f1ed195a-4fda-4d3e-8b96-63174c2d7899",
+      "format": "pdf",
+      "topics": "rosary glorious scripture",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/ca011b3c-d647-4d50-8fcd-058ec2afaefa": {
+      "id": "resource-ca011b3c-d647-4d50-8fcd-058ec2afaefa",
+      "format": "pdf",
+      "topics": "mary activity",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/6b513fa1-5788-474e-8d42-b9e29f51e044": {
+      "id": "resource-6b513fa1-5788-474e-8d42-b9e29f51e044",
+      "format": "article",
+      "topics": "mary rosary",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read article"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/dac21569-4683-4b0d-9292-5cde85ccbb69": {
+      "id": "resource-children",
+      "format": "article",
+      "topics": "children family",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read article"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/2b9fbf11-bf98-4f1e-b7c9-65313ca055ca": {
+      "id": "resource-2b9fbf11-bf98-4f1e-b7c9-65313ca055ca",
+      "format": "pdf",
+      "topics": "prayer family",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/fc087e45-3344-42c7-b5cd-35f3ff4ad900": {
+      "id": "resource-fc087e45-3344-42c7-b5cd-35f3ff4ad900",
+      "format": "pdf",
+      "topics": "family prayer",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/8b2cc709-cd25-4fd5-838b-c70df6b985bf": {
+      "id": "resource-growing",
+      "format": "guide",
+      "topics": "children family",
+      "languages": [
+        "en"
+      ],
+      "section": "library",
+      "action": "Try an age-by-age prayer"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/4cf9f8fb-f222-4237-8d2e-774f1dddb812": {
+      "id": "resource-4cf9f8fb-f222-4237-8d2e-774f1dddb812",
+      "format": "pdf",
+      "topics": "family prayer",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/57b8ff18-1a0e-4e96-9f32-d17afe9d3a7d": {
+      "id": "resource-57b8ff18-1a0e-4e96-9f32-d17afe9d3a7d",
+      "format": "article",
+      "topics": "mary",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read article"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/4793f081-1362-493b-8a69-38a49347539d": {
+      "id": "resource-4793f081-1362-493b-8a69-38a49347539d",
+      "format": "article",
+      "topics": "family rosary",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read article"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/0ed5aa6f-e98a-48ac-b8b5-9231bb6f4317": {
+      "id": "resource-0ed5aa6f-e98a-48ac-b8b5-9231bb6f4317",
+      "format": "video",
+      "topics": "peyton cross",
+      "languages": [],
+      "section": "library",
+      "action": "Watch videos"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/b7d58630-a23d-46f7-abf7-665fb6f239a0": {
+      "id": "resource-b7d58630-a23d-46f7-abf7-665fb6f239a0",
+      "format": "podcast",
+      "topics": "rosary peyton family",
+      "languages": [],
+      "section": "library",
+      "action": "Listen to podcast"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/a44b0023-fb7f-4682-8b52-e8f60918da17": {
+      "id": "resource-a44b0023-fb7f-4682-8b52-e8f60918da17",
+      "format": "pdf",
+      "topics": "mary chaplet",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/2dc28ee9-90ed-4ee1-a8e7-9d8e52f678ca": {
+      "id": "resource-2dc28ee9-90ed-4ee1-a8e7-9d8e52f678ca",
+      "format": "pdf",
+      "topics": "mary rosary sacred-art",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/a81adadf-cdcf-43c3-97f8-1bf6c7aae134": {
+      "id": "resource-a81adadf-cdcf-43c3-97f8-1bf6c7aae134",
+      "format": "pdf",
+      "topics": "lent cross sacred-art",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/9de078dd-b468-435d-be46-355357a74164": {
+      "id": "resource-9de078dd-b468-435d-be46-355357a74164",
+      "format": "pdf",
+      "topics": "christmas sacred-art family",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/2a545dda-c947-48b2-8bb0-c7e77ced93c7": {
+      "id": "resource-2a545dda-c947-48b2-8bb0-c7e77ced93c7",
+      "format": "pdf",
+      "topics": "christmas sacred-art",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/622d7092-a7e3-456d-9387-7041936362ca": {
+      "id": "resource-622d7092-a7e3-456d-9387-7041936362ca",
+      "format": "pdf",
+      "topics": "advent christmas children family",
+      "languages": [],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/9f8f933a-6dca-47dc-b134-32268959702b": {
+      "id": "resource-9f8f933a-6dca-47dc-b134-32268959702b",
+      "format": "pdf",
+      "topics": "advent christmas children family",
+      "languages": [
+        "es"
+      ],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/1c9f6045-d287-44ce-901c-c261b4b87412": {
+      "id": "resource-1c9f6045-d287-44ce-901c-c261b4b87412",
+      "format": "activity-collection",
+      "topics": "lent children family",
+      "languages": [],
+      "section": "library",
+      "action": "Explore activities"
+    },
+    "https://cta-redirect.hubspot.com/cta/redirect/275132/ead1ff77-1508-4e8b-9dfb-12c737837ee2": {
+      "id": "resource-ead1ff77-1508-4e8b-9dfb-12c737837ee2",
+      "format": "podcast",
+      "topics": "christmas",
+      "languages": [],
+      "section": "library",
+      "action": "Listen to podcast"
+    }
+  },
+  "additional": [
+    {
+      "title": "How to pray the Rosary",
+      "description": "Follow the order of prayers and find the ministry’s three-language PDF guides.",
+      "url": "/how-to-pray-the-rosary/",
+      "image": "",
+      "id": "resource-0",
+      "format": "guide",
+      "topics": "rosary beginners",
+      "languages": [
+        "en",
+        "es",
+        "pt"
+      ],
+      "section": "library",
+      "action": "Read the guide"
+    },
+    {
+      "title": "10 creative tips for praying as a family",
+      "description": "Practical ways to share prayer in ordinary family life.",
+      "url": "https://blog.familyrosary.org/10-creative-tips-for-praying-as-a-family-0",
+      "image": "",
+      "id": "resource-2",
+      "format": "article",
+      "topics": "children family",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read ideas"
+    },
+    {
+      "title": "A novena for family unity and peace",
+      "description": "A 20-page prayer booklet from Family Rosary.",
+      "url": "https://blog.familyrosary.org/hubfs/FamilyRosaryWebsite/PEYTON%20NOVENA/Novena%202025/Novena%20Booklet%202025%20English%20-%20DOWNLOAD%20FINAL.pdf",
+      "image": "",
+      "id": "resource-3",
+      "format": "pdf",
+      "topics": "family rosary",
+      "languages": [
+        "en"
+      ],
+      "section": "library",
+      "action": "Open PDF"
+    },
+    {
+      "title": "Novena por la unidad familiar y la paz",
+      "description": "Un folleto de oración de Family Rosary, de 20 páginas.",
+      "url": "https://blog.familyrosary.org/hubfs/FamilyRosaryWebsite/PEYTON%20NOVENA/Novena%202025/Novena%20Booklet%202025%20-%20Spanish%20-%20DOWNLOAD%20FINAL.pdf",
+      "image": "",
+      "id": "resource-4",
+      "format": "pdf",
+      "topics": "family rosary",
+      "languages": [
+        "es"
+      ],
+      "section": "library",
+      "action": "Abrir PDF"
+    },
+    {
+      "title": "Praying with images: the Sorrowful Mysteries",
+      "description": "Reflect on the mysteries with sacred images.",
+      "url": "https://blog.familyrosary.org/praying-with-images-the-sorrowful-mysteries-clone",
+      "image": "",
+      "id": "resource-5",
+      "format": "article",
+      "topics": "rosary family",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Open reflection"
+    },
+    {
+      "title": "Finding time to pray the Rosary",
+      "description": "Eight ideas for bringing the Rosary into a busy day.",
+      "url": "https://blog.familyrosary.org/eight-unique-ideas-on-finding-time-to-pray-the-rosary",
+      "image": "",
+      "id": "resource-6",
+      "format": "article",
+      "topics": "family rosary",
+      "languages": [
+        "en"
+      ],
+      "section": "articles",
+      "action": "Read ideas"
+    }
+  ]
+}

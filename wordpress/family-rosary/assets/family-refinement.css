@@ -37,3 +37,10 @@
 @media(max-width:780px){.fr-footer{padding-top:30px}.fr-footer .fr-footer-inner{grid-template-columns:1fr 1fr;gap:1.5rem}.fr-footer .fr-footer-inner>.wp-block-column:first-child{grid-column:1/-1;margin-bottom:0}.fr-footer .fr-footer-meta{grid-template-columns:1fr;gap:.8rem;margin-top:1.5rem!important}.fr-footer .fr-footer-heading{max-width:26ch}.fr-footer .fr-footer-nav a{min-height:36px;padding:6px 0}.fr-footer .fr-footer-meta a{display:inline-block;padding:3px 0}.fr-story-today{grid-template-columns:1fr;gap:1.5rem}.fr-story-today .fr-story-chapter-image{max-width:640px}.fr-story-today .fr-story-chapter-copy p{max-width:65ch}.rd-page .rd-results{gap:2.25rem 1.5rem}}
 @media(max-width:560px){.fr-footer .fr-footer-inner{gap:1.25rem}.fr-footer .fr-footer-nav a{font-size:.85rem}.fr-footer h3{font-size:1rem}.rd-page .rd-results{gap:2.5rem}.rd-page .rd-art{aspect-ratio:1;max-height:none}.rd-page .rd-copy h3{font-size:1.45rem}.fr-story-today .fr-story-chapter-image img{aspect-ratio:4/3}}
 @media print{.fr-footer{display:none!important}.fr-story-chapter-image{break-inside:avoid}.rd-page .rd-resource{break-inside:avoid}}
+/* Light surfaces use blue focus; gold remains visible on the dark hero. */
+.home .fr-header .fr-menu-open a:focus-visible,
+.home .fr-header .is-menu-open a:focus-visible{outline:3px solid #0047bb;outline-offset:4px}
+@media(max-width:780px){
+ .fr-footer .fr-footer-meta>p{font-size:.9rem;line-height:2}
+ .fr-footer .fr-footer-meta a{display:inline-flex;align-items:center;min-height:44px;padding:4px 7px;margin:0 2px;vertical-align:middle}
+}
