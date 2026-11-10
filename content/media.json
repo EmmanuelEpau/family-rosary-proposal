@@ -83,7 +83,10 @@
     "playability_status": "OK",
     "playable_in_embed": true,
     "verified_on": "2026-11-04",
-    "local_thumbnail": "media/e6e0c936f92b.webp"
+    "local_thumbnail": "media/e6e0c936f92b.webp",
+    "editorial_artwork": "family-rosary.webp",
+    "artwork_note": "Illustrative ministry photograph of a family with a Rosary; not a still from this instructional video.",
+    "artwork_kind": "instruction-composition"
   },
   {
     "type": "video",
@@ -109,7 +112,10 @@
     "playability_status": "OK",
     "playable_in_embed": true,
     "verified_on": "2026-11-04",
-    "local_thumbnail": "media/e9b9b90925f7.webp"
+    "local_thumbnail": "media/e9b9b90925f7.webp",
+    "editorial_artwork": "episodes/sign-of-cross.svg",
+    "artwork_note": "Native cross symbol; editorial instructional cover, not a video frame.",
+    "artwork_kind": "instruction-composition"
   },
   {
     "type": "video",
@@ -135,7 +141,10 @@
     "playability_status": "OK",
     "playable_in_embed": true,
     "verified_on": "2026-11-04",
-    "local_thumbnail": "media/3499f5587308.webp"
+    "local_thumbnail": "media/3499f5587308.webp",
+    "editorial_artwork": "photos/family-relic-welcome.jpg",
+    "artwork_note": "Illustrative ministry family photograph; not a still from this instructional video.",
+    "artwork_kind": "instruction-composition"
   },
   {
     "type": "video",
@@ -187,7 +196,9 @@
     "playability_status": "OK",
     "playable_in_embed": true,
     "verified_on": "2026-11-04",
-    "local_thumbnail": "media/c1d3b9e4f9f6.webp"
+    "local_thumbnail": "media/c1d3b9e4f9f6.webp",
+    "editorial_artwork": "photos/family-relic-welcome.jpg",
+    "artwork_note": "Editorial photograph of a family holding Rosary beads at The Father Peyton Center during the November 3,2026 St. Bernadette relic visit. Ministry-owned Pixieset collection126331663, photographEM_A8203. Not a frame from this recording."
   },
   {
     "type": "video",
@@ -271,7 +282,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Don’t like\nthe Rosary?",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -307,7 +320,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Praying\nwith Mary",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -343,7 +358,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Movement\nand healing",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -380,7 +397,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Pray together.\nStay together.",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -414,7 +433,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/413da990b7e0.webp"
+    "local_thumbnail": "media/413da990b7e0.webp",
+    "art_title": "More than\na prayer",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -433,7 +454,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "A conversation about surrender, gratitude, and bringing everyday struggles to prayer.",
+    "description": "Scott Weeman reflects on recovery, surrender and gratitude, and on bringing everyday struggles honestly to prayer.",
     "topic": "Prayer in everyday life",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -446,7 +467,45 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/177954f59107.webp"
+    "local_thumbnail": "media/177954f59107.webp",
+    "episode_number": 12,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/sada4awgwbeciqzn/Scott_Weeman_Ep_12baj29.png",
+    "artwork_guest_name": "Scott Weeman",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-scott-weeman/",
+    "published_on": "2026-09-09",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-scott-weeman/",
+    "episode_hook": "Bringing our struggles to God",
+    "display_title": "Bringing our struggles to God",
+    "guest_name": "Scott Weeman",
+    "participants": [
+      "Scott Weeman"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-scott-weeman/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-scott-weeman/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "host_name": "Allison Gingras",
+    "host_name_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-scott-weeman/",
+    "editorial_artwork": "episodes/hypl-scott-session.jpg",
+    "artwork_kind": "session-composition",
+    "artwork_note": "Actual Family Rosary video conversation frame showing Scott Weeman and Allison Gingras, captured by root at6:38.56 from https://www.youtube.com/watch?v=PAFz_GHIhSA. Native show typography is an editorial cover composition; original official episode cover retained in local_thumbnail and thumbnail_url.",
+    "video_alternate": {
+      "url": "https://www.youtube.com/watch?v=PAFz_GHIhSA",
+      "embed_url": "https://www.youtube.com/embed/PAFz_GHIhSA",
+      "embed_id": "PAFz_GHIhSA",
+      "provider": "YouTube",
+      "publisher": "Family Rosary",
+      "publisher_url": "https://www.youtube.com/@FamilyRosaryVideo",
+      "source_title": "How's Your Prayer Life? with Scott Weeman (Ep. 12 LIVESTREAM)",
+      "duration_label": "22:08",
+      "duration_seconds": 1328,
+      "matched_episode_number": 12,
+      "visual_format": "filmed-conversation",
+      "verified_on": "2026-11-09",
+      "verification_level": "watch-page-and-session-frame",
+      "verification": "Root inspected the official Family Rosary watch page and actual two-speaker conversation frame at6:38.56. Video runtime22:08 observed by root; audio source remains a separately published edition.",
+      "duration_seconds_observed": 1328.5
+    },
+    "preferred_playback": "video"
   },
   {
     "type": "podcast",
@@ -465,7 +524,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "Family traditions and small daily routines help keep prayer part of home life.",
+    "description": "Sonia Martinez-Trujillo shares how family traditions, homeschooling and simple routines make room for prayer throughout the day.",
     "topic": "Family prayer",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -478,7 +537,36 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/d35108d05f08.webp"
+    "local_thumbnail": "media/d35108d05f08.webp",
+    "episode_number": 11,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/ywspckdd56pb5mzm/Sonia_Martinez-Trujillo_Ep_116ml5g.png",
+    "artwork_guest_name": "Sonia Martinez-Trujillo",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-sonia-martinez-trujillo/",
+    "published_on": "2026-09-02",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-sonia-martinez-trujillo/",
+    "episode_hook": "Small routines, shared family prayer",
+    "display_title": "Small routines, shared family prayer",
+    "guest_name": "Sonia Martinez-Trujillo",
+    "participants": [
+      "Sonia Martinez-Trujillo"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-sonia-martinez-trujillo/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-sonia-martinez-trujillo/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "host_name": "Allison Gingras",
+    "host_name_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-sonia-martinez-trujillo/",
+    "portrait_crop": {
+      "source_image": "media/d35108d05f08.webp",
+      "source_url": "https://mcdn.podbean.com/mf/web/ywspckdd56pb5mzm/Sonia_Martinez-Trujillo_Ep_116ml5g.png",
+      "width": 1280,
+      "height": 720,
+      "cx": 742,
+      "cy": 570,
+      "diameter": 218
+    },
+    "artwork_kind": "guest-composition",
+    "editorial_artwork": "media/d35108d05f08.webp",
+    "artwork_note": "Editorial native cover using the real portrait already present in this episode’s original official artwork. Original cover/portrait circle visually inspected; crop geometry recorded in portrait_crop. No new face or filmed session is implied. Full original cover retained in the details view and original source metadata."
   },
   {
     "type": "podcast",
@@ -497,7 +585,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "Explore how prayer routines can adapt when ordinary life changes.",
+    "description": "Jessica Benfield explores adapting prayer when ordinary routines change, from praying the Rosary outdoors to finding peace amid family demands.",
     "topic": "Prayer in everyday life",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -510,7 +598,46 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/403e8a248529.webp"
+    "local_thumbnail": "media/403e8a248529.webp",
+    "episode_number": 10,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/nakc9yvf8irymuk6/Jessica_Benfield_Ep_107s8eu.png",
+    "artwork_guest_name": "Jessica Benfield",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-jessica-benfield/",
+    "published_on": "2026-08-21",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-jessica-benfield/",
+    "episode_hook": "When your prayer routine changes",
+    "display_title": "When your prayer routine changes",
+    "guest_name": "Jessica Benfield",
+    "participants": [
+      "Jessica Benfield"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-jessica-benfield/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-jessica-benfield/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "host_name": "Allison Gingras",
+    "host_name_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-jessica-benfield/",
+    "video_alternate": {
+      "url": "https://www.youtube.com/watch?v=y48apHyqpiw",
+      "embed_url": "https://www.youtube.com/embed/y48apHyqpiw",
+      "embed_id": "y48apHyqpiw",
+      "provider": "YouTube",
+      "publisher": "Family Rosary",
+      "publisher_url": "https://www.youtube.com/@FamilyRosaryVideo",
+      "source_title": "How's Your Prayer Life? with Jessica Benfield (Ep. 10 LIVESTREAM)",
+      "duration_label": "22:06",
+      "duration_seconds": 1326,
+      "matched_episode_number": 10,
+      "verified_on": "2026-11-09",
+      "verification_level": "watch-page-playback-and-session-frame",
+      "verification": "Root watched the official Family Rosary episode10 video and captured the actual two-speaker frame at95.762681seconds (1:35.76). Player runtime1326.301seconds; label22:06uses elapsed whole seconds. Search result had displayed22:07rounding. Audio source remains separately published.",
+      "visual_format": "filmed-conversation",
+      "duration_seconds_observed": 1326.301
+    },
+    "preferred_playback": "video",
+    "editorial_artwork": "episodes/hypl-jessica-session.jpg",
+    "artwork_kind": "session-composition",
+    "artwork_fit": "contain",
+    "artwork_note": "Actual official Family Rosary episode10 conversation frame at1:35.76, captured by root from https://www.youtube.com/watch?v=y48apHyqpiw. Guest Jessica Benfield is labelled at left; host Allison Gingras is labelled at right. Original official episode cover remains in local_thumbnail and thumbnail_url. Native show typography is an editorial cover composition."
   },
   {
     "type": "podcast",
@@ -529,7 +656,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "Explore the Rosary, journaling, and Eucharistic Adoration as practical prayer habits.",
+    "description": "Stephen Driscoll shares practical ways to grow in consistent prayer through the Rosary, journaling, Eucharistic Adoration and everyday activities.",
     "topic": "Getting started",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -542,7 +669,51 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/9d0e08733db5.webp"
+    "local_thumbnail": "media/9d0e08733db5.webp",
+    "episode_number": 1,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/tyhfayfzfaukjmzd/HOw_Your_Prayer_Life_Ep_1asise.png",
+    "artwork_guest_name": "Stephen Driscoll",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-stephen-driscoll/",
+    "published_on": "2026-05-15",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-stephen-driscoll/",
+    "episode_hook": "Building a daily prayer habit",
+    "display_title": "Building a daily prayer habit",
+    "guest_name": "Stephen Driscoll",
+    "participants": [
+      "Stephen Driscoll"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-stephen-driscoll/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-stephen-driscoll/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "video_alternate": {
+      "url": "https://www.youtube.com/watch?v=xPnEnTfV0aI",
+      "embed_url": "https://www.youtube.com/embed/xPnEnTfV0aI",
+      "embed_id": "xPnEnTfV0aI",
+      "provider": "YouTube",
+      "publisher": "Family Rosary",
+      "publisher_url": "https://www.youtube.com/@FamilyRosaryVideo",
+      "source_title": "How's Your Prayer Life? Ep. 1 - Stephen Driscoll",
+      "duration_label": "23:11",
+      "duration_seconds": 1391,
+      "matched_episode_number": 1,
+      "verified_on": "2026-11-09",
+      "verification": "Official Family Rosary channel and matching episode number/guest/title observed by root in internal-browser YouTube search results. Watch-page frames and actual video playback verification pending. Runtime is video-result runtime, not an inferred audio duration.",
+      "verification_level": "official-search-result-match",
+      "source_evidence": "research/committee-v3/hypl-youtube-results.json"
+    },
+    "portrait_crop": {
+      "source_image": "media/9d0e08733db5.webp",
+      "source_url": "https://mcdn.podbean.com/mf/web/tyhfayfzfaukjmzd/HOw_Your_Prayer_Life_Ep_1asise.png",
+      "width": 1280,
+      "height": 720,
+      "cx": 752,
+      "cy": 540,
+      "diameter": 146,
+      "review_note": "Re-inspected original source: tighter native crop excludes the original overprinted guest-caption ink while preserving the face/head. No pixels regenerated."
+    },
+    "artwork_kind": "guest-composition",
+    "editorial_artwork": "media/9d0e08733db5.webp",
+    "artwork_note": "Editorial native cover using the real portrait already present in this episode’s original official artwork. Original cover/portrait circle visually inspected; crop geometry recorded in portrait_crop. No new face or filmed session is implied. Full original cover retained in the details view and original source metadata."
   },
   {
     "type": "podcast",
@@ -574,7 +745,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Christ in\nyour Advent",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -606,7 +779,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Thanksgiving\nspecial",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -638,7 +813,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Living\ncharity",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -670,7 +847,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "The value of\nRosary stories",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -702,7 +881,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Living the\nmysteries",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -734,7 +915,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Strength in\ndifficult times",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -766,7 +949,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Living\nfor Heaven",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -798,7 +983,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Together\ntoward Heaven",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -830,7 +1017,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Hope in\nthe simple",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -862,7 +1051,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Living\noptimism",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -898,7 +1089,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "We all\nhave a call",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -930,7 +1123,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Praying\nfor vocations",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -966,7 +1161,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Discerning\na vocation",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -1002,7 +1199,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Mary\nas mentor",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -1038,7 +1237,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Learning\nto listen",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -1074,7 +1275,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Hope and\nthe Creed",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -1110,7 +1313,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "A world\nat peace",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -1144,7 +1349,9 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/6d7ece34b6f1.webp"
+    "local_thumbnail": "media/6d7ece34b6f1.webp",
+    "art_title": "Becoming\na saint",
+    "artwork_note": "Editorial audio artwork with a shortened topic label for the cover. The complete original episode title remains below the cover and in original source metadata. Blue fabric texture derives from the existing series background with its crucifix outside the displayed crop; magnifying-glass geometry and native HCFM typography are editable. No guest or filmed session is implied."
   },
   {
     "type": "podcast",
@@ -1163,7 +1370,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "Allison Gingras speaks with Allison Auth about prayer in everyday life.",
+    "description": "Allison Auth reflects on identity, Scripture and the Eucharist, and on finding interior silence amid motherhood and ordinary life.",
     "topic": "Prayer in everyday life",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -1176,7 +1383,47 @@
       "http_status": 200,
       "content_type": "image/jpeg"
     },
-    "local_thumbnail": "media/eb50c38faf72.webp"
+    "local_thumbnail": "media/eb50c38faf72.webp",
+    "episode_number": 9,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/y4xpkpt9d38q2e3v/Allison_Auth_Ep_96cbgo.jpg",
+    "artwork_guest_name": "Allison Auth",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-allison-auth/",
+    "published_on": "2026-08-12",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-allison-auth/",
+    "episode_hook": "Hearing God in the quiet",
+    "display_title": "Hearing God in the quiet",
+    "guest_name": "Allison Auth",
+    "participants": [
+      "Allison Auth"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-allison-auth/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-allison-auth/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "host_name": "Allison Gingras",
+    "host_name_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-allison-auth/",
+    "metadata_review_note": "Fresh official canonical heading/body and original episode9artwork agree on Allison Auth (double l). Host Allison Gingras is a different person; no episode mismatch established.",
+    "editorial_artwork": "episodes/hypl-allison-auth-session.jpg",
+    "artwork_kind": "session-composition",
+    "artwork_fit": "contain",
+    "artwork_note": "Actual official Family Rosary episode9 video frame at approximately7:07, captured by root. Guest Allison Auth is labelled at left; host Allison Gingras is labelled at right. The two people are distinct. Native show typography is an editorial cover composition; original official cover remains in local_thumbnail and thumbnail_url.",
+    "video_alternate": {
+      "url": "https://www.youtube.com/watch?v=piuEnwRqOxI",
+      "embed_url": "https://www.youtube.com/embed/piuEnwRqOxI",
+      "embed_id": "piuEnwRqOxI",
+      "provider": "YouTube",
+      "publisher": "Family Rosary",
+      "publisher_url": "https://www.youtube.com/@FamilyRosaryVideo",
+      "duration_label": "23:23",
+      "duration_seconds": 1403,
+      "matched_episode_number": 9,
+      "visual_format": "filmed-conversation",
+      "verified_on": "2026-11-09",
+      "verification_level": "watch-page-playback-and-session-frame",
+      "verification": "Root played/watched the official Family Rosary episode9 video and captured the actual two-speaker frame at approximately7:07; on-screen guest Allison Auth and host Allison Gingras are visibly distinct. Runtime23:23 observed. Audio remains a separately published edition.",
+      "source_title": "How's Your Prayer Life? with Allison Auth (Ep. 9 LIVESTREAM)",
+      "duration_seconds_observed": 1402.761
+    },
+    "preferred_playback": "video"
   },
   {
     "type": "podcast",
@@ -1195,7 +1442,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "Allison Gingras speaks with Kylie Hein about prayer in everyday life.",
+    "description": "Kylie Hein explores discernment, mental prayer and spiritual reading, including how to recognize gentle guidance without depending on strong feelings.",
     "topic": "Prayer in everyday life",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -1208,7 +1455,47 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/e1b4afa2f9da.webp"
+    "local_thumbnail": "media/e1b4afa2f9da.webp",
+    "episode_number": 8,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/jqx5pw47qbuw6m3p/Kylie_Hein_Ep_8ahlsg.png",
+    "artwork_guest_name": "Kylie Hein",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-kylie-hein/",
+    "published_on": "2026-08-05",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-kylie-hein/",
+    "episode_hook": "Discerning God’s gentle guidance",
+    "display_title": "Discerning God’s gentle guidance",
+    "guest_name": "Kylie Hein",
+    "participants": [
+      "Kylie Hein"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-kylie-hein/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-kylie-hein/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "host_name": "Allison Gingras",
+    "host_name_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-kylie-hein/",
+    "video_alternate": {
+      "url": "https://www.youtube.com/watch?v=erP2SyXzLk0",
+      "embed_url": "https://www.youtube.com/embed/erP2SyXzLk0",
+      "embed_id": "erP2SyXzLk0",
+      "provider": "YouTube",
+      "publisher": "Family Rosary",
+      "publisher_url": "https://www.youtube.com/@FamilyRosaryVideo",
+      "source_title": "How's Your Prayer Life? with Kylie Hein (Ep. 8 LIVESTREAM)",
+      "duration_label": "22:09",
+      "duration_seconds": 1329,
+      "matched_episode_number": 8,
+      "verified_on": "2026-11-09",
+      "verification": "Root inspected/played the official Family Rosary video and captured the actual two-speaker frame at294.752688seconds (4:54.75). Player duration1329.101seconds; label22:09uses elapsed whole seconds. Search result had displayed22:10rounding. Audio source remains separately published.",
+      "verification_level": "watch-page-playback-and-session-frame",
+      "source_evidence": "research/committee-v3/hypl-youtube-results.json",
+      "visual_format": "filmed-conversation",
+      "duration_seconds_observed": 1329.101
+    },
+    "editorial_artwork": "episodes/hypl-kylie-session.jpg",
+    "artwork_kind": "session-composition",
+    "artwork_fit": "contain",
+    "artwork_note": "Actual official Family Rosary episode8 video frame at4:54.75, captured by root from https://www.youtube.com/watch?v=erP2SyXzLk0. Guest Kylie Hein is labelled at left; host Allison Gingras is labelled at right. Original official episode cover remains in local_thumbnail and thumbnail_url; native show typography is an editorial cover composition.",
+    "preferred_playback": "video"
   },
   {
     "type": "podcast",
@@ -1227,7 +1514,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "Allison Gingras speaks with Krystal Quagliera about prayer in everyday life.",
+    "description": "Krystal Quagliara discusses prayer amid busy schedules, the difference between routine and genuine connection, and friendship with God in everyday life.",
     "topic": "Prayer in everyday life",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -1240,7 +1527,38 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/c46725615550.webp"
+    "local_thumbnail": "media/c46725615550.webp",
+    "episode_number": 7,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/5jn8gmt8wqfc68rf/_Krystal_Anne_Quagliara_Ep_78x3wu.png",
+    "artwork_guest_name": "Krystal Quagliara",
+    "metadata_review_note": "Editorial guest/display spelling Quagliara follows the official episode-page biography and original episode7artwork. Official heading and opening copy use Quagliera; exact source_title and original title retained.",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-krystal-quagliera/",
+    "published_on": "2026-07-30",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-krystal-quagliera/",
+    "episode_hook": "Finding prayer in a messy day",
+    "display_title": "Finding prayer in a messy day",
+    "guest_name": "Krystal Quagliara",
+    "participants": [
+      "Krystal Quagliara"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-krystal-quagliera/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-krystal-quagliera/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "host_name": "Allison Gingras",
+    "host_name_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-krystal-quagliera/",
+    "portrait_crop": {
+      "source_image": "media/c46725615550.webp",
+      "source_url": "https://mcdn.podbean.com/mf/web/5jn8gmt8wqfc68rf/_Krystal_Anne_Quagliara_Ep_78x3wu.png",
+      "width": 1280,
+      "height": 720,
+      "cx": 746,
+      "cy": 568,
+      "diameter": 210,
+      "review_note": "Re-inspected original source: tighter native crop excludes the original overprinted guest-caption ink while preserving the face/head. No pixels regenerated."
+    },
+    "artwork_kind": "guest-composition",
+    "editorial_artwork": "media/c46725615550.webp",
+    "artwork_note": "Editorial native cover using the real portrait already present in this episode’s original official artwork. Original cover/portrait circle visually inspected; crop geometry recorded in portrait_crop. No new face or filmed session is implied. Full original cover retained in the details view and original source metadata."
   },
   {
     "type": "podcast",
@@ -1259,7 +1577,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "Allison Gingras speaks with Deacon Pedro about prayer in everyday life.",
+    "description": "Deacon Pedro Guevara-Mann explores the Liturgy of the Hours, prayer walks and other ways to pray amid a busy life.",
     "topic": "Prayer in everyday life",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -1272,7 +1590,34 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/21b6aa67ca85.webp"
+    "local_thumbnail": "media/21b6aa67ca85.webp",
+    "episode_number": 5,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/q3mzhce6br4a99mp/Deacon_Pedro_Guevara-Mann_Ep_573ogu.png",
+    "artwork_guest_name": "Deacon Pedro Guevara-Mann",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-deacon-pedro/",
+    "published_on": "2026-07-18",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-deacon-pedro/",
+    "episode_hook": "Finding your way into prayer",
+    "display_title": "Finding your way into prayer",
+    "guest_name": "Deacon Pedro Guevara-Mann",
+    "participants": [
+      "Deacon Pedro Guevara-Mann"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-deacon-pedro/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-deacon-pedro/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "portrait_crop": {
+      "source_image": "media/21b6aa67ca85.webp",
+      "source_url": "https://mcdn.podbean.com/mf/web/q3mzhce6br4a99mp/Deacon_Pedro_Guevara-Mann_Ep_573ogu.png",
+      "width": 1280,
+      "height": 720,
+      "cx": 740,
+      "cy": 570,
+      "diameter": 220
+    },
+    "artwork_kind": "guest-composition",
+    "editorial_artwork": "media/21b6aa67ca85.webp",
+    "artwork_note": "Editorial native cover using the real portrait already present in this episode’s original official artwork. Original cover/portrait circle visually inspected; crop geometry recorded in portrait_crop. No new face or filmed session is implied. Full original cover retained in the details view and original source metadata."
   },
   {
     "type": "podcast",
@@ -1291,7 +1636,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "Allison Gingras speaks with Danielle Schmitz about prayer in everyday life.",
+    "description": "Danielle Schmitz reflects on letting go of perfection, inviting Jesus into ordinary moments and trusting God through spiritual dryness.",
     "topic": "Prayer in everyday life",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -1304,7 +1649,52 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/67fa0ab3033b.webp"
+    "local_thumbnail": "media/67fa0ab3033b.webp",
+    "episode_number": 6,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/7zj9p2kn25jr8kfu/Danielle_Schmitz_Ep_69ysqx.png",
+    "artwork_guest_name": "Danielle Schmitz",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-danielle-schmitz/",
+    "published_on": "2026-07-22",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-danielle-schmitz/",
+    "episode_hook": "Letting go of perfect prayer",
+    "display_title": "Letting go of perfect prayer",
+    "guest_name": "Danielle Schmitz",
+    "participants": [
+      "Danielle Schmitz"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-danielle-schmitz/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-danielle-schmitz/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "host_name": "Allison Gingras",
+    "host_name_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-danielle-schmitz/",
+    "video_alternate": {
+      "url": "https://www.youtube.com/watch?v=zU60mGym1u4",
+      "embed_url": "https://www.youtube.com/embed/zU60mGym1u4",
+      "embed_id": "zU60mGym1u4",
+      "provider": "YouTube",
+      "publisher": "Family Rosary",
+      "publisher_url": "https://www.youtube.com/@FamilyRosaryVideo",
+      "source_title": "How's Your Prayer Life? Ep. 6 - Danielle Schmitz",
+      "duration_label": "23:12",
+      "duration_seconds": 1392,
+      "matched_episode_number": 6,
+      "verified_on": "2026-11-09",
+      "verification": "Official Family Rosary channel and matching episode number/guest/title observed by root in internal-browser YouTube search results. Watch-page frames and actual video playback verification pending. Runtime is video-result runtime, not an inferred audio duration.",
+      "verification_level": "official-search-result-match",
+      "source_evidence": "research/committee-v3/hypl-youtube-results.json"
+    },
+    "portrait_crop": {
+      "source_image": "media/67fa0ab3033b.webp",
+      "source_url": "https://mcdn.podbean.com/mf/web/7zj9p2kn25jr8kfu/Danielle_Schmitz_Ep_69ysqx.png",
+      "width": 1280,
+      "height": 720,
+      "cx": 740,
+      "cy": 568,
+      "diameter": 218
+    },
+    "artwork_kind": "guest-composition",
+    "editorial_artwork": "media/67fa0ab3033b.webp",
+    "artwork_note": "Editorial native cover using the real portrait already present in this episode’s original official artwork. Original cover/portrait circle visually inspected; crop geometry recorded in portrait_crop. No new face or filmed session is implied. Full original cover retained in the details view and original source metadata."
   },
   {
     "type": "podcast",
@@ -1323,7 +1713,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "Allison Gingras speaks with Nicole Benjamin about prayer in everyday life.",
+    "description": "Nicole Benjamin shares practical ways to pray through motherhood and daily responsibilities, including gratitude, journaling, chores and prayer on the go.",
     "topic": "Prayer in everyday life",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -1336,7 +1726,34 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/3820a8eeaf76.webp"
+    "local_thumbnail": "media/3820a8eeaf76.webp",
+    "episode_number": 4,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/ba8826wpirdb4wua/Nicole_Benjamin_Ep_48n42a.png",
+    "artwork_guest_name": "Nicole Benjamin",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-nicole-benjamin/",
+    "published_on": "2026-07-08",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-nicole-benjamin/",
+    "episode_hook": "Praying through an ordinary day",
+    "display_title": "Praying through an ordinary day",
+    "guest_name": "Nicole Benjamin",
+    "participants": [
+      "Nicole Benjamin"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-nicole-benjamin/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-nicole-benjamin/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "portrait_crop": {
+      "source_image": "media/3820a8eeaf76.webp",
+      "source_url": "https://mcdn.podbean.com/mf/web/ba8826wpirdb4wua/Nicole_Benjamin_Ep_48n42a.png",
+      "width": 1280,
+      "height": 720,
+      "cx": 740,
+      "cy": 570,
+      "diameter": 220
+    },
+    "artwork_kind": "guest-composition",
+    "editorial_artwork": "media/3820a8eeaf76.webp",
+    "artwork_note": "Editorial native cover using the real portrait already present in this episode’s original official artwork. Original cover/portrait circle visually inspected; crop geometry recorded in portrait_crop. No new face or filmed session is implied. Full original cover retained in the details view and original source metadata."
   },
   {
     "type": "podcast",
@@ -1355,7 +1772,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "Allison Gingras speaks with Bernadette Nelson about prayer in everyday life.",
+    "description": "Bernadette Nelson shares how gratitude journaling, novenas, spiritual reading and prayer for specific intentions shape her daily faith.",
     "topic": "Prayer in everyday life",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -1368,7 +1785,51 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/3ea45a8db7f9.webp"
+    "local_thumbnail": "media/3ea45a8db7f9.webp",
+    "episode_number": 3,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/d7hnxxc4a7jg8ag3/Bernadette_Nelsonbpdze.png",
+    "artwork_guest_name": "Bernadette Nelson",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-bernadette-nelson/",
+    "published_on": "2026-06-24",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-bernadette-nelson/",
+    "episode_hook": "Gratitude, novenas and hope",
+    "display_title": "Gratitude, novenas and hope",
+    "guest_name": "Bernadette Nelson",
+    "participants": [
+      "Bernadette Nelson"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-bernadette-nelson/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-bernadette-nelson/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "video_alternate": {
+      "url": "https://www.youtube.com/watch?v=P14g78YSj-k",
+      "embed_url": "https://www.youtube.com/embed/P14g78YSj-k",
+      "embed_id": "P14g78YSj-k",
+      "provider": "YouTube",
+      "publisher": "Family Rosary",
+      "publisher_url": "https://www.youtube.com/@FamilyRosaryVideo",
+      "source_title": "How's Your Prayer Life? Ep. 3 - Bernadette Nelson",
+      "duration_label": "21:36",
+      "duration_seconds": 1296,
+      "matched_episode_number": 3,
+      "verified_on": "2026-11-09",
+      "verification": "Official Family Rosary channel and matching episode number/guest/title observed by root in internal-browser YouTube search results. Watch-page frames and actual video playback verification pending. Runtime is video-result runtime, not an inferred audio duration.",
+      "verification_level": "official-search-result-match",
+      "source_evidence": "research/committee-v3/hypl-youtube-results.json"
+    },
+    "portrait_crop": {
+      "source_image": "media/3ea45a8db7f9.webp",
+      "source_url": "https://mcdn.podbean.com/mf/web/d7hnxxc4a7jg8ag3/Bernadette_Nelsonbpdze.png",
+      "width": 1280,
+      "height": 720,
+      "cx": 760,
+      "cy": 543,
+      "diameter": 190,
+      "review_note": "Re-inspected original source: tighter native crop excludes the original overprinted guest-caption ink while preserving the face/head. No pixels regenerated."
+    },
+    "artwork_kind": "guest-composition",
+    "editorial_artwork": "media/3ea45a8db7f9.webp",
+    "artwork_note": "Editorial native cover using the real portrait already present in this episode’s original official artwork. Original cover/portrait circle visually inspected; crop geometry recorded in portrait_crop. No new face or filmed session is implied. Full original cover retained in the details view and original source metadata. The original guest photograph includes two people; both faces remain visible in the tighter crop, which excludes the overprinted original caption. No companion identity is inferred."
   },
   {
     "type": "podcast",
@@ -1387,7 +1848,7 @@
     "http_status": 200,
     "player_shell_verified": true,
     "playback_verification": "HTTP 200 and Podbean player application markup verified; audio not played.",
-    "description": "Allison Gingras speaks with Maria Gallagher about prayer in everyday life.",
+    "description": "Maria Gallagher reflects on growing trust in God, overcoming obstacles to daily Rosary prayer and letting go of perfectionism.",
     "topic": "Prayer in everyday life",
     "audience": "Adults and families; suggested editorial audience, not an age rating",
     "thumbnail_kind": "Episode artwork",
@@ -1400,7 +1861,53 @@
       "http_status": 200,
       "content_type": "image/png"
     },
-    "local_thumbnail": "media/a81388e57357.webp"
+    "local_thumbnail": "media/a81388e57357.webp",
+    "episode_number": 2,
+    "episode_number_source": "Visually inspected official original episode artwork (local copy); source URL: https://mcdn.podbean.com/mf/web/5shwb8qdrqg8dpee/Maria_Gallagher6h692.png",
+    "artwork_guest_name": "Maria Gallagher",
+    "episode_url": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-maria-gallagher/",
+    "published_on": "2026-06-11",
+    "published_on_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-maria-gallagher/",
+    "episode_hook": "Learning to trust through the Rosary",
+    "display_title": "Learning to trust through the Rosary",
+    "guest_name": "Maria Gallagher",
+    "participants": [
+      "Maria Gallagher"
+    ],
+    "participants_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-maria-gallagher/",
+    "editorial_metadata_source": "https://howsyourprayerlife.podbean.com/e/hows-your-prayer-life-with-maria-gallagher/",
+    "editorial_metadata_verified_on": "2026-11-09",
+    "video_alternate": {
+      "url": "https://www.youtube.com/watch?v=Z1QicHhSOSg",
+      "embed_url": "https://www.youtube.com/embed/Z1QicHhSOSg",
+      "embed_id": "Z1QicHhSOSg",
+      "provider": "YouTube",
+      "publisher": "Family Rosary",
+      "publisher_url": "https://www.youtube.com/@FamilyRosaryVideo",
+      "source_title": "How's Your Prayer Life? Ep. 2 - Maria Gallagher",
+      "duration_label": "18:31",
+      "duration_seconds": 1111,
+      "matched_episode_number": 2,
+      "verified_on": "2026-11-09",
+      "verification": "Root watched official YouTube edition at25seconds: static show artwork/audio on a square720×720canvas, not a filmed conversation.",
+      "verification_level": "watch-page-static-artwork",
+      "source_evidence": "research/committee-v3/hypl-youtube-results.json",
+      "visual_format": "audio-with-artwork",
+      "label": "YouTube audio edition"
+    },
+    "portrait_crop": {
+      "source_image": "media/a81388e57357.webp",
+      "source_url": "https://mcdn.podbean.com/mf/web/5shwb8qdrqg8dpee/Maria_Gallagher6h692.png",
+      "width": 1280,
+      "height": 720,
+      "cx": 747,
+      "cy": 568,
+      "diameter": 210,
+      "review_note": "Re-inspected original source: tighter native crop excludes the original overprinted guest-caption ink while preserving the face/head. No pixels regenerated."
+    },
+    "artwork_kind": "guest-composition",
+    "editorial_artwork": "media/a81388e57357.webp",
+    "artwork_note": "Editorial native cover using the real portrait already present in this episode’s original official artwork. Original cover/portrait circle visually inspected; crop geometry recorded in portrait_crop. No new face or filmed session is implied. Full original cover retained in the details view and original source metadata."
   },
   {
     "type": "video",

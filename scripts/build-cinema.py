@@ -1,6 +1,8 @@
 """Build native media pattern from the preserved, source-attributed catalog."""
 from pathlib import Path
-import json,html
+import json,html,subprocess
+from urllib.parse import urlparse
+subprocess.run(["python3",str(Path(__file__).with_name("build-episode-art.py"))],check=True)
 ROOT=Path(__file__).resolve().parents[1];T=ROOT/'wordpress/family-rosary'
 esc=lambda x:html.escape(str(x),quote=True)
 media=json.loads((ROOT/'content/media.json').read_text())
@@ -29,9 +31,18 @@ for m in media:
 for m in media:
  m.setdefault('publisher','Family Rosary')
  if m['audience'].endswith('not an age rating'):m['audience']='Conversations about prayer and faith. Read the description to choose what fits your family.' if m['type']=='podcast' else 'For shared prayer and reflection. Parents can accompany children as they watch.'
- if m['type']=='podcast':m['artwork']='cinema/through-mysteries.png' if m['series']=='Through the Mysteries' else 'cinema/prayer-life.png'
- else:m['artwork']=m['local_thumbnail']
+ if m['type']=='podcast':m['artwork']=m.get('editorial_artwork') or ('episodes/'+m['id']+'.svg' if m['series']=='Through the Mysteries' else m['local_thumbnail'])
+ if m['series']=='Through the Mysteries':m['art_layout']='mysteries-'+str(sum(x['series']=='Through the Mysteries' for x in media[:media.index(m)])%4)
+ if m['type']=='podcast':m['artwork_kind']=m['artwork_kind'] if m.get('artwork_kind') in {'session-composition','guest-composition'} else 'title-composition' if m['series']=='Through the Mysteries' else 'official-episode-cover'
+ else:m['artwork']=m.get('editorial_artwork',m['local_thumbnail'])
  m.setdefault('display_title',m['title'].replace('Pray the ','').replace(' with Father Patrick Peyton, C.S.C.','').replace(' of The Rosary','').replace(' | Part 1 New Logo','').replace(' | Part 2 New Logo','').replace(' | Part 3 New Logo','').replace("How's Your Prayer Life? with ",''))
+for m in media:
+ if m['id']=='video-OEjIKD6McsY':m['display_title']='The Rosary'
+ if m['id']=='video-zaqlP4rX518':m['display_title']='Sign of the Cross'
+ if m['id']=='video-_cypVUxgYmI':m['display_title']='Our Father'
+for m in media:
+ parsed=urlparse(m['embed_url'])
+ assert parsed.scheme=='https' and parsed.hostname in {'www.youtube.com','youtube.com','www.youtube-nocookie.com','www.podbean.com','podbean.com'}, 'Unsupported player source: '+m['id']
 byid={m['id']:m for m in media}
 def asset(file):return "<?php echo esc_url( get_theme_file_uri( 'assets/"+file+"' ) ); ?>"
 def homeurl(path):return "<?php echo esc_url( home_url( '"+path+"' ) ); ?>"
@@ -39,25 +50,35 @@ def raw(body):return '<!-- wp:html -->'+body+'<!-- /wp:html -->\n'
 def icon(kind):
  paths={'play':'<path d="m9 5 11 7-11 7z" fill="currentColor" stroke="none"/>','info':'<circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/>','left':'<path d="m14 5-7 7 7 7"/>','right':'<path d="m10 5 7 7-7 7"/>','close':'<path d="m6 6 12 12M6 18 18 6"/>','audio':'<path d="M4 14v-3a8 8 0 0 1 16 0v3M4 12H2v7h4v-7zm16 0h2v7h-4v-7z"/>','search':'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>'}
  return '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">'+paths[kind]+'</svg>'
-def link(m,label,cls='',play=False):return '<a class="'+cls+'" href="'+esc(m['playback_url'])+'" data-cinema-id="'+m['id']+'"'+(' data-cinema-play' if play else '')+'>'+label+'</a>'
+def filmed(m):return m.get('preferred_playback')=='video' and m.get('video_alternate',{}).get('visual_format')=='filmed-conversation'
+def playback(m):return m['video_alternate']['url'] if filmed(m) else m['playback_url']
+def link(m,label,cls='',play=False):return '<a class="'+cls+'" href="'+esc(playback(m))+'" data-cinema-id="'+m['id']+'"'+(' data-cinema-play' if play else '')+'>'+label+'</a>'
 def views(m):return f"{m['youtube_views']/1000000:.2f}M views" if m.get('youtube_views') else ''
+def guest_composition(m):
+ crop=m['portrait_crop'];d=crop['diameter'];assert d>0 and 0<crop['cx']<crop['width'] and 0<crop['cy']<crop['height']
+ style='width:'+str(round(crop['width']/d*100,4))+'%;left:'+str(round(-(crop['cx']-d/2)/d*100,4))+'%;top:'+str(round(-(crop['cy']-d/2)/d*100,4))+'%;'
+ return '<span class="guest-show-wordmark" aria-hidden="true"><span>How’s Your</span><i>Prayer</i><span>Life?</span></span><span class="portrait-window" aria-hidden="true"><img src="'+asset(crop['source_image'])+'" alt="" loading="lazy" style="'+style+'"/></span>'
 def card(m,rank=None):
- podcast=m['type']=='podcast';title=m['display_title'];art=m['artwork']
- cover='<div class="cinema-card-art"><img src="'+asset(art)+'" alt="" loading="lazy" width="640" height="360"/>'
- if podcast:cover+='<span class="cinema-podcast-wordmark">'+('Through the<br><i>Mysteries</i>' if m['series']=='Through the Mysteries' else 'How’s Your<br><i>Prayer Life?</i>')+'</span>'
- cover+='<span class="cinema-card-open">'+icon('audio' if podcast else 'play')+'<span>Explore '+('episode' if podcast else 'film')+'</span></span>'
- if m.get('duration_label'):cover+='<span class="cinema-runtime">'+esc(m['duration_label'])+'</span>'
+ podcast=m['type']=='podcast';video=filmed(m);title=m['display_title'];art=m['artwork']
+ cover='<div class="cinema-card-art '+('episode-title-art '+m.get('art_layout','') if m['series']=='Through the Mysteries' else 'episode-session-art'+(' session-fit-contain' if m.get('artwork_fit')=='contain' else '') if m.get('artwork_kind')=='session-composition' else 'episode-guest-art' if m.get('artwork_kind')=='guest-composition' else 'episode-original-art' if podcast else 'instruction-art' if m.get('artwork_kind')=='instruction-composition' else '')+'"><img src="'+asset(art)+'" alt="" loading="lazy" width="640" height="360"/>'
+ if m['series']=='Through the Mysteries':cover+='<span class="episode-native-copy '+m['art_layout']+'" aria-hidden="true"><span class="episode-show">Through the <i>Mysteries</i></span><strong>'+esc(m.get('art_title',m['title']))+'</strong><span class="episode-ministry">Family Rosary · Audio</span></span>'
+ if m.get('artwork_kind')=='guest-composition':cover+=guest_composition(m)
+ if m.get('artwork_kind')=='session-composition':cover+='<span class="session-wordmark" aria-hidden="true"><span>How’s Your</span><i>Prayer Life?</i></span>'
+ if m.get('artwork_kind')=='instruction-composition':cover+='<span class="instruction-copy" aria-hidden="true"><strong>'+esc(m['display_title'])+'</strong><span>Family Rosary</span></span>'
+ cover+='<span class="cinema-card-open">'+icon('audio' if podcast and not video else 'play')+'<span>'+('Listen' if podcast and not video else 'Watch' if video else 'Play')+'</span></span>'
+ runtime=m['video_alternate'].get('duration_label') if video else m.get('duration_label')
+ if runtime:cover+='<span class="cinema-runtime">'+esc(runtime)+'</span>'
  cover+='</div>'
  if rank:cover='<div class="cinema-ranked-art"><span class="cinema-rank" aria-label="Number '+str(rank)+'">'+str(rank)+'</span>'+cover+'</div>'
- sub=views(m) if rank else ('Podcast' if podcast else 'For parents' if m['series']=='Digital Age Family Safety' else 'Family story' if m['series'] in ['Family Prayer','Staying Together: Families Praying Together'] else 'Video')
- return '<article class="cinema-card'+(' cinema-ranked' if rank else '')+'">'+link(m,cover+'<div class="cinema-card-caption"><h3>'+esc(title)+'</h3><p>'+sub+'</p></div>','cinema-card-link')+'</article>'
+ sub=views(m) if rank else ('Video & audio' if video else 'Podcast' if podcast else 'For parents' if m['series']=='Digital Age Family Safety' else 'Family story' if m['series'] in ['Family Prayer','Staying Together: Families Praying Together'] else 'Video')
+ return '<article class="cinema-card'+(' cinema-ranked' if rank else '')+'">'+link(m,cover+'<div class="cinema-card-caption"><h3>'+esc(title)+'</h3>'+('<p class="cinema-card-guest">With '+esc(m['guest_name'])+'</p>' if m.get('guest_name') else '')+'<p>'+sub+'</p></div>','cinema-card-link')+'<button type="button" class="cinema-card-info" data-cinema-id="'+m['id']+'" data-cinema-details aria-label="More details: '+esc(title)+'">'+icon('info')+'</button></article>'
 def shelf(id,title,description,records,rank=False):
  controls=''.join('<button class="cinema-scroll" type="button" data-cinema-scroll="'+str(n)+'" data-shelf="'+id+'" aria-label="'+label+' '+esc(title)+'">'+icon(ico)+'</button>' for n,label,ico in [(-1,'Previous','left'),(1,'More','right')])
  return '<section class="cinema-row" data-cinema-row aria-labelledby="'+id+'-title"><div class="cinema-row-heading"><div><h2 id="'+id+'-title">'+esc(title)+'</h2><p>'+esc(description)+'</p></div><div class="cinema-row-controls">'+controls+'</div></div><div class="cinema-shelf" id="'+id+'" tabindex="0" aria-label="'+esc(title)+'">'+''.join(card(m,i+1 if rank else None) for i,m in enumerate(records))+'</div></section>'
-features=[('video-9IsIPuJNdHI','Faith in the<br>hardest moments.','Meet the Hernandez family. A story of love, uncertainty and the prayer that carries them.','Watch the film'),('audio-w2jp2-1978007-pb','There’s more to<br>the <i>Rosary.</i>','Through the Mysteries explores the prayer, the questions and the everyday lives behind it.','Listen to the episode'),('audio-evb7j-1b5554c-pb','What does prayer<br>look like <i>for you?</i>','Honest conversations about faith, family and finding room for God. Begin with Scott Weeman.','Listen to the conversation'),('video-XkE8fuk1rHs','A moment for<br>the <i>Rosary.</i>','Follow Father Patrick Peyton through the Joyful Mysteries, with scenes from the life of Jesus and Mary.','Pray this Rosary')]
+features=[('video-9IsIPuJNdHI','Faith in the<br>hardest moments.','Meet the Hernandez family. A story of love, uncertainty and the prayer that carries them.','Watch the film'),('audio-w2jp2-1978007-pb','There’s more to<br>the <i>Rosary.</i>','Through the Mysteries explores the prayer, the questions and the everyday lives behind it.','Listen to the episode'),('audio-evb7j-1b5554c-pb','What does prayer<br>look like <i>for you?</i>','Honest conversations about faith, family and finding room for God. Begin with Scott Weeman.','Watch the conversation'),('video-XkE8fuk1rHs','A moment for<br>the <i>Rosary.</i>','Follow Father Patrick Peyton through the Joyful Mysteries, with scenes from the life of Jesus and Mary.','Pray this Rosary')]
 slides='';selectors=''
 for i,(mid,title,desc,cta) in enumerate(features):
- m=byid[mid];slides+='<article class="fr-feature-slide cinema-feature-slide'+(' cinema-feature-podcast' if m['type']=='podcast' else '')+'" data-feature-slide aria-roledescription="slide" aria-label="'+str(i+1)+' of 4"'+(' hidden' if i else '')+'><img class="cinema-feature-image" src="'+asset(m['artwork'])+'" alt="" width="1600" height="900"'+(' fetchpriority="high"' if i==0 else ' loading="lazy"')+'/><div class="cinema-feature-shade"></div><div class="cinema-feature-copy"><h2>'+title+'</h2><p>'+esc(desc)+'</p><p class="cinema-feature-facts">'+esc(('Podcast · '+m['series']) if m['type']=='podcast' else (m.get('duration_label') or 'Rosary film')+' · '+m['publisher'])+'</p><div class="cinema-feature-actions">'+link(m,icon('audio' if m['type']=='podcast' else 'play')+esc(cta),'cinema-primary',True)+link(m,icon('info')+'More details','cinema-details')+'</div></div></article>'
+ m=byid[mid];slides+='<article class="fr-feature-slide cinema-feature-slide'+(' cinema-feature-podcast '+('episode-feature-original' if m['series']!= 'Through the Mysteries' else 'episode-feature-title') if m['type']=='podcast' else '')+'" data-feature-slide aria-roledescription="slide" aria-label="'+str(i+1)+' of 4"'+(' hidden' if i else '')+'><img class="cinema-feature-image" src="'+asset(m['artwork'])+'" alt="" width="1600" height="900"'+(' fetchpriority="high"' if i==0 else ' loading="lazy"')+'/><div class="cinema-feature-shade"></div><div class="cinema-feature-copy"><h2>'+title+'</h2><p>'+esc(desc)+'</p><p class="cinema-feature-facts">'+esc((('Video & audio · ' if filmed(m) else 'Podcast · ')+m['series']) if m['type']=='podcast' else (m.get('duration_label') or 'Rosary film')+' · '+m['publisher'])+'</p><div class="cinema-feature-actions">'+link(m,icon('audio' if m['type']=='podcast' and not filmed(m) else 'play')+esc(cta),'cinema-primary',True)+link(m,icon('info')+'More details','cinema-details')+'</div></div></article>'
  selectors+='<button type="button" data-feature-select="'+str(i)+'" aria-pressed="'+('true' if i==0 else 'false')+'" aria-label="Show featured selection '+str(i+1)+': '+esc(m['display_title'])+'"><span></span></button>'
 hero='<section class="fr-feature-carousel cinema-feature" data-feature-carousel role="region" aria-roledescription="carousel" aria-label="Featured films and podcasts"><div class="cinema-feature-slides">'+slides+'</div><div class="cinema-feature-bottom"><div class="cinema-feature-selectors">'+selectors+'</div><div class="cinema-feature-nav"><button type="button" data-feature-prev aria-label="Previous featured selection">'+icon('left')+'</button><button type="button" data-feature-next aria-label="Next featured selection">'+icon('right')+'</button><button type="button" data-feature-toggle>Pause rotation</button></div></div><p class="fr-sr-only" data-feature-status role="status" aria-live="polite"></p></section>'
 nav='<div class="cinema-navigation"><div class="fr-wrap"><h1>Watch &amp; Listen</h1><nav aria-label="Explore Watch and Listen"><a href="#family-films-title">Family stories</a><a href="#popular-row-title">Rosaries</a><a href="#podcast-series">Podcasts</a><a href="#cinema-find">Find a program '+icon('search')+'</a></nav></div></div>'
@@ -65,7 +86,7 @@ family=[m for m in media if m['series'].startswith('Staying Together')]
 rank=[byid['video-'+x] for x in ['XkE8fuk1rHs','W2SnQhWhcJc','ngqZ0Vwn-Eg','dgeZdrDu84U']]
 series=''
 for name,key,mid,desc in [('Through the Mysteries','through-mysteries','audio-w2jp2-1978007-pb','Discover a prayer that meets real life.'),("How's Your Prayer Life?",'prayer-life','audio-evb7j-1b5554c-pb','Meet the people behind the prayer.')]:
- m=byid[mid];count=sum(x['series']==name for x in media);series+='<article class="cinema-series"><img src="'+asset(m['artwork'])+'" alt="" loading="lazy" width="1000" height="563"/><div><h3>'+('Through the<br><i>Mysteries</i>' if key=='through-mysteries' else 'How’s Your<br><i>Prayer Life?</i>')+'</h3><p>'+desc+'</p>'+link(m,str(count)+' episodes '+icon('right'),'cinema-series-link')+'</div></article>'
+ m=byid[mid];count=sum(x['series']==name for x in media);series+='<article class="cinema-series"><img src="'+asset(m['local_thumbnail'])+'" alt="" loading="lazy" width="1000" height="563"/><div><h3>'+('Through the<br><i>Mysteries</i>' if key=='through-mysteries' else 'How’s Your<br><i>Prayer Life?</i>')+'</h3><p>'+desc+'</p>'+link(m,str(count)+' episodes '+icon('right'),'cinema-series-link')+'</div></article>'
 content=nav+hero+'<div class="cinema-collections fr-wrap" id="media-library">'+shelf('family-films','Real families. Real faith.','Stories of love, resilience and prayer from Family Theater Productions.',family)+shelf('family-prayer','Prayer, in family life','Meet families making time for prayer, in their own homes.',[m for m in media if m['series']=='Family Prayer'])+shelf('digital-family','Raising a family in a digital world','Media, social platforms and AI: thoughtful guidance for parents.',[m for m in media if m['series']=='Digital Age Family Safety'])+shelf('popular-row','The Rosaries families return to','First four films in Family Rosary’s YouTube Popular list. Views checked November 9, 2026.',rank,True)+'<section class="cinema-series-section" id="podcast-series"><h2>Make room for a good conversation.</h2><p>Two series. Many ways to bring faith into the everyday.</p><div class="cinema-series-grid">'+series+'</div></section>'+shelf('watch-row','A few minutes for your faith','Short reflections with Father Fulgens Katende, C.S.C.',[m for m in media if m['series']=='Daily Reflection Videos'])
 for i,name in enumerate(['Through the Mysteries',"How's Your Prayer Life?"]):content+=shelf('listen-row-'+str(i),name,'Choose an episode, explore the series and listen here.',[m for m in media if m['series']==name])
 content+=shelf('learn-row','Learn the Rosary, one prayer at a time','Follow the opening prayers in these short videos.',[m for m in media if m['series']=='How to Pray the Rosary'])
@@ -75,7 +96,7 @@ dialog='<dialog id="cinema-dialog" class="cinema-dialog" aria-labelledby="cinema
 # Data URLs remain site-relative at build/export; sources and all visible catalog text stay intact.
 data=[]
 for m in media:
- data.append({k:v for k,v in m.items() if k in ['id','type','title','display_title','description','series','topic','audience','provider','publisher','playback_url','embed_url','duration_label','language','participants','published_on','youtube_views','views_checked_on','source_url'] }|{'artwork':m['artwork']})
+ data.append({k:v for k,v in m.items() if k in ['id','type','title','display_title','description','series','topic','audience','provider','publisher','playback_url','embed_url','duration_label','language','participants','published_on','youtube_views','views_checked_on','source_url','art_layout','artwork_kind','episode_number','video_alternate','audio_alternate','episode_url','artwork_note','episode_hook','art_title','guest_name','preferred_playback','portrait_crop','artwork_fit','thumbnail_url','local_thumbnail'] }|{'artwork':m['artwork']})
 pattern='<?php\n/**\n * Title: Watch and Listen — films, prayer and conversations\n * Slug: family-rosary/media\n * Categories: family-rosary\n * Inserter: yes\n */\n?>\n'+raw('<div class="fr-cinema" data-cinema-base="'+asset('')+'">'+content+dialog+'<script type="application/json" id="cinema-catalog">'+json.dumps(data,ensure_ascii=False).replace('<','\\u003c')+'</script></div>')
 (T/'patterns/media.php').write_text(pattern)
 assert len(media)==57 and len({m['id'] for m in media})==57

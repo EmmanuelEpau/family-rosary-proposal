@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "node scripts/build-rosary.mjs && python3 scripts/build-preview.py",
+    "build": "node scripts/build-rosary.mjs && python3 scripts/build-cinema.py && python3 scripts/build-resources.py && python3 scripts/build-preview.py",
     "check": "node scripts/check.mjs"
   },
   "devDependencies": {

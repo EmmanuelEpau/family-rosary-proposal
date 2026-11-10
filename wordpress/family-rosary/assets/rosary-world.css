@@ -1,0 +1,20 @@
+.fr-rosary-world{align-items:start;gap:clamp(2rem,5vw,5rem)}
+.fr-rosary-world .fr-prayer-reader{position:sticky;top:7rem;min-width:0;padding:clamp(1.25rem,3vw,2.5rem);background:#fff;color:#002c76}
+.fr-rosary-world .fr-prayer-words{font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.7;max-width:62ch;min-height:10rem}
+.fr-rosary-world .fr-reader-controls{display:flex;gap:1rem;justify-content:space-between;margin:2rem 0}
+.fr-rosary-world button,.fr-rosary-world select{min-height:44px;max-width:100%;font:inherit}
+.fr-rosary-world button{cursor:pointer}.fr-rosary-world button:disabled{cursor:default;opacity:.55}
+.fr-rosary-world :focus-visible{outline:3px solid #0047bb;outline-offset:4px}
+.fr-rosary-world .fr-rosary-navigation{display:grid;gap:.75rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid #ccd9ee}
+.fr-rosary-world .fr-field{display:grid;gap:.4rem}.fr-rosary-world select{width:100%;color:#002c76;background:#fff;border:1px solid #7a91b6;padding:.6rem}
+.fr-rosary-materials{border:0;padding:0;margin:1rem 0;display:flex;flex-wrap:wrap;gap:.5rem}.fr-rosary-materials legend{margin-bottom:.5rem}.fr-rosary-materials button{padding:.55rem 1rem;border:1px solid #0047bb;background:#fff;color:#0047bb;border-radius:3px}.fr-rosary-materials button[aria-pressed=true]{background:#0047bb;color:#fff}.fr-rosary-materials button:hover{background:#e8f0fc;color:#002c76}
+.fr-rosary-world progress{width:100%;height:.4rem;accent-color:#0047bb}.fr-rosary-world .fr-reader-rosary{height:540px;touch-action:pan-y pinch-zoom}.fr-rosary-world .fr-prayer-mystery{font-size:1.15rem;font-weight:700}.fr-rosary-world #prayer-title{scroll-margin-top:8rem}
+@media(max-width:760px){.fr-rosary-world{display:flex!important;flex-direction:column}.fr-rosary-world .fr-prayer-settings,.fr-rosary-world .fr-prayer-reader{width:100%}.fr-rosary-world .fr-reader-rosary{height:310px}.fr-rosary-world .fr-prayer-reader{position:static}.fr-rosary-world .fr-prayer-words{min-height:0}.fr-rosary-world .fr-reader-controls{position:sticky;bottom:0;background:#fff;padding:1rem 0;margin-bottom:1rem;z-index:2}.fr-rosary-world .fr-reader-controls button{flex:1}.fr-rosary-world .fr-rosary-navigation{margin-top:1rem}}
+@media(forced-colors:active){.fr-rosary-materials button[aria-pressed=true]{outline:3px solid Highlight}.fr-rosary-world progress{forced-color-adjust:auto}}
+
+/* Keep the words and next prayer central; direct navigation is available on request. */
+.fr-rosary-world details.fr-rosary-navigation{display:block;padding-top:1rem;margin-top:1.5rem}
+.fr-rosary-world .fr-rosary-navigation summary{font-weight:650;cursor:pointer;min-height:44px;padding:.5rem 0;list-style-position:inside}
+.fr-rosary-world .fr-rosary-choices{display:grid;gap:1rem;padding:1rem 0}
+.fr-rosary-world .fr-rosary-resume{font-size:.95rem;color:#244a79;margin:1rem 0 .5rem}
+.fr-rosary-world #prayer-reset{margin-top:1rem;min-height:44px}

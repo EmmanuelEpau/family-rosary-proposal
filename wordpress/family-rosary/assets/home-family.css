@@ -1,0 +1,34 @@
+.fr-cinematic-hero .fr-hero-art{overflow:hidden}
+.fr-cinematic-hero .fr-family-slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.3s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.fr-cinematic-hero .fr-family-slide.is-current{opacity:1}
+.fr-cinematic-hero .fr-family-slide img{width:100%;height:100%;object-fit:cover}
+.fr-cinematic-hero .fr-family-slide:first-child img{object-position:center 35%}
+.fr-cinematic-hero .fr-family-pause{position:absolute;right:var(--fr-gap,24px);bottom:24px;z-index:4;width:48px;height:48px;display:grid;place-items:center;border:1px solid #fff;background:#002c76;color:#fff;border-radius:50%;padding:0}
+.fr-cinematic-hero .fr-family-pause[hidden]{display:none!important}
+.fr-cinematic-hero .fr-family-pause:hover{background:#0047bb}
+.fr-cinematic-hero .fr-family-pause:focus-visible{outline:3px solid #ffb500;outline-offset:4px}
+.fr-cinematic-hero .fr-family-play-icon{display:none}
+.fr-cinematic-hero .fr-family-pause[aria-pressed=true] .fr-family-pause-icon{display:none}
+.fr-cinematic-hero .fr-family-pause[aria-pressed=true] .fr-family-play-icon{display:block}
+@media(max-width:780px){.fr-cinematic-hero .fr-hero-art{width:100%;height:auto;aspect-ratio:1.5}.fr-cinematic-hero .fr-family-slide,.fr-cinematic-hero .fr-family-slide img{height:100%;aspect-ratio:auto}.fr-cinematic-hero .fr-family-pause{top:16px;bottom:auto;right:16px}}
+@media(prefers-reduced-motion:reduce){.fr-cinematic-hero .fr-family-slide{transition:none}.fr-cinematic-hero .fr-family-pause{display:none}}
+/* Readable invitations: useful excerpts, with events distinct from articles. */
+.fr-home-journal{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+.fr-home-journal h2{font-size:clamp(2.1rem,3.5vw,3.4rem);max-width:17ch;margin-bottom:1.2rem}
+.fr-home-journal>div>p{font-size:1.1rem;max-width:48ch}
+.fr-home-journal ul{list-style:none;margin:1.75rem 0;padding:0}
+.fr-home-journal li{padding:1rem 0;border-top:1px solid #a9c2e6}
+.fr-home-journal li a{display:inline-block;font-weight:650;font-size:1.1rem;line-height:1.4;min-height:44px;padding-block:.4rem}
+.fr-home-journal li span{display:block;color:#244a79;font-size:1rem;max-width:48ch}
+.fr-home-events{background:#e9f2ff;padding:clamp(1.5rem,3vw,2.5rem);color:#002c76}
+.fr-home-events h2{padding-bottom:.6rem;border-bottom:4px solid #ffb500}
+.fr-home-journal .fr-event-note{font-size:.9rem;color:#244a79;margin-top:1.5rem}
+.fr-age-options .fr-age-prayer{display:block;max-width:62ch;font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.65}
+@media(max-width:780px){.fr-home-journal{grid-template-columns:1fr;gap:2.5rem}.fr-home-journal h2 br{display:none}.fr-home-journal li a{padding-block:.5rem}.fr-home-events{padding:1.5rem}}
+
+.fr-resource-cover-prayers{background:#0047bb;isolation:isolate}
+.fr-resource-cover-prayers>img{inset:auto 0 0 auto;width:75%;height:80%;object-position:38% 52%;mask-image:linear-gradient(180deg,transparent 0%,#000 24%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 24%)}
+.fr-resource-cover-prayers>div{position:relative;z-index:1;background:none;width:70%;align-self:start;padding-top:22px}
+.fr-resource-cover-prayers strong{font-size:clamp(27px,2.8vw,38px)}
+.fr-resource-cover-prayers span{max-width:12ch}
+.fr-family-photo img{object-position:center 65%}

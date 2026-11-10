@@ -1,0 +1,171 @@
+/* Native episode compositions: real official HYPL art; exact title-led TTM audio. */
+.episode-title-art{background:#0047bb url('cinema/through-mysteries.png') left center / 220% auto no-repeat;position:relative;overflow:hidden}
+.episode-title-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.episode-native-copy{position:absolute;inset:8% 7%;display:flex;flex-direction:column;align-items:flex-start;text-align:left;color:#fff;pointer-events:none}
+.episode-native-copy .episode-show{font:600 clamp(12px,1.2vw,19px)/1.05 var(--fr-sans);color:#fff;max-width:80%}
+.episode-show i{font-family:PlaylistScript,cursive;font-size:1.65em;font-weight:700;color:#ffb500;font-style:normal}
+.episode-native-copy strong{font:700 clamp(21px,2vw,34px)/1.03 var(--fr-sans);letter-spacing:-.025em;max-width:78%;margin:auto 0;text-wrap:balance}
+.episode-ministry{font:500 11px/1.2 var(--fr-sans);color:#fff}
+.mysteries-1 .episode-native-copy strong{max-width:68%;font-size:clamp(25px,2.4vw,41px)}
+.mysteries-2 .episode-native-copy{inset:10% 8%}
+.mysteries-2 .episode-native-copy strong{max-width:75%;color:#ffb500}
+.mysteries-3 .episode-native-copy strong{max-width:72%;font-size:clamp(22px,2.2vw,37px)}
+.episode-original-art{background:#fff}
+.cinema-card-art.episode-original-art>img{object-fit:contain}
+.cinema-card-art .cinema-card-open{z-index:2}
+.episode-preview{display:block;position:relative;width:148px;aspect-ratio:16/9;flex:none;overflow:hidden;border-radius:5px}
+.episode-preview>img{width:100%;height:100%;object-fit:contain}
+.episode-preview .episode-native-copy{inset:9% 7%}
+.episode-preview .episode-native-copy .episode-show{font-size:8px}
+.episode-preview .episode-native-copy strong{font-size:13px;max-width:79%}
+.cinema-episode>.episode-preview img{width:100%;height:100%}
+.cinema-result>.episode-preview{width:100%}
+.cinema-result .episode-native-copy strong{font-size:clamp(19px,2vw,28px)}
+.cinema-result .episode-native-copy .episode-show{font-size:12px}
+.cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-art{aspect-ratio:auto;height:auto;background:#fff;min-height:0}
+.cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-art>img{position:static;width:100%;height:auto;max-height:450px;object-fit:contain;display:block}
+.cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-title{position:static;background:#002c75;padding:25px 6%;max-width:none}
+.cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-art:after{display:none}
+.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-art{background:#0047bb url('cinema/through-mysteries.png') left center / 220% auto no-repeat}
+.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-art>img{object-fit:contain}
+.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-title{max-width:78%}
+.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-art:after{display:none}
+.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-title h2{font-family:var(--fr-sans);text-wrap:balance}
+.cinema-dialog[data-artwork-kind="title-composition"] #cinema-series-name{color:#ffb500;font-weight:600}
+.cinema-episode:focus-visible,.cinema-card-link:focus-visible,.cinema-result:focus-visible{outline:3px solid #ffb500;outline-offset:-4px;box-shadow:inset 0 0 0 6px #0047bb}
+.cinema-alternate{display:inline-block;margin-block:12px}
+@media(max-width:600px){.episode-native-copy strong{font-size:25px}.episode-native-copy .episode-show{font-size:13px}.mysteries-1 .episode-native-copy strong{font-size:31px}.mysteries-3 .episode-native-copy strong{font-size:27px}.episode-preview{width:100px}.episode-preview .episode-native-copy strong{font-size:10px}.episode-preview .episode-native-copy .episode-show{font-size:6px}.cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-title{padding:20px}.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-title{max-width:90%}}
+.cinema-feature .episode-feature-title{background:#0047bb url('cinema/through-mysteries.png') left center / 220% auto no-repeat}
+.cinema-feature .episode-feature-title .cinema-feature-image{width:70%;right:0;object-fit:contain}
+.cinema-feature .episode-feature-original{background:#fff}
+.cinema-feature .episode-feature-original .cinema-feature-image{width:62%;right:0;object-fit:contain;object-position:right center}
+.cinema-feature .episode-feature-original .cinema-feature-shade{background:linear-gradient(90deg,#001c49 0%,#001c49 28%,rgba(0,28,73,.94) 37%,rgba(0,28,73,0) 63%)}
+@media(max-width:600px){.cinema-feature .episode-feature-original .cinema-feature-image{width:100%;height:47%;top:auto;bottom:0;object-position:center}.cinema-feature .episode-feature-original{background:#001c49}.cinema-feature .episode-feature-original .cinema-feature-shade{background:linear-gradient(0deg,transparent 0%,transparent 27%,#001c49 56%)}.cinema-feature .episode-feature-original .cinema-feature-copy{padding-bottom:310px}.cinema-feature .episode-feature-title .cinema-feature-image{width:100%}}
+.instruction-art{position:relative;background:#0047bb}
+.instruction-art>img{object-fit:cover;object-position:70% center;width:65%;margin-left:35%}
+.instruction-art:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0047bb 0%,#0047bb 31%,rgba(0,71,187,.1) 77%);pointer-events:none}
+.instruction-art .instruction-copy{position:absolute;inset:15% 8%;z-index:1;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;color:#fff}
+.instruction-copy strong{font:700 clamp(27px,2.8vw,44px)/1.02 var(--fr-sans);max-width:65%;text-wrap:balance;letter-spacing:-.03em}
+.instruction-copy>span{font:600 12px/1.2 var(--fr-sans);color:#ffb500}
+.cinema-series{aspect-ratio:auto;display:flex;flex-direction:column;background:#002c75}
+.cinema-series>img{position:static;aspect-ratio:16/9;object-fit:contain;background:#fff;width:100%;height:auto}
+.cinema-series>div{width:100%;padding:25px 30px}
+.cinema-series h3{font-size:32px;margin:0 0 16px}
+.cinema-series h3 br{display:none}
+.cinema-series p{max-width:none}
+/* One real provider instance persists while the visitor browses this page. */
+.cinema-audio-dock{position:fixed;z-index:1001;bottom:16px;right:16px;width:min(580px,calc(100vw - 32px));padding:16px 20px;background:#fff;border:2px solid #0047bb;border-radius:12px;box-shadow:0 8px 30px rgba(0,25,70,.24);color:#001c49}
+.cinema-dock-heading{display:flex;gap:16px;align-items:start;justify-content:space-between}
+.cinema-dock-title{font:600 16px/1.3 var(--fr-sans);max-width:35ch}
+.cinema-dock-heading>div{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.cinema-dock-heading button{min-height:44px;padding:8px 11px;background:#0047bb;color:white;border:0;border-radius:6px;font:600 13px/1.2 var(--fr-sans)}
+.cinema-dock-heading button:disabled{opacity:.55;cursor:wait}
+.cinema-dock-heading button:focus-visible{outline:3px solid #ffb500;outline-offset:2px}
+.cinema-dock-status{font-size:13px;line-height:1.3;margin:10px 0;color:#0047bb}
+.cinema-dock-provider iframe{width:100%;height:315px;display:block;border:0}
+.cinema-dock-provider>a{font-size:13px;display:inline-block;margin-top:8px}
+.cinema-audio-dock.is-minimized .cinema-dock-provider{display:none}
+.has-cinema-audio{padding-bottom:110px}
+@media(max-width:600px){.cinema-audio-dock{bottom:8px;right:8px;width:calc(100vw - 16px);padding:12px}.cinema-dock-heading{flex-direction:column;gap:8px}.cinema-dock-heading>div{justify-content:flex-start}.cinema-dock-provider iframe{height:280px}.cinema-dock-title{font-size:14px}}
+.cinema-dock-heading button{display:inline-grid;place-items:center;min-width:44px;min-height:44px;width:44px;height:44px;padding:10px;flex:none}
+.cinema-dock-heading button svg{display:block;pointer-events:none}
+.cinema-dock-status.fr-sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+
+/* A compact glass surface keeps the conversation in view while browsing. */
+.cinema-audio-dock{width:min(560px,calc(100vw - 32px));padding:12px 14px;background:rgba(248,252,255,.84);border:1px solid rgba(255,255,255,.85);border-radius:18px;box-shadow:0 6px 28px rgba(0,35,90,.16),inset 0 0 0 1px rgba(0,71,187,.12);backdrop-filter:blur(20px) saturate(135%);-webkit-backdrop-filter:blur(20px) saturate(135%)}
+.cinema-dock-heading{align-items:center;gap:12px;flex-direction:row}
+.cinema-dock-title{font-size:14px;line-height:1.35;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cinema-dock-heading>div{flex-shrink:0;flex-wrap:nowrap;gap:5px}
+.cinema-dock-heading button{width:44px;height:44px;padding:10px;border-radius:12px;background:rgba(255,255,255,.5);color:#0047bb;border:1px solid rgba(0,71,187,.13);box-shadow:inset 0 1px 0 rgba(255,255,255,.75);transition:background .18s ease,box-shadow .18s ease}
+.cinema-dock-heading button:hover{background:rgba(255,255,255,.94);box-shadow:0 2px 8px rgba(0,71,187,.09)}
+.cinema-dock-heading button:active{background:rgba(219,234,255,.85)}
+@media(max-width:600px){.cinema-audio-dock{right:8px;bottom:8px;width:calc(100vw - 16px);padding:10px 12px}.cinema-dock-heading{flex-direction:row;gap:8px}.cinema-dock-title{font-size:13px}.cinema-dock-heading>div{gap:3px}}
+@media(prefers-reduced-motion:reduce){.cinema-dock-heading button{transition:none}}
+@media(forced-colors:active){.cinema-audio-dock,.cinema-dock-heading button{background:Canvas;color:CanvasText;border:1px solid CanvasText}}
+/* True session imagery stays below the show identity; no synthetic portraits. */
+.episode-session-art{position:relative;overflow:hidden;background:#0047bb}
+.cinema-card-art.episode-session-art>img,.episode-preview.episode-session-art>img{position:absolute;inset:35% 0 0;width:100%;height:65%;object-fit:cover;object-position:center}
+.session-wordmark{position:absolute;inset:0 0 auto;display:flex;align-items:center;justify-content:center;gap:4%;height:35%;padding:4% 5%;color:#fff;pointer-events:none;white-space:nowrap}
+.session-wordmark>span{font:600 clamp(17px,1.7vw,27px)/1 var(--fr-sans);letter-spacing:-.025em}
+.session-wordmark>i{font:700 clamp(28px,2.8vw,45px)/.85 PlaylistScript,cursive;font-style:normal;color:#ffb500;letter-spacing:0}
+.episode-preview .session-wordmark>span{font-size:10px}
+.episode-preview .session-wordmark>i{font-size:17px}
+.cinema-result .session-wordmark>span{font-size:19px}
+.cinema-result .session-wordmark>i{font-size:30px}
+.cinema-card{position:relative}
+.cinema-card-info{position:absolute;top:8px;right:8px;z-index:3;display:grid;place-items:center;width:44px;height:44px;min-width:44px;min-height:44px;border:0;border-radius:50%;background:rgba(0,28,73,.92);color:#fff;cursor:pointer}
+.cinema-card-info:hover{background:#0047bb;color:#ffb500}
+.cinema-card-info:focus-visible{outline:3px solid #ffb500;outline-offset:2px}
+.cinema-card-caption .cinema-card-guest,.cinema-guest{font-size:13px;line-height:1.3;font-weight:400;color:#24446f;margin:8px 0}
+.cinema-dialog[data-artwork-kind="session-composition"] .cinema-detail-art{aspect-ratio:auto;height:auto;min-height:0;background:#0047bb}
+.cinema-dialog[data-artwork-kind="session-composition"] .cinema-detail-art:after{display:none}
+.cinema-dialog[data-artwork-kind="session-composition"] .cinema-detail-art>.session-wordmark{position:static;height:130px;padding:25px;gap:30px}
+.cinema-dialog[data-artwork-kind="session-composition"] .session-wordmark>span{font-size:32px}
+.cinema-dialog[data-artwork-kind="session-composition"] .session-wordmark>i{font-size:54px}
+.cinema-dialog[data-artwork-kind="session-composition"] .cinema-detail-art>img{position:static;width:100%;height:auto;object-fit:contain;display:block}
+.cinema-dialog[data-artwork-kind="session-composition"] .cinema-detail-title{position:static;padding:25px 6%;max-width:none}
+.cinema-dialog[data-artwork-kind="session-composition"] .cinema-detail-title h2{font-family:var(--fr-sans);font-size:clamp(30px,4vw,44px)}
+.cinema-alternate{margin-left:0}
+.cinema-edition-note{font-size:14px;line-height:1.4;color:#0047bb;margin:0 0 12px}
+@media(max-width:600px){.session-wordmark>span{font-size:19px}.session-wordmark>i{font-size:31px}.episode-preview .session-wordmark>span{font-size:7px}.episode-preview .session-wordmark>i{font-size:11px}.cinema-dialog[data-artwork-kind="session-composition"] .cinema-detail-art>.session-wordmark{height:95px;padding:15px;gap:20px}.cinema-dialog[data-artwork-kind="session-composition"] .session-wordmark>span{font-size:23px}.cinema-dialog[data-artwork-kind="session-composition"] .session-wordmark>i{font-size:36px}}
+.episode-session-art{container-type:inline-size}
+.session-wordmark>span{font-size:clamp(15px,5.3cqw,27px)}
+.session-wordmark>i{font-size:clamp(24px,8.7cqw,45px)}
+.cinema-card-art.episode-session-art .session-wordmark{justify-content:flex-start;padding-right:50px}
+.cinema-card-art.episode-session-art.session-fit-contain>img,.episode-preview.episode-session-art.session-fit-contain>img{object-fit:contain}
+/* Existing official portraits, enlarged through recorded source coordinates. */
+.episode-guest-art{position:relative;overflow:hidden;container-type:inline-size;background:#0047bb}
+.episode-guest-art>img{display:none}
+.guest-show-wordmark{position:absolute;left:6%;top:50%;transform:translateY(-50%);width:43%;display:flex;flex-direction:column;align-items:flex-start;color:#fff;pointer-events:none}
+.guest-show-wordmark>span{font:600 clamp(14px,6cqw,28px)/1.05 Calluna,Georgia,serif;letter-spacing:-.025em;white-space:nowrap}
+.guest-show-wordmark>i{font:700 clamp(26px,13cqw,59px)/.9 PlaylistScript,cursive;color:#ffb500;font-style:normal;margin:4% 0 2%;letter-spacing:0}
+.guest-show-wordmark>span:last-child{font-size:clamp(18px,8cqw,36px)}
+.portrait-window{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:42%;aspect-ratio:1;border-radius:50%;overflow:hidden;background:#fff;box-shadow:0 5px 16px rgba(0,24,65,.2);pointer-events:none}
+.cinema-card-art .portrait-window>img,.episode-preview .portrait-window>img{position:absolute;max-width:none;height:auto;object-fit:initial;transform:none!important;transition:none}
+.episode-preview .guest-show-wordmark>span{font-size:9px}
+.episode-preview .guest-show-wordmark>i{font-size:19px}
+.episode-preview .guest-show-wordmark>span:last-child{font-size:12px}
+.cinema-result .guest-show-wordmark>span{font-size:clamp(15px,6cqw,24px)}
+.cinema-result .guest-show-wordmark>i{font-size:clamp(26px,13cqw,48px)}
+.cinema-result .guest-show-wordmark>span:last-child{font-size:clamp(18px,8cqw,30px)}
+.cinema-dialog[data-artwork-kind="guest-composition"] .cinema-detail-art{aspect-ratio:auto;height:auto;min-height:0;background:#fff}
+.cinema-dialog[data-artwork-kind="guest-composition"] .cinema-detail-art:after{display:none}
+.cinema-dialog[data-artwork-kind="guest-composition"] .cinema-detail-art>img{position:static;width:100%;height:auto;max-height:450px;object-fit:contain;display:block}
+.cinema-dialog[data-artwork-kind="guest-composition"] .cinema-detail-title{position:static;background:#002c75;padding:25px 6%;max-width:none}
+@media(max-width:600px){.episode-preview .guest-show-wordmark>span{font-size:6px}.episode-preview .guest-show-wordmark>i{font-size:13px}.episode-preview .guest-show-wordmark>span:last-child{font-size:8px}}
+/* Curated two-line audio hooks have a reserved brand row and footer row. */
+.episode-title-art{container-type:inline-size}
+.episode-title-art .episode-native-copy{inset:7%;display:grid;grid-template-rows:26px minmax(0,1fr) 14px;gap:6px;align-items:stretch}
+.episode-title-art .episode-native-copy .episode-show{font-size:12px;line-height:1.15;align-self:start;max-width:calc(100% - 42px);white-space:nowrap}
+.episode-title-art .episode-native-copy strong{font-size:clamp(20px,8cqw,27px);line-height:1.04;letter-spacing:-.025em;max-width:84%;margin:0;align-self:center;white-space:pre-line;text-wrap:initial}
+.episode-title-art .episode-native-copy .episode-ministry{align-self:end;font-size:10px;line-height:1.2;white-space:nowrap}
+.episode-preview.episode-title-art .episode-native-copy{grid-template-rows:clamp(7px,7cqw,12px) minmax(0,1fr) clamp(5px,5cqw,8px);gap:2px}
+.episode-preview.episode-title-art .episode-native-copy .episode-show{font-size:clamp(5px,5cqw,8px);max-width:100%}
+.episode-preview.episode-title-art .episode-native-copy strong{font-size:clamp(9px,8cqw,13px)}
+.episode-preview.episode-title-art .episode-native-copy .episode-ministry{font-size:clamp(4px,4cqw,6px)}
+.cinema-result .episode-preview.episode-title-art .episode-native-copy{grid-template-rows:22px minmax(0,1fr) 12px;gap:5px}
+.cinema-result .episode-preview.episode-title-art .episode-native-copy .episode-show{font-size:11px}
+.cinema-result .episode-preview.episode-title-art .episode-native-copy strong{font-size:clamp(19px,8cqw,25px)}
+.cinema-result .episode-preview.episode-title-art .episode-native-copy .episode-ministry{font-size:9px}
+/* Homepage media reuses the catalog's editable artwork and actual sources. */
+.fr-home-media-band .fr-home-native-art{position:relative;display:block;width:100%;aspect-ratio:16/9;overflow:hidden}
+.fr-home-media-band .fr-home-native-art>img{position:absolute;inset:0;width:100%;height:100%;padding:0;margin:0;aspect-ratio:auto;transform:none;object-fit:contain;background:transparent}
+.fr-home-media-band .fr-home-native-art.episode-session-art>img{top:35%;height:65%;object-fit:cover}
+.fr-home-media-band .fr-home-native-art.session-fit-contain>img{object-fit:contain}
+.fr-home-media-band .fr-home-native-art.instruction-art>img{left:35%;width:65%;object-fit:cover}
+.fr-home-media-band .fr-home-native-art.fr-home-source-art>img{object-fit:cover}
+.fr-home-media-band .fr-home-native-art .instruction-copy{position:absolute;inset:15% 8%;z-index:1;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;color:#fff}
+.fr-home-media-band .fr-home-native-art .instruction-copy strong{font-size:clamp(25px,8cqw,42px)}
+.fr-home-media-band .fr-home-native-art.instruction-art{container-type:inline-size}
+.fr-home-media-band .fr-home-media-cover,.fr-home-media-band .fr-media-cover{aspect-ratio:16/9}
+.fr-home-media-band .fr-feature-art>.fr-home-native-art{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto}
+.fr-home-media-band .fr-feature-audio .fr-feature-art{background:#0047bb}
+.fr-home-media-band .fr-feature-selectors img.fr-home-native-selector{background:#0047bb url('cinema/through-mysteries.png') left center / 220% auto no-repeat;object-fit:contain}
+.fr-home-media-band .fr-collection-art .fr-home-native-art{aspect-ratio:16/9}
+.fr-home-media-band .fr-home-media-cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px}
+.fr-home-media-band .fr-home-media-cards .fr-media-card{flex:0 0 calc((100% - 78px)/4);min-width:240px;scroll-snap-align:start}
+.fr-home-media-band .fr-home-media-cards h3{margin-top:18px}
+.fr-home-media-band .fr-home-media-cards .fr-media-kind{margin-top:10px;font-size:13px}
+.fr-home-media-band .fr-home-media-cards .fr-media-desc{font-size:14px;line-height:1.3;margin-top:8px}
+@media(max-width:780px){.fr-home-media-band .fr-feature-art>.fr-home-native-art{position:relative;height:auto;aspect-ratio:16/9}.fr-home-media-band .fr-home-media-cards .fr-media-card{flex-basis:84%;max-width:330px;min-width:0}}
+.fr-home-media-band .fr-media-card .fr-play-icon{top:10px;right:10px;bottom:auto;left:auto;width:40px;height:40px}
