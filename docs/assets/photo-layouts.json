@@ -1,0 +1,18 @@
+{
+  "default": "100vw",
+  "figures": {
+    "fr-family-slide": "100vw",
+    "fr-daily-prayer-image": "(max-width: 350px) 80px, (max-width: 780px) 105px, (max-width: 1150px) 110px, 135px",
+    "fr-resource-cover-prayers": "(max-width: 780px) calc(100vw - 48px), (max-width: 1440px) 30vw, 416px",
+    "fr-child-photo": "(max-width: 780px) 320px, 460px",
+    "fr-age-family-photo": "(max-width: 1440px) calc(100vw - 48px), 1440px",
+    "fr-feature-art": "(max-width: 780px) 100vw, (max-width: 1440px) 90vw, 1320px",
+    "fr-family-photo": "(max-width: 780px) calc(100vw - 48px), 480px",
+    "fr-story-chapter-image": "(max-width: 780px) calc(100vw - 48px), (max-width: 1440px) 46vw, 640px",
+    "pa-family-image": "(max-width: 780px) calc(100vw - 48px), (max-width: 1440px) 44vw, 600px"
+  },
+  "images": {
+    "cinema-feature-image": "100vw",
+    "fr-rosary-fallback": "(max-width: 780px) calc(100vw - 96px), 560px"
+  }
+}

@@ -6,6 +6,7 @@ if (OUT/'assets').exists():shutil.rmtree(OUT/'assets')
 shutil.copytree(T/'assets',OUT/'assets')
 ASSET_VERSION=hashlib.sha256(b''.join(p.read_bytes() for p in sorted(T.rglob('*')) if p.is_file())).hexdigest()[:10]
 MANIFEST=json.loads((T/'assets/route-assets.json').read_text())
+PHOTO_LAYOUTS=json.loads((T/'assets/photo-layouts.json').read_text())
 for bundles in [MANIFEST['common'],*MANIFEST['routes'].values()]:
  for kind,extension in [('styles','css'),('scripts','js')]:
   assert all((T/'assets'/f'{name}.{extension}').exists() for name in bundles[kind])
@@ -23,13 +24,20 @@ def convert(s,prefix,home=False):
   cls=attrs.get('className','');return ('<button class="fr-mobile-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>' if cls=='fr-nav' else '')+'<nav '+('id="main-nav" ' if cls=='fr-nav' else '')+'class="'+cls+'" aria-label="'+attrs.get('ariaLabel','Navigation')+'"><ul>'+''.join(links)+'</ul></nav>'
  s=re.sub(r'<!-- wp:navigation (.*?) -->(.*?)<!-- /wp:navigation -->',nav,s,flags=re.S)
  s=re.sub(r'<!--.*?-->','',s,flags=re.S)
- # Deliver the same photographic derivatives as WordPress's render_block filter.
- def photo(match):
-  stem=match.group(2)
-  if 'srcset=' in match.group(0) or not (T/'assets/photos'/f'{stem}-640.webp').exists():return match.group(0)
-  base=match.group(1)[:-4]
-  return match.group(0).replace('src="'+match.group(1)+'"','src="'+base+'-1280.webp" srcset="'+base+'-640.webp 640w, '+base+'-1280.webp 1280w" sizes="100vw"')
- s=re.sub(r'<img\b[^>]*\bsrc="([^" ]*/assets/photos/([^/" ]+)\.jpg)"[^>]*>',photo,s)
+ # Same role sizes and derivatives as WordPress's render_block filter.
+ def role_size(markup,roles,fallback):
+  classes=re.search(r'\bclass="([^"]*)"',markup,re.I)
+  return next((roles[c] for c in classes.group(1).split() if c in roles),fallback) if classes else fallback
+ def photos(markup,figure_size):
+  def photo(match):
+   stem=match.group(2)
+   if 'srcset=' in match.group(0) or not (T/'assets/photos'/f'{stem}-640.webp').exists():return match.group(0)
+   base=match.group(1)[:-4]
+   size='' if re.search(r'\bsizes="[^"]*"',match.group(0),re.I) else ' sizes="'+html.escape(role_size(match.group(0),PHOTO_LAYOUTS['images'],figure_size),quote=True)+'"'
+   return match.group(0).replace('src="'+match.group(1)+'"','src="'+base+'-1280.webp" srcset="'+base+'-640.webp 640w, '+base+'-1280.webp 1280w"'+size)
+  return re.sub(r'<img\b[^>]*\bsrc="([^" ]*/assets/photos/([^/" ]+)\.jpg)"[^>]*>',photo,markup,flags=re.I)
+ s=re.sub(r'<figure\b[^>]*>.*?</figure>',lambda m:photos(m.group(0),role_size(m.group(0).split('>',1)[0],PHOTO_LAYOUTS['figures'],PHOTO_LAYOUTS['default'])),s,flags=re.I|re.S)
+ s=photos(s,PHOTO_LAYOUTS['default'])
  # Keep internal review navigation on the current release even in previously open tabs.
  def review_link(m):
   target=html.unescape(m.group(2))
@@ -62,4 +70,4 @@ program_builder=ROOT/'scripts/build-programs.py'
 if program_builder.exists():
  exec(compile(program_builder.read_text(),str(program_builder),'exec'),globals())
 
-shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.7.2"),"zip",root_dir=T.parent,base_dir=T.name)
+shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.7.3"),"zip",root_dir=T.parent,base_dir=T.name)

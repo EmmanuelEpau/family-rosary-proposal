@@ -1,4 +1,6 @@
-# Family Rosary proposal1.7.2
+Current 1.7.3 follow-up: fixes stalled audio retries and event races, restores failed-card recovery, preserves expanded controls, focuses completed family prayer, keeps changed phone prayer words visible, stages later hero photos, uses role-aware responsive images and preserves faces in the family-day crop. Run `npm run check:unit` for focused controller, photo, Rosary and content checks. Actual browser and native WordPress evidence is recorded in the dated audit-closure task folder. Production and editorial limitations below remain explicit.
+
+# Family Rosary proposal 1.7.3
 
 Public review: https://emmanuelepau.github.io/family-rosary-proposal/ . This is a proposal, not the ministry production website. Review pages retain noindex.
 
@@ -14,7 +16,7 @@ Resource language metadata now includes original-body evidence for16PDFs and rev
 
 ## Build and package
 
-Run npm ci, then npm run build. Source lives in wordpress/family-rosary, media/resource metadata in content, and generators in scripts. The build exports docs and creates docs/downloads/family-rosary-theme-1.7.2.zip. Historical packages are retained. Assets and their rights are recorded in wordpress/family-rosary/ASSET-CREDITS.md. Font binaries are not redistributed.
+Run npm ci, then npm run build. Source lives in wordpress/family-rosary, media/resource metadata in content, and generators in scripts. The build exports docs and creates docs/downloads/family-rosary-theme-1.7.3.zip. Historical packages are retained. Assets and their rights are recorded in wordpress/family-rosary/ASSET-CREDITS.md. Font binaries are not redistributed.
 
 ## Verification
 

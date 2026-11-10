@@ -212,7 +212,7 @@
 .cinema-dialog.is-playing .cinema-detail-summary{margin-top:24px}
 
 /* The authentic two-person call fills two deliberate portrait windows, rather than a letterbox. */
-.fr-cinema .cinema-feature .episode-feature-original>.cinema-feature-image{visibility:hidden}
+.fr-cinema .cinema-feature .episode-feature-original:has(.cinema-session-portraits)>.cinema-feature-image{visibility:hidden}
 .cinema-session-portraits{position:absolute;inset:0 0 0 40%;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;z-index:0}
 .cinema-session-portraits>span{position:relative;overflow:hidden;background:#001c49}
 .cinema-session-portraits>span>img{position:absolute;top:0;left:50%;width:auto;height:100%;max-width:none;object-fit:initial}
