@@ -83,3 +83,14 @@ The previously credited Canva child photograph remains a baseline asset with the
 ## 1.6.1 photographic crucifix
 
 Sign of the Cross uses an actual photograph of the chapel crucifix at The Father Peyton Center, from Emmy’s Pixieset collection St. Bernadette Relic at HCFM Part 2, Nov4,2026. Original filename St-Bernadette-Relic-at-HCFM-Part-2_High-Resolution_EM_A1990.jpg, collection126529925/set182542383, photo34of167. Observed1600×2399preview at https://images.pixieset.com/529925621/5eee0a8c53d87e9dd894714a103ac468-xxlarge.jpg; localassetphotos/crucifix-peyton-center.jpg. This is genuine photographed religious artwork, not a generated corpus or geometric substitute.
+
+
+## 1.6.2 ministry family photographs
+
+Four additional photographs were visually reviewed and downloaded through Emmy’s signed-in Pixieset gallery. No people, devotional objects or backgrounds were generated. Layout crops and blue overlays are applied in the website.
+
+- `photos/child-rosary-costume.jpg`: `2026-11-02_Feast-of-All-Souls-Reception-and-Reflection_Print_EM_A7977.jpg`, Nov2,2026, collection126176797/set182009198, photograph79of106. Observed1600×2399 preview: https://images.pixieset.com/797671621/03d98e80eb2bc98ce6cc94debd69a68e-xxlarge.jpg. The child wears a brown costume with a physical Rosary; this is not yet established as the specific maroon-clothed baby Emmy remembers.
+- `photos/costume-children.jpg`: `2026-11-02_Feast-of-All-Souls-Reception-and-Reflection_Print_EM_A8095.jpg`, Nov2,2026, same collection/set, photo20804284625. Observed1600×1067 preview: https://images.pixieset.com/797671621/cb1e4facd4b6c87a051e8b0d863f4f6e-xxlarge.jpg. Four children in costumes photographed at the ministry.
+- `photos/mary-may-crowning.jpg`: `MayCrowningCelebration-45.jpg`, May1,2026, collection113883582/set163466740, photo18467738344 (44of55). Observed1600×1124 preview: https://images.pixieset.com/285388311/42df973f75aa630de15bf6388f52141a-xxlarge.jpg. A front-facing statue of Mary with a blue and white flower crown replaces the away-facing profile in the homepage Joyful Mysteries feature.
+
+- `photos/family-festival-joy.jpg`: `HCFMFaithandFamilyDay-17.jpg`, Sep13,2025, collection99488502/set142430065, photograph17of274. Observed1600×1067 preview: https://images.pixieset.com/20588499/c107f14d68c081df4679c6af527997c2-xxlarge.jpg. A joyful outdoor family group provides a visual contrast to the chapel prayer photographs.

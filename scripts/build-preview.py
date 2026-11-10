@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1];T=ROOT/'wordpress/family-rosary';OUT=RO
 if (OUT/'assets').exists():shutil.rmtree(OUT/'assets')
 shutil.copytree(T/'assets',OUT/'assets')
 ASSET_VERSION=hashlib.sha256(b''.join(p.read_bytes() for p in sorted(T.rglob('*')) if p.is_file())).hexdigest()[:10]
-STYLES=('site','cinema-v3','resource-discovery','rosary-world','home-family','companion','prayer-by-age','print-guide-v3','cinema-preview')
+STYLES=('site','cinema-v3','resource-discovery','rosary-world','home-family','companion','prayer-by-age','print-guide-v3','cinema-preview','family-refinement')
 SCRIPTS=('site','cinema','prayer-experience','resource-discovery','rosary-journey','home-family','prayer-by-age','cinema-preview')
 assert all((T/'assets'/f'{n}.css').exists() for n in STYLES)
 assert all((T/'assets'/f'{n}.js').exists() for n in SCRIPTS)
@@ -48,4 +48,4 @@ print('Static review exported from WordPress patterns and template parts.')
 
 # Package the current native theme alongside the static review.
 (OUT/"downloads").mkdir(exist_ok=True)
-shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.6.1"),"zip",root_dir=T.parent,base_dir=T.name)
+shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.6.2"),"zip",root_dir=T.parent,base_dir=T.name)

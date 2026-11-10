@@ -1,8 +1,7 @@
 .fr-cinematic-hero .fr-hero-art{overflow:hidden}
-.fr-cinematic-hero .fr-family-slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.3s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.fr-cinematic-hero .fr-family-slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .8s cubic-bezier(.16,1,.3,1);pointer-events:none}
 .fr-cinematic-hero .fr-family-slide.is-current{opacity:1}
-.fr-cinematic-hero .fr-family-slide img{width:100%;height:100%;object-fit:cover}
-.fr-cinematic-hero .fr-family-slide:first-child img{object-position:center 35%}
+.fr-cinematic-hero .fr-family-slide img{width:100%;height:100%;object-fit:cover;object-position:var(--family-focal-desktop,center)}
 .fr-cinematic-hero .fr-family-pause{position:absolute;right:var(--fr-gap,24px);bottom:24px;z-index:4;width:48px;height:48px;display:grid;place-items:center;border:1px solid #fff;background:#002c76;color:#fff;border-radius:50%;padding:0}
 .fr-cinematic-hero .fr-family-pause[hidden]{display:none!important}
 .fr-cinematic-hero .fr-family-pause:hover{background:#0047bb}
@@ -26,9 +25,50 @@
 .fr-age-options .fr-age-prayer{display:block;max-width:62ch;font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.65}
 @media(max-width:780px){.fr-home-journal{grid-template-columns:1fr;gap:2.5rem}.fr-home-journal h2 br{display:none}.fr-home-journal li a{padding-block:.5rem}.fr-home-events{padding:1.5rem}}
 
-.fr-resource-cover-prayers{background:#0047bb;isolation:isolate}
-.fr-resource-cover-prayers>img{inset:auto 0 0 auto;width:75%;height:80%;object-position:38% 52%;mask-image:linear-gradient(180deg,transparent 0%,#000 24%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 24%)}
-.fr-resource-cover-prayers>div{position:relative;z-index:1;background:none;width:70%;align-self:start;padding-top:22px}
-.fr-resource-cover-prayers strong{font-size:clamp(27px,2.8vw,38px)}
-.fr-resource-cover-prayers span{max-width:12ch}
+/* The photograph reaches every edge; its blue fade carries the invitation. */
+.fr-resource-cover.fr-resource-cover-prayers{background:#0047bb;isolation:isolate;overflow:hidden}
+.fr-resource-cover.fr-resource-cover-prayers>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 58%;mask-image:none;-webkit-mask-image:none}
+.fr-resource-cover.fr-resource-cover-prayers:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(0,32,86,.98) 0%,rgba(0,48,126,.8) 30%,rgba(0,71,187,.12) 64%,transparent 82%);pointer-events:none}
+.fr-resource-cover.fr-resource-cover-prayers>div{position:absolute;inset:auto 0 0;z-index:2;background:none;width:100%;padding:24px;display:flex;flex-direction:column;align-items:flex-start}
+.fr-resource-cover.fr-resource-cover-prayers strong{font:700 clamp(26px,2.6vw,34px)/1.04 var(--fr-sans);max-width:13ch;color:#fff;letter-spacing:-.025em}
+.fr-resource-cover.fr-resource-cover-prayers span{max-width:none;margin-top:9px;color:#fff;font-size:14px;line-height:1.3}
 .fr-family-photo img{object-position:center 65%}
+
+/* Real children: preserve the waving hands and the Rosary at the waist. */
+.fr-age-band .fr-child-photo{width:min(100%,420px);margin-inline:auto;align-self:center}
+.fr-age-band .fr-child-photo img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:1600/2399;object-fit:contain;object-position:center;border-radius:12px}
+/* Media photographs bleed to their feature edges rather than floating in frames. */
+.fr-home-media-band .fr-home-photo-feature{min-height:550px}
+.fr-home-media-band .fr-home-photo-feature .fr-feature-art{position:absolute;inset:0!important;z-index:-2;margin:0;border:0;border-radius:0;background:#002052}
+.fr-home-media-band .fr-home-photo-feature .fr-feature-art>img{width:100%;height:100%;padding:0;object-fit:contain;object-position:right center}
+.fr-home-media-band .fr-home-photo-rosary:after{display:block;background:linear-gradient(90deg,#002052 0%,#002052 35%,rgba(0,32,82,.85) 48%,rgba(0,32,82,.05) 75%,transparent 100%)}
+.fr-home-media-band .fr-home-photo-session{min-height:640px;align-items:flex-end}
+.fr-home-media-band .fr-home-photo-session .fr-feature-art>img{height:auto;object-fit:contain;object-position:center top}
+.fr-home-media-band .fr-home-photo-session:after{display:block;background:linear-gradient(0deg,#002052 0%,rgba(0,32,82,.98) 32%,rgba(0,32,82,.24) 62%,transparent 83%)}
+.fr-home-media-band .fr-home-photo-session .fr-feature-copy{padding-top:310px}
+.fr-home-media-band .fr-home-photo-session .fr-feature-copy h2{max-width:28ch}
+.fr-home-media-band .fr-home-photo-session .fr-feature-description{max-width:62ch}
+.fr-home-media-band img[src*="mary-may-crowning.jpg"]{object-position:55% 32%}
+@media(max-width:780px){.fr-cinematic-hero .fr-family-slide img{object-position:var(--family-focal-mobile,var(--family-focal-desktop,center))}.fr-age-band .fr-child-photo{width:min(78%,320px)}.fr-home-media-band .fr-home-photo-feature{min-height:0}.fr-home-media-band .fr-home-photo-feature .fr-feature-art{position:relative;inset:auto!important;z-index:0;width:100%;height:auto;aspect-ratio:1.25;order:0}.fr-home-media-band .fr-home-photo-feature .fr-feature-art>img{object-position:center;object-fit:contain}.fr-home-media-band .fr-home-photo-feature:after{display:none}.fr-home-media-band .fr-home-photo-session .fr-feature-art{aspect-ratio:1512/434}.fr-home-media-band .fr-home-photo-session .fr-feature-art>img{height:100%;object-fit:contain}.fr-home-media-band .fr-home-photo-session .fr-feature-copy{padding:28px 24px 20px}.fr-resource-cover.fr-resource-cover-prayers>div{padding:22px}.fr-resource-cover.fr-resource-cover-prayers strong{font-size:30px}}
+/* Equal card columns keep their actions aligned beneath differing descriptions. */
+#family-resources .fr-resource-album-card{display:flex;flex-direction:column}
+#family-resources .fr-resource-album-copy{display:flex;flex-direction:column;flex:1}
+#family-resources .fr-resource-album-copy>p:last-child{margin-block-start:auto;margin-bottom:0;padding-top:16px}
+/* A fixed desktop stage avoids carousel height jumps; fades sit above the photos. */
+@media(min-width:781px){
+.fr-home-media-band .fr-feature-home .fr-feature-slide{height:600px;min-height:600px}
+.fr-home-media-band .fr-home-photo-feature .fr-feature-art{z-index:0}
+.fr-home-media-band .fr-home-photo-feature:after{z-index:1;pointer-events:none}
+.fr-home-media-band .fr-home-photo-feature .fr-feature-copy{z-index:2}
+.fr-home-media-band .fr-home-photo-rosary:after{background:linear-gradient(90deg,#002052 0%,#002052 calc(100% - 590px),rgba(0,32,82,.4) calc(100% - 430px),transparent calc(100% - 310px))}
+.fr-home-media-band .fr-home-photo-session .fr-feature-art{height:360px}
+.fr-home-media-band .fr-home-photo-session .fr-feature-art>img{width:100%;height:360px;object-fit:contain;object-position:center top}
+.fr-home-media-band .fr-home-photo-session:after{background:linear-gradient(0deg,#002052 0%,#002052 37%,rgba(0,32,82,.93) 39%,rgba(0,32,82,.08) 60%,transparent 74%)}
+.fr-home-media-band .fr-home-photo-session .fr-feature-copy{position:absolute;inset:auto 32px 0;width:auto;height:220px;margin:0;padding:18px 0;display:grid;grid-template-columns:minmax(0,1fr) 240px;grid-template-rows:auto auto minmax(0,1fr) auto;column-gap:32px;row-gap:6px;align-items:start}
+.fr-home-media-band .fr-home-photo-session .fr-feature-copy h2{grid-column:1;grid-row:1;max-width:none;font-size:34px;line-height:1.05;margin:0}
+.fr-home-media-band .fr-home-photo-session .fr-feature-credit{grid-column:1;grid-row:2;font-size:14px;line-height:1.3;max-width:none;margin:0}
+.fr-home-media-band .fr-home-photo-session .fr-feature-description{grid-column:1;grid-row:3;font-size:15px;line-height:1.4;max-width:72ch;margin:0}
+.fr-home-media-band .fr-home-photo-session .fr-feature-meta{grid-column:1;grid-row:4;font-size:13px;line-height:1.3;margin:0}
+.fr-home-media-band .fr-home-photo-session .fr-feature-actions{grid-column:2;grid-row:1 / span 4;align-self:center;display:flex;flex-direction:column;align-items:flex-start;gap:16px;max-width:none}
+}
+@media(min-width:781px) and (max-width:1000px){.fr-home-media-band .fr-home-photo-session .fr-feature-copy{height:240px;grid-template-columns:minmax(0,1fr) 205px;column-gap:24px}.fr-home-media-band .fr-home-photo-session .fr-feature-copy h2{font-size:29px}.fr-home-media-band .fr-home-photo-session .fr-feature-description{font-size:14px}.fr-home-media-band .fr-home-photo-session .fr-stream-play{font-size:15px;padding-inline:16px}}
