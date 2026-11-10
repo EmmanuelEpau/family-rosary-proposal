@@ -72,3 +72,15 @@
 .fr-home-media-band .fr-home-photo-session .fr-feature-actions{grid-column:2;grid-row:1 / span 4;align-self:center;display:flex;flex-direction:column;align-items:flex-start;gap:16px;max-width:none}
 }
 @media(min-width:781px) and (max-width:1000px){.fr-home-media-band .fr-home-photo-session .fr-feature-copy{height:240px;grid-template-columns:minmax(0,1fr) 205px;column-gap:24px}.fr-home-media-band .fr-home-photo-session .fr-feature-copy h2{font-size:29px}.fr-home-media-band .fr-home-photo-session .fr-feature-description{font-size:14px}.fr-home-media-band .fr-home-photo-session .fr-stream-play{font-size:15px;padding-inline:16px}}
+
+/* Each homepage invitation now has a distinct job: discover media, then pray. */
+.fr-age-family-photo{margin:24px 0 28px;border-radius:12px;overflow:hidden;background:#e8f0fc}
+.fr-age-family-photo img{display:block;width:100%;max-height:320px;object-fit:cover;object-position:center 45%}
+.fr-age-family-photo figcaption{padding:10px 16px;color:#244a79;font-size:14px}
+.fr-today-preview{text-align:center;min-width:0;align-self:center}
+.fr-today-preview .fr-sacred-rosary{height:310px;min-height:0;width:100%;position:relative;background:#eaf2ff;margin-bottom:12px}
+.fr-today-preview canvas{display:block;width:100%;height:100%}
+.fr-today-preview .fr-rosary-fallback{width:100%;height:100%;object-fit:contain}
+.fr-today-preview p{font-size:14px;color:#dce8ff;margin:0 auto}
+@media(min-width:1000px){.fr-today{grid-template-columns:minmax(0,1fr) minmax(0,.8fr) minmax(0,1fr);gap:32px}.fr-today h2{font-size:44px}.fr-today-prayer{padding-left:28px}.fr-today-title{font-size:32px}}
+@media(max-width:999px){.fr-today-preview{display:none}}

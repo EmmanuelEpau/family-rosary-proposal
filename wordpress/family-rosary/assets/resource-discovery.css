@@ -39,3 +39,11 @@
 .rd-questions details p { margin:1rem 0; }
 @media(max-width:900px) { .rd-results { grid-template-columns:repeat(2,minmax(0,1fr)); } .rd-filters { grid-template-columns:repeat(2,minmax(0,1fr)); } .rd-shortcuts { grid-template-columns:1fr; gap:1.5rem; } }
 @media(max-width:560px) { .rd-results,.rd-age { grid-template-columns:1fr; } .rd-results { gap:2.5rem; } .rd-filters { grid-template-columns:1fr; } .rd-art { aspect-ratio:4/3; max-height:24rem; } .rd-copy h3 { font-size:1.45rem; } }
+/* Search stays immediate; optional refinements no longer form a phone-sized wall. */
+.rd-filter-details{grid-column:1/-1;min-width:0}
+.rd-filter-details>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600;gap:.75rem}
+.rd-filter-details>summary:before{content:'+';font-size:1.4rem}
+.rd-filter-details[open]>summary:before{content:'−'}
+.rd-filter-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;padding:1rem 0}
+@media(max-width:900px){.rd-filter-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.rd-filter-fields{grid-template-columns:1fr}.rd-filters{gap:.5rem;padding-block:1rem}.rd-start{margin-top:1.5rem;padding-block:1.5rem}}

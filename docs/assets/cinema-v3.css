@@ -1,5 +1,5 @@
 /* Native episode compositions: real official HYPL art; exact title-led TTM audio. */
-.episode-title-art{background:#0047bb url('cinema/through-mysteries.png') left center / 220% auto no-repeat;position:relative;overflow:hidden}
+.episode-title-art{background:#0047bb url('cinema/through-mysteries.webp') left center / 220% auto no-repeat;position:relative;overflow:hidden}
 .episode-title-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .episode-native-copy{position:absolute;inset:8% 7%;display:flex;flex-direction:column;align-items:flex-start;text-align:left;color:#fff;pointer-events:none}
 .episode-native-copy .episode-show{font:600 clamp(12px,1.2vw,19px)/1.05 var(--fr-sans);color:#fff;max-width:80%}
@@ -26,7 +26,7 @@
 .cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-art>img{position:static;width:100%;height:auto;max-height:450px;object-fit:contain;display:block}
 .cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-title{position:static;background:#002c75;padding:25px 6%;max-width:none}
 .cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-art:after{display:none}
-.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-art{background:#0047bb url('cinema/through-mysteries.png') left center / 220% auto no-repeat}
+.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-art{background:#0047bb url('cinema/through-mysteries.webp') left center / 220% auto no-repeat}
 .cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-art>img{object-fit:contain}
 .cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-title{max-width:78%}
 .cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-art:after{display:none}
@@ -35,7 +35,7 @@
 .cinema-episode:focus-visible,.cinema-card-link:focus-visible,.cinema-result:focus-visible{outline:3px solid #ffb500;outline-offset:-4px;box-shadow:inset 0 0 0 6px #0047bb}
 .cinema-alternate{display:inline-block;margin-block:12px}
 @media(max-width:600px){.episode-native-copy strong{font-size:25px}.episode-native-copy .episode-show{font-size:13px}.mysteries-1 .episode-native-copy strong{font-size:31px}.mysteries-3 .episode-native-copy strong{font-size:27px}.episode-preview{width:100px}.episode-preview .episode-native-copy strong{font-size:10px}.episode-preview .episode-native-copy .episode-show{font-size:6px}.cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-title{padding:20px}.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-title{max-width:90%}}
-.cinema-feature .episode-feature-title{background:#0047bb url('cinema/through-mysteries.png') left center / 220% auto no-repeat}
+.cinema-feature .episode-feature-title{background:#0047bb url('cinema/through-mysteries.webp') left center / 220% auto no-repeat}
 .cinema-feature .episode-feature-title .cinema-feature-image{width:70%;right:0;object-fit:contain}
 .cinema-feature .episode-feature-original{background:#fff}
 .cinema-feature .episode-feature-original .cinema-feature-image{width:62%;right:0;object-fit:contain;object-position:right center}
@@ -146,7 +146,7 @@
 .fr-home-media-band .fr-home-media-cover,.fr-home-media-band .fr-media-cover{aspect-ratio:16/9}
 .fr-home-media-band .fr-feature-art>.fr-home-native-art{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto}
 .fr-home-media-band .fr-feature-audio .fr-feature-art{background:#0047bb}
-.fr-home-media-band .fr-feature-selectors img.fr-home-native-selector{background:#0047bb url('cinema/through-mysteries.png') left center / 220% auto no-repeat;object-fit:contain}
+.fr-home-media-band .fr-feature-selectors img.fr-home-native-selector{background:#0047bb url('cinema/through-mysteries.webp') left center / 220% auto no-repeat;object-fit:contain}
 .fr-home-media-band .fr-collection-art .fr-home-native-art{aspect-ratio:16/9}
 .fr-home-media-band .fr-home-media-cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px}
 .fr-home-media-band .fr-home-media-cards .fr-media-card{flex:0 0 calc((100% - 78px)/4);min-width:240px;scroll-snap-align:start}
@@ -188,3 +188,41 @@
 /* One shared HYPL header; all authentic imagery stays below it. */
 .cinema-card-art.episode-guest-art .session-wordmark,.cinema-card-art.episode-session-art .session-wordmark{height:35%;justify-content:center;padding:4% 5%}
 .cinema-card-art.episode-session-art>img,.episode-preview.episode-session-art>img{object-fit:contain}
+
+/* Refinement: image-led conversations with one quiet, consistent series signature. */
+.cinema-feature .episode-feature-original{background:#001c49}
+.cinema-card-art.episode-guest-art .session-wordmark,.cinema-card-art.episode-session-art .session-wordmark{height:23%;padding:3% 5%}
+.cinema-card-art.episode-session-art>img,.episode-preview.episode-session-art>img{inset:23% 0 0;height:77%;object-fit:contain;background:#003889}
+.cinema-card-art.episode-session-art .session-wordmark>span{font-size:clamp(13px,4.7cqw,23px)}
+.cinema-card-art.episode-session-art .session-wordmark>i{font-size:clamp(22px,7.6cqw,36px)}
+.cinema-card-art.episode-guest-art .portrait-window{height:71%;top:61%;box-shadow:none}
+.cinema-card-art.episode-guest-art .session-wordmark>span{font-size:clamp(13px,4.7cqw,23px)}
+.cinema-card-art.episode-guest-art .session-wordmark>i{font-size:clamp(22px,7.6cqw,36px)}
+.cinema-dock-heading button:focus-visible{outline:3px solid #0047bb;outline-offset:2px}
+.cinema-audio-dock.needs-recovery .cinema-dock-status{position:static!important;width:auto!important;height:auto!important;padding:0!important;margin:10px 0!important;overflow:visible!important;clip:auto!important;white-space:normal!important}
+@media(max-width:420px){.cinema-dock-heading{flex-direction:column;align-items:stretch}.cinema-dock-title{-webkit-line-clamp:2;font-size:14px}.cinema-dock-heading>div{justify-content:flex-start;gap:8px}}
+
+/* Deliberate playback leads; the large promotional image belongs to details mode. */
+.cinema-dialog.is-playing .cinema-detail-art{height:auto!important;min-height:0!important;aspect-ratio:auto!important;background:#001c49!important}
+.cinema-dialog.is-playing .cinema-detail-art>img,.cinema-dialog.is-playing .cinema-detail-art>.session-wordmark,.cinema-dialog.is-playing .cinema-detail-art:after{display:none!important}
+.cinema-dialog.is-playing .cinema-detail-title{position:static!important;max-width:none!important;padding:24px 70px 22px 30px!important;background:#001c49!important}
+.cinema-dialog.is-playing .cinema-detail-title h2{font-family:var(--fr-sans);font-size:clamp(25px,3.5vw,40px)!important;margin:0}
+.cinema-dialog.is-playing #cinema-series-name{font-size:13px;margin-bottom:8px;color:#c2d8fb}
+.cinema-dialog.is-playing #cinema-player-mount{margin-top:0}
+.cinema-dialog.is-playing .cinema-detail-summary{margin-top:24px}
+
+/* The authentic two-person call fills two deliberate portrait windows, rather than a letterbox. */
+.fr-cinema .cinema-feature .episode-feature-original>.cinema-feature-image{visibility:hidden}
+.cinema-session-portraits{position:absolute;inset:0 0 0 40%;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;z-index:0}
+.cinema-session-portraits>span{position:relative;overflow:hidden;background:#001c49}
+.cinema-session-portraits>span>img{position:absolute;top:0;left:50%;width:auto;height:100%;max-width:none;object-fit:initial}
+.cinema-session-guest>img{transform:translateX(-25%)}
+.cinema-session-host>img{transform:translateX(-75%)}
+.fr-cinema .cinema-feature .episode-feature-original .cinema-feature-shade{background:linear-gradient(90deg,#001c49 0%,#001c49 30%,rgba(0,28,73,.96) 38%,rgba(0,28,73,.58) 47%,rgba(0,28,73,.08) 61%,transparent 75%)}
+@media(max-width:780px){.cinema-session-portraits{inset:0 0 auto;height:330px}.fr-cinema .cinema-feature .episode-feature-original .cinema-feature-shade{background:linear-gradient(180deg,rgba(0,28,73,.15) 0,rgba(0,28,73,.12) 180px,rgba(0,28,73,.6) 255px,#001c49 335px)}}
+
+/* A real family and physical Rosary introduce the audio series. */
+.fr-cinema .cinema-feature .episode-feature-title{background:#001c49}
+.fr-cinema .cinema-feature .episode-feature-title .cinema-feature-image{width:65%;height:100%;object-fit:cover;object-position:center bottom}
+.fr-cinema .cinema-feature .episode-feature-title .cinema-feature-shade{background:linear-gradient(90deg,#001c49 29%,rgba(0,28,73,.88) 40%,rgba(0,28,73,.12) 72%)}
+@media(max-width:780px){.fr-cinema .cinema-feature .episode-feature-title .cinema-feature-image{width:100%;height:330px}.fr-cinema .cinema-feature .episode-feature-title .cinema-feature-shade{background:linear-gradient(180deg,rgba(0,28,73,.1) 150px,#001c49 335px)}}

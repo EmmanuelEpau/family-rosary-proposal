@@ -1,3 +1,15 @@
+# Current proposal:1.7.0 committee corrections
+
+10 November2026. The1.7.0 pass repairs media playback recovery, full-height interview composition, player-first dialogs, larger guest artwork, prayer entry routes, age progress, optional Fatima words, phone bead/reader transitions, focus contrast, resource filters and program discovery. It retains all48saved legacy resources within54records and57unique programs.
+
+The static proposal and native package now contain57program detail documents. Native patterns and a dedicated page-program template are included; run tools/seed-programs.php explicitly with WP-CLI only in the intended installation. Activation never creates posts. The helper preserves existing pages; the main8pages still follow the installation guide. No ministry production installation was changed.
+
+Checks: build, Python/JavaScript syntax, two structural Rosary checks; internal-browser8routes at1280/390, nooverflow/brokenloadedimages andoneH1; actualdirectvideo, episode switch, audio start/pause/stop; age-tab progress; native82documents513blocks0invalid; nativeprogramoneH1andplayingvideo; standaloneaudiooneclick advancing. Full external-Chrome/axe suite not run under user's internal-browser restriction. Historical failed suite remains historical, not passed.
+
+Editorial/source work remains open: reviewed transcripts, unclassified resource languages, exact remembered baby/Canto selections, sharper crucifix photo, fully art-directed remaining source posters, and confirmed newsletter benefits. Production migration/policy/field performance and human/ministry approval are separate from this proposal. See task FINDINGS.md and reviews for the full honest ledger. Do not call the entire broader brief finished.
+
+---
+
 # Family Rosary website proposal
 
 Version 1.6.2 review revision, 9 November 2026. Eight on-site routes, 54 resource cards and 57 unique media programs, built with HCFM’s Whitney, Calluna and PlaylistScript typography and official Family Rosary marks. This revision is locally verified; publication and live-check results are recorded separately in the task delivery notes. The ministry website is unchanged.

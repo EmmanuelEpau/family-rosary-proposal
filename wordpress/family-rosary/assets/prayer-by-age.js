@@ -10,7 +10,7 @@
   back.addEventListener('click',()=>{index=Math.max(0,index-1);finished=false;render(true);});next.addEventListener('click',()=>{if(index<steps.length-1)index++;else finished=true;render(!finished);});
   panel.querySelector('[data-plan-restart]').addEventListener('click',()=>{index=0;finished=false;render(true);});
   panel.querySelector('[data-plan-all]').addEventListener('click',()=>{guided=false;finished=false;index=0;render();start.focus({preventScroll:true});});
-  controllers.set(panel.dataset.agePanel,()=>{guided=false;finished=false;index=0;render();});
+  controllers.set(panel.dataset.agePanel,()=>render());
  }
  list.setAttribute('role','tablist');
  function activate(age,focus=false,save=false){

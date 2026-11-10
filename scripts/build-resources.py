@@ -8,22 +8,18 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 e = lambda value: html.escape(str(value), quote=True)
 source = json.loads((ROOT / 'content/resource-previews.json').read_text())
-curated = json.loads((ROOT / 'content/resources.json').read_text())
-formats = ('download activity-collection download-collection podcast podcast event event event livestream video download novena video video video video ebook guide ebook image-reflection ebook ebook image-reflection image-reflection image-reflection image-reflection image-reflection ebook ebook article article ebook ebook ebook ebook article article video podcast infographic ebook ebook ebook ebook activity activity activity podcast').split()
-topics = ['rosary children family','children family mass','creation family','prayer','family parenting','marriage parish','prayer fellowship','prayer rosary','rosary mass','rosary','rosary novena peyton','rosary novena peyton','rosary','faith rosary','sacred-art','prayer homily','rosary beginners peyton','rosary beginners','rosary beginners','rosary glorious sacred-art peyton','rosary joyful scripture','rosary beginners','rosary sorrowful sacred-art','rosary joyful sacred-art','rosary joyful sacred-art peyton','rosary glorious sacred-art peyton','rosary luminous sacred-art','rosary glorious scripture','mary activity','mary rosary','children family','prayer family','family prayer','children family','family prayer','mary','family rosary','peyton cross','rosary peyton family','mary chaplet','mary rosary sacred-art','lent cross sacred-art','christmas sacred-art family','christmas sacred-art','advent christmas children family','advent christmas children family','lent children family','christmas']
 labels = {'download':'Download','activity-collection':'Activity collection','download-collection':'Download collection','podcast':'Podcast','event':'Event / retreat','livestream':'Livestream','video':'Video','ebook':'eBook','guide':'Guide','novena':'Novena','image-reflection':'Image reflection','article':'Article','infographic':'Infographic','activity':'Printable activity','pdf':'PDF'}
 actions = {'download':'Explore download','activity-collection':'Explore activities','download-collection':'Explore collection','podcast':'Listen to podcast','event':'View current dates and details','livestream':'Join daily prayer','video':'Watch videos','ebook':'Explore eBook','guide':'Read the guide','novena':'Explore novena','image-reflection':'Open reflection','article':'Read article','infographic':'Explore infographic','activity':'Explore activity','pdf':'Open PDF'}
-old_ids = ['resource-0','resource-companion','resource-2','resource-3','resource-4','resource-5','resource-6','resource-7','resource-mass-activities','resource-growing','resource-children','resource-creation']
-merged = {0:1,1:8,2:11,30:10,33:9}
-records=[]
-for i,item in enumerate(source):
-    fmt=formats[i]
-    records.append(dict(item, id=old_ids[merged[i]] if i in merged else 'resource-'+item['url'].rsplit('/',1)[-1], sourceIndex=i, format=fmt, topics=topics[i], languages=['en','es'] if i==0 else ['es'] if i in (11,45) else [], section='events' if fmt=='event' else 'articles' if fmt=='article' else 'library', action=actions[fmt]))
-# Preserve six distinct curated destinations; original source titles are never replaced.
-for i in (0,2,3,4,5,6):
-    title,fmt,topic,language,description,url,action=curated[i]
-    fmt='pdf' if i in (3,4) else 'guide' if i==0 else 'article'
-    records.append(dict(title=title,description=description,url=url,image='',id=old_ids[i],format=fmt,topics=topic,languages=['es'] if i==4 else ['en','es','pt'] if i==0 else ['en'],section='articles' if fmt=='article' else 'library',action=action))
+# Metadata belongs to a source identity, never its position in an input array.
+metadata = json.loads((ROOT / 'content/resource-metadata.json').read_text())
+assert len({item['url'] for item in source}) == len(source), 'Duplicate source URL'
+assert set(metadata['legacy']) == {item['url'] for item in source}, 'Missing or stale resource metadata'
+records = []
+for item in source:
+    classification = metadata['legacy'][item['url']]
+    assert all(key in classification for key in ('id','format','topics','languages','section','action'))
+    records.append(dict(item, **classification))
+records.extend(metadata['additional'])
 # Optional verified destination inventory, keyed by original URL. Explicit actions override format defaults.
 resolved=ROOT/'content/resource-destinations.json'
 if resolved.exists():
@@ -34,15 +30,9 @@ if resolved.exists():
             if key in change: record[key]=change[key]
         if 'format' in change: record['action']=actions.get(record['format'],'Explore resource')
         if 'action' in change: record['action']=change['action']
-# Root's saved destination headings and source descriptions establish these English articles.
-# This evidence applies to HTML articles, not the language inside linked PDFs or media.
-confirmed_english_articles = {19, 22, 23, 24, 25, 26, 29, 30, 35, 36}
-for record in records:
-    if record.get('sourceIndex') in confirmed_english_articles and record['format'] == 'article' and not record['languages']:
-        record['languages'] = ['en']
 assert len(source)==48 and len(records)==54
 assert len({r['id'] for r in records})==54
-assert all(any(r.get('sourceIndex')==i for r in records) for i in range(48))
+assert all(any(r['title']==item['title'] for r in records) for item in source)
 parts=['''<?php
 /**
  * Title: Prayer resources — complete directory
@@ -54,16 +44,17 @@ parts=['''<?php
 <!-- wp:html -->
 <div class="rd-page">
 <section class="fr-wrap fr-section rd-intro"><p><a href="../">Home</a> / Resources</p><h1>Resources for family prayer.</h1><p class="fr-lead">A guide beside you. An activity to share. A little room for prayer.</p><p>Explore Rosary guides, family activities, reflections, podcasts and ministry programs for home, school and parish.</p>
-<div class="rd-start"><h2>Find a place to begin.</h2><div class="rd-shortcuts"><a href="#resource-companion">Discover the Rosary together <span>Family Rosary Companion · English & Español</span></a><a href="#resource-mass-activities">Bring out the crayons <span>Family Mass Activities · print and share</span></a><a href="?topic=children#resource-library">Pray with children <span>Activities and ideas for family prayer</span></a></div></div></section>
+<div class="rd-start"><h2>Find a place to begin.</h2><div class="rd-shortcuts"><a href="#resource-companion">Discover the Rosary together <span>Family Rosary Companion · English & Español</span></a><a href="#resource-mass-activities">Bring out the crayons <span>Family Mass Activities · print and share</span></a><a href="<?php echo esc_url( home_url( '/praying-with-children/#prayer-plan' ) ); ?>">Pray with children <span>Prayer plans for babies, children and teenagers</span></a></div></div></section>
 <section class="fr-wrap fr-section" id="resource-library"><span id="resource-7"></span><h2>Browse family prayer resources</h2><p>Choose a topic or format, or search for something your family needs. Articles, media and events are labeled so you know what comes next.</p>
 <form id="rd-filters" class="rd-filters" hidden role="search"><label class="rd-search">Search resources<input id="rd-search" name="q" type="search" placeholder="Try Rosary, children or sacred art"></label>''']
 def select(key,label,options):
     return '<label>'+label+'<select id="rd-'+key+'" name="'+key+'"><option value="">All '+('languages' if key == 'language' else label.lower())+'</option>'+''.join('<option value="'+e(k)+'">'+e(v)+'</option>' for k,v in options)+'</select></label>'
+parts.append('<details class="rd-filter-details"><summary>Filter resources</summary><div class="rd-filter-fields">')
 parts.append(select('view','Sections',[('library','Prayer, activities & media'),('articles','Articles'),('events','Events & retreats')]))
 parts.append(select('topic','Topics',[(k,v) for k,v in [('rosary','Rosary'),('family','Family prayer'),('children','Children'),('beginners','Getting started'),('mary','Mary'),('sacred-art','Sacred art'),('scripture','Scripture'),('advent','Advent'),('christmas','Christmas'),('lent','Lent'),('peyton','Father Peyton'),('creation','Care for creation'),('marriage','Marriage'),('mass','Mass')]]))
 parts.append(select('format','Formats',sorted({(r['format'],labels[r['format']]) for r in records},key=lambda x:x[1])))
 parts.append(select('language','Confirmed language',[('en','English'),('es','Español'),('pt','Português'),('unknown','Language not confirmed')]))
-parts.append('''<button type="reset" class="rd-reset">Clear filters</button></form><p class="rd-language-note">Language labels reflect confirmed resource information. Choose “Language not confirmed” to include resources whose language we have not established.</p><p id="rd-count" role="status" aria-live="polite">54 resources: 48 from the ministry collection and 6 additional guides and reflections.</p><p id="rd-notice" hidden></p><div class="rd-results">''')
+parts.append('''<button type="reset" class="rd-reset">Clear filters</button></div></details></form><p class="rd-language-note">Choose a language to see verified matches. Other resources are listed under “Language not confirmed.”</p><p id="rd-count" role="status" aria-live="polite">54 resources: 48 from the ministry collection and 6 additional guides and reflections.</p><p id="rd-notice" hidden></p><div class="rd-results">''')
 for r in records:
     languages=' · '.join({'en':'English','es':'Español','pt':'Português'}[x] for x in r['languages'])
     meta=labels[r['format']]+(' · '+languages if languages else '')

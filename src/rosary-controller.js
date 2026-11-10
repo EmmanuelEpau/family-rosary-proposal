@@ -27,6 +27,7 @@ if(root){
   $('#prayer-mystery').textContent=s.phase==='decade'?m.names[n]:s.phase==='opening'?'Begin at the cross':s.phase==='closing'?'Close the Rosary':'Thank you for praying';
   $('#prayer-reference').textContent=s.phase==='decade'?m.refs[n]:s.phase==='opening'?'Bring an intention, or hold it quietly in your heart.':s.phase==='closing'?'Return to the medal and close in prayer.':'Take a quiet moment for the intention you brought.';
   const p=s.prayerKey==='mystery'?{title:m.names[n],words:'Bring this mystery to mind. Anyone may offer an intention, lead the responses, or listen quietly.'}:s.prayerKey==='complete'?{title:'The Rosary is complete',words:'You have reached the closing Sign of the Cross. You may rest here or begin again.'}:prayers[s.prayerKey];
+  const optional=$('#prayer-fatima');if(optional){optional.hidden=!(s.phase==='decade'&&s.prayerKey==='glory');optional.open=false;}
   $('#prayer-title').textContent=p.title;$('#prayer-words').textContent=p.words;
   $('#prayer-progress-text').textContent=label(s);const progress=$('#prayer-progress');progress.max=journey.length-1;progress.value=cursor;progress.textContent=`${cursor} of ${journey.length-1} steps`;
   $('#prayer-back').disabled=cursor===0;$('#prayer-next').disabled=cursor===journey.length-1;$('#prayer-next').textContent=cursor===journey.length-2?'Finish prayer':'Next prayer';
@@ -42,7 +43,7 @@ if(root){
  options();set.addEventListener('change',()=>{options();render();});number.addEventListener('change',()=>{cursor=journey.findIndex(s=>s.decade===Number(number.value)&&s.prayerKey==='mystery');render(true);});
  phase.addEventListener('change',()=>{cursor=journey.findIndex(s=>s.phase===phase.value);render(true);});jump.addEventListener('change',()=>{cursor=Number(jump.value);render(true);});
  $('#prayer-back').addEventListener('click',()=>{cursor=Math.max(0,cursor-1);render(true);});$('#prayer-next').addEventListener('click',()=>{cursor=Math.min(journey.length-1,cursor+1);render(true);});$('#prayer-reset').addEventListener('click',()=>{cursor=0;render(true);});
- document.addEventListener('fr-rosary-select',e=>{const i=stateForAnchor(journey,e.detail.anchorId);if(i>=0){cursor=i;render(true);}});
+ document.addEventListener('fr-rosary-select',e=>{const i=stateForAnchor(journey,e.detail.anchorId);if(i>=0){cursor=i;render(true);if(matchMedia('(max-width:760px)').matches)root.scrollIntoView({block:'start',behavior:'instant'});}});
  document.querySelectorAll('[data-rosary-material]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-rosary-material]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.dispatchEvent(new CustomEvent('fr-rosary-material',{detail:{material:button.dataset.rosaryMaterial}}));}));
  render();
  // Scene may finish loading after this classic deferred controller.

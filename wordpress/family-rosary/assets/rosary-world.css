@@ -18,3 +18,8 @@
 .fr-rosary-world .fr-rosary-choices{display:grid;gap:1rem;padding:1rem 0}
 .fr-rosary-world .fr-rosary-resume{font-size:.95rem;color:#244a79;margin:1rem 0 .5rem}
 .fr-rosary-world #prayer-reset{margin-top:1rem;min-height:44px}
+.fr-rosary-world .fr-optional-prayer{margin:1rem 0;padding:1rem;background:#edf4ff;border-radius:8px}
+.fr-rosary-world .fr-optional-prayer summary{cursor:pointer;min-height:44px;font-weight:600}
+.fr-rosary-world .fr-optional-prayer p{font-size:1.05rem;line-height:1.65}
+.fr-rosary-world .fr-beads-return{display:none}
+@media(max-width:760px){.fr-rosary-world .fr-prayer-reader{scroll-margin-top:1rem}.fr-rosary-world .fr-beads-return{display:inline-flex;min-height:44px;align-items:center;margin-top:.5rem}}

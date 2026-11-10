@@ -5,10 +5,10 @@ ROOT=Path(__file__).resolve().parents[1];T=ROOT/'wordpress/family-rosary';OUT=RO
 if (OUT/'assets').exists():shutil.rmtree(OUT/'assets')
 shutil.copytree(T/'assets',OUT/'assets')
 ASSET_VERSION=hashlib.sha256(b''.join(p.read_bytes() for p in sorted(T.rglob('*')) if p.is_file())).hexdigest()[:10]
-STYLES=('site','cinema-v3','resource-discovery','rosary-world','home-family','companion','prayer-by-age','print-guide-v3','cinema-preview','family-refinement')
-SCRIPTS=('site','cinema','prayer-experience','resource-discovery','rosary-journey','home-family','prayer-by-age','cinema-preview')
-assert all((T/'assets'/f'{n}.css').exists() for n in STYLES)
-assert all((T/'assets'/f'{n}.js').exists() for n in SCRIPTS)
+MANIFEST=json.loads((T/'assets/route-assets.json').read_text())
+for bundles in [MANIFEST['common'],*MANIFEST['routes'].values()]:
+ for kind,extension in [('styles','css'),('scripts','js')]:
+  assert all((T/'assets'/f'{name}.{extension}').exists() for name in bundles[kind])
 routes={'prayer-by-age':('praying-with-children','Family Prayer by Age: Babies, Children & Teens | Family Rosary','Find a short prayer and a useful activity for babies, primary school children, preteens and teenagers. Follow a guided moment of family prayer together.'),'companion':('family-rosary-companion','Family Rosary Companion: Activities in English & Spanish | Family Rosary','Pray and color together with the Family Rosary Companion. Try an activity on this page and choose free English or Spanish mystery printables.'),'print-guide':('rosary-prayer-guide','Rosary Prayer Guide: Read or Print | Family Rosary','Read the Rosary prayers in English and all four sets of mysteries. Print a clear guide to keep beside you or share with your family.'),'home':('','Family Rosary | Pray Together as a Family','Find a welcoming place to learn the Rosary, pray together and discover resources for your family.'),'rosary-guide':('how-to-pray-the-rosary','How to Pray the Rosary, Step by Step | Family Rosary','Learn how to pray the Rosary, follow all five decades, read the prayers and mysteries, and find printable guides.'),'resources':('prayerresources','Family Prayer Resources & Rosary Guides | Family Rosary','Find Rosary guides, prayer book downloads and activities for children. Browse family prayer resources for home, school and parish.'),'story':('our-story','Our Story: Father Peyton and Family Prayer | Family Rosary','Discover Father Peyton’s invitation to family prayer and the worldwide mission of Family Rosary.'),'media':('watch-and-listen','Watch & Listen: Prayer, Podcasts and Reflections | Family Rosary','Watch daily prayer, explore reflections and listen to Family Rosary podcasts.')}
 def convert(s,prefix,home=False):
  s=re.sub(r'<\?php\s*/\*\*.*?\*/\s*\?>','',s,flags=re.S)
@@ -23,6 +23,13 @@ def convert(s,prefix,home=False):
   cls=attrs.get('className','');return ('<button class="fr-mobile-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>' if cls=='fr-nav' else '')+'<nav '+('id="main-nav" ' if cls=='fr-nav' else '')+'class="'+cls+'" aria-label="'+attrs.get('ariaLabel','Navigation')+'"><ul>'+''.join(links)+'</ul></nav>'
  s=re.sub(r'<!-- wp:navigation (.*?) -->(.*?)<!-- /wp:navigation -->',nav,s,flags=re.S)
  s=re.sub(r'<!--.*?-->','',s,flags=re.S)
+ # Deliver the same photographic derivatives as WordPress's render_block filter.
+ def photo(match):
+  stem=match.group(2)
+  if 'srcset=' in match.group(0) or not (T/'assets/photos'/f'{stem}-640.webp').exists():return match.group(0)
+  base=match.group(1)[:-4]
+  return match.group(0).replace('src="'+match.group(1)+'"','src="'+base+'-1280.webp" srcset="'+base+'-640.webp 640w, '+base+'-1280.webp 1280w" sizes="100vw"')
+ s=re.sub(r'<img\b[^>]*\bsrc="([^" ]*/assets/photos/([^/" ]+)\.jpg)"[^>]*>',photo,s)
  # Keep internal review navigation on the current release even in previously open tabs.
  def review_link(m):
   target=html.unescape(m.group(2))
@@ -37,8 +44,8 @@ for slug,(path,title,desc) in routes.items():
  prefix='../' if path else './';dest=OUT/path;dest.mkdir(exist_ok=True)
  content=convert(source.read_text(),prefix);header=convert((T/'parts/header.html').read_text(),prefix,home=slug=='home');footer=convert((T/'parts/footer.html').read_text(),prefix)
  review='<div class="fr-proposal-note">Family Rosary website proposal · For design review · Not the live ministry website</div>'
- styles=''.join(f'<link rel="stylesheet" href="{prefix}assets/{name}.css?v={ASSET_VERSION}">' for name in STYLES)
- scripts=''.join(f'<script defer src="{prefix}assets/{name}.js?v={ASSET_VERSION}"></script>' for name in SCRIPTS)
+ styles=''.join(f'<link rel="stylesheet" href="{prefix}assets/{name}.css?v={ASSET_VERSION}">' for name in dict.fromkeys(MANIFEST['common']['styles']+MANIFEST['routes'][slug]['styles']+['family-refinement']))
+ scripts=''.join(f'<script defer src="{prefix}assets/{name}.js?v={ASSET_VERSION}"></script>' for name in dict.fromkeys(MANIFEST['common']['scripts']+MANIFEST['routes'][slug]['scripts']))
  body_class=' class="home"' if slug=='home' else ''
  page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>{html.escape(title)}</title><meta name="description" content="{html.escape(desc,quote=True)}"><link rel="icon" href="{prefix}assets/logo.svg">{styles}{scripts}</head><body{body_class} data-preview="true"><a href="#main-content" class="fr-skip">Skip to content</a>{header}<main id="main-content" class="fr-main">{content}</main>{footer}{review}</body></html>'''
  (dest/'index.html').write_text(page)
@@ -48,4 +55,11 @@ print('Static review exported from WordPress patterns and template parts.')
 
 # Package the current native theme alongside the static review.
 (OUT/"downloads").mkdir(exist_ok=True)
-shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.6.2"),"zip",root_dir=T.parent,base_dir=T.name)
+
+
+# Priority program pages share the same generated review shell and asset revision.
+program_builder=ROOT/'scripts/build-programs.py'
+if program_builder.exists():
+ exec(compile(program_builder.read_text(),str(program_builder),'exec'),globals())
+
+shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.7.0"),"zip",root_dir=T.parent,base_dir=T.name)

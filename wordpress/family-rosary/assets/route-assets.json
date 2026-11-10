@@ -1,0 +1,81 @@
+{
+  "common": {
+    "styles": [
+      "site"
+    ],
+    "scripts": [
+      "site"
+    ]
+  },
+  "routes": {
+    "home": {
+      "styles": [
+        "home-family",
+        "cinema-v3"
+      ],
+      "scripts": [
+        "prayer-experience",
+        "home-family"
+      ]
+    },
+    "media": {
+      "styles": [
+        "cinema-v3",
+        "cinema-preview"
+      ],
+      "scripts": [
+        "cinema",
+        "cinema-preview"
+      ]
+    },
+    "resources": {
+      "styles": [
+        "resource-discovery"
+      ],
+      "scripts": [
+        "resource-discovery"
+      ]
+    },
+    "rosary-guide": {
+      "styles": [
+        "rosary-world"
+      ],
+      "scripts": [
+        "prayer-experience",
+        "rosary-journey"
+      ]
+    },
+    "print-guide": {
+      "styles": [
+        "print-guide-v3"
+      ],
+      "scripts": [
+        "prayer-experience"
+      ]
+    },
+    "companion": {
+      "styles": [
+        "companion"
+      ],
+      "scripts": []
+    },
+    "prayer-by-age": {
+      "styles": [
+        "prayer-by-age"
+      ],
+      "scripts": [
+        "prayer-by-age"
+      ]
+    },
+    "story": {
+      "styles": [],
+      "scripts": []
+    },
+    "program": {
+      "styles": [],
+      "scripts": [
+        "program"
+      ]
+    }
+  }
+}

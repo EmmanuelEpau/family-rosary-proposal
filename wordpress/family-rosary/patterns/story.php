@@ -84,13 +84,13 @@
 <!-- wp:paragraph --><p><a class="text-link" href="<?php echo esc_url( home_url( '/how-to-pray-the-rosary/' ) ); ?>">Learn to pray the Rosary</a> · <a class="text-link" href="<?php echo esc_url( home_url( '/prayerresources/' ) ); ?>">Find help for family prayer</a></p><!-- /wp:paragraph -->
 
 </div><!-- /wp:group -->
-<!-- wp:image {"className":"fr-story-chapter-image"} --><figure class="wp-block-image fr-story-chapter-image"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/photos/family-children-prayer.jpg' ) ); ?>" alt="Children and family members gathered in prayer at the St. Bernadette relic visit."/></figure><!-- /wp:image -->
+<!-- wp:image {"className":"fr-story-chapter-image"} --><figure class="wp-block-image fr-story-chapter-image"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/photos/family-daughters-prayer.jpg' ) ); ?>" alt="A mother and her daughters share a quiet moment at the St. Bernadette relic visit."/></figure><!-- /wp:image -->
 
 </section><!-- /wp:group -->
 <!-- wp:group {"className":"fr-wrap fr-section fr-story-community","layout":{"type":"default"},"tagName":"section"} --><section class="wp-block-group fr-wrap fr-section fr-story-community">
 <!-- wp:group {"className":"fr-story-chapter-copy","layout":{"type":"default"}} --><div class="wp-block-group fr-story-chapter-copy">
 <!-- wp:heading {"level":2} --><h2 class="wp-block-heading">Many hands. One invitation.</h2><!-- /wp:heading -->
-<!-- wp:paragraph --><p>The mission continues through the people who share it: staff, volunteers, families and communities. Rosaries are prepared for others. People gather to pray. The invitation reaches another home.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>In Novaliches, Philippines, young people and adults prepare Rosaries together around a table. At The Father Peyton Center, families gather for prayer and community. These shared tasks carry Father Peyton’s mission from one family to the next.</p><!-- /wp:paragraph -->
 
 </div><!-- /wp:group -->
 <!-- wp:group {"className":"fr-story-community-pictures","layout":{"type":"default"}} --><div class="wp-block-group fr-story-community-pictures">

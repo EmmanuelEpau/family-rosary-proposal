@@ -1,0 +1,9 @@
+<?php
+/**
+ * Title: Faith in the hardest moments
+ * Slug: family-rosary/program-video-9IsIPuJNdHI
+ * Categories: family-rosary
+ * Inserter: no
+ */
+?>
+<!-- wp:html --><article class="fr-wrap fr-section"><p><a href="../../watch-and-listen/">Watch &amp; Listen</a> / Staying Together: Families Praying Together</p><h1>Faith in the hardest moments</h1><p class="fr-lead">Vivian and John Hernandez share how faith, community and prayer sustain their family through uncertainty.</p><div class="program-player"><button class="fr-primary" data-program-embed="https://www.youtube-nocookie.com/embed/9IsIPuJNdHI" data-program-title="Faith in the hardest moments">Play</button></div><dl><dt><strong>Series</strong></dt><dd>Staying Together: Families Praying Together</dd><dt><strong>From</strong></dt><dd>Family Theater Productions</dd><dt><strong>Format</strong></dt><dd>Video</dd><dt><strong>Length</strong></dt><dd>8:00</dd><dt><strong>Published</strong></dt><dd>2026-05-19</dd></dl><section><h2>About this episode</h2><p>Family testimony; includes discussion of illness, loss and hardship. Parents should choose what fits their family.</p><p>Original title: Facing a Rare Genetic Disorder: One Family’s Journey of Faith, Love, and Prayer</p><a href="https://www.youtube.com/watch?v=9IsIPuJNdHI">Original program on YouTube</a></section><section><h2>More from Staying Together: Families Praying Together</h2><ul><li><a href="../video-bG7r8HXWpk0/">Together, even when apart</a></li><li><a href="../video-3Hpny2VtT9U/">Trusting God through hardship</a></li><li><a href="../video-8hAd27w4zP0/">Prayer through the storm</a></li><li><a href="../video-aO5K7tBFuaw/">Meet the families</a></li></ul></section></article><!-- /wp:html -->

@@ -126,3 +126,8 @@ The same-origin rosary-scene.js module is bundled from Three.js with its license
 Print a Guide now opens an on-site reading page; Print this Guide invokes the browser print dialog. It is not a new PDF download. The complete prayer words/mystery sets are visible in HTML and print styles hide site navigation.
 
 Current verification supersedes the historical counts above: the actual editor parser reports 595 blocks in 20 documents, zero invalid blocks. Six static routes passed 42 internal-browser width checks. Complete editor save/reopen, physical printing, every provider’s full playback and production migration remain unverified. The ministry’s production content and settings are unchanged.
+
+
+## Program pages (1.7.0)
+
+The package includes57program patterns and a dedicated Program details template with one H1. After installing the theme, an administrator may explicitly run `wp eval-file wp-content/themes/family-rosary/tools/seed-programs.php` in the intended WordPress installation. This creates a Programs parent and missing child pages, preserves existing pages, and assigns the dedicated template only to newly created children. It is never run on activation. Existing customized program pages require a deliberate editorial decision before changes.
