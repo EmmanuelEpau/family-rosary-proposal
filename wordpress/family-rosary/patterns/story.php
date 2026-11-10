@@ -31,7 +31,9 @@
 <!-- wp:group {"className":"fr-story-chapter-copy","layout":{"type":"default"}} --><div class="wp-block-group fr-story-chapter-copy">
 <!-- wp:heading {"level":2} --><h2 class="wp-block-heading">A priest with a family’s prayer in his heart.</h2><!-- /wp:heading -->
 <!-- wp:paragraph --><p>Patrick came to America with his brother Tom. In Scranton, Pennsylvania, work at the cathedral helped reawaken his desire to become a priest. Both brothers entered the Congregation of Holy Cross.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>In 1938, tuberculosis threatened his vocation. Patrick prayed to Mary during his illness and attributed his recovery to her intercession. That experience deepened his resolve to share the prayer that had shaped his family.</p><!-- /wp:paragraph -->
 <!-- wp:paragraph --><p>On June 15, 1941, they were ordained at Notre Dame. Father Patrick’s first assignment took him to Albany, New York. There, he began asking others to help bring the Rosary into family homes.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p><a class="text-link" href="https://fatherpeyton.org/chapters/chapter-2/">Read the ministry’s account of his early vocation</a></p><!-- /wp:paragraph -->
 <!-- wp:paragraph {"className":"fr-story-milestone"} --><p class="fr-story-milestone">1942 · The invitation begins to travel.</p><!-- /wp:paragraph -->
 <!-- wp:paragraph --><p>Students helped prepare letters to bishops. A mission that had begun around one family’s prayer was finding its way to other homes.</p><!-- /wp:paragraph -->
 
@@ -82,7 +84,7 @@
 <!-- wp:paragraph --><p><a class="text-link" href="<?php echo esc_url( home_url( '/how-to-pray-the-rosary/' ) ); ?>">Learn to pray the Rosary</a> · <a class="text-link" href="<?php echo esc_url( home_url( '/prayerresources/' ) ); ?>">Find help for family prayer</a></p><!-- /wp:paragraph -->
 
 </div><!-- /wp:group -->
-<!-- wp:image {"className":"fr-story-chapter-image"} --><figure class="wp-block-image fr-story-chapter-image"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/family-prayer.webp' ) ); ?>" alt="Adults and children praying together around an open Bible."/></figure><!-- /wp:image -->
+<!-- wp:image {"className":"fr-story-chapter-image"} --><figure class="wp-block-image fr-story-chapter-image"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/photos/family-children-prayer.jpg' ) ); ?>" alt="Children and family members gathered in prayer at the St. Bernadette relic visit."/></figure><!-- /wp:image -->
 
 </section><!-- /wp:group -->
 <!-- wp:group {"className":"fr-wrap fr-section fr-story-community","layout":{"type":"default"},"tagName":"section"} --><section class="wp-block-group fr-wrap fr-section fr-story-community">

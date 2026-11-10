@@ -47,3 +47,35 @@ Typography rechecked against https://hcfm.org/ on 9 November 2026: editorial her
 - New JPEG/PNG assets carry embedded origin metadata. Generation edit-intent summaries are recorded; exact initial tool prompts were not retained. Rejected incorrect bead arrangements are kept only in private task evidence and are not shipped in the current theme/review assets.
 - Companion art is a CSS composition around the complete unchanged ministry resource image, with object-fit contain; the new landscape card does not alter the book/PDF itself. Sunday art uses the exact previously credited Canva child photograph.
 - The Rosary is deterministic geometry in src/rosary-layout.mjs and src/rosary-scene.js, rendered with Three.js (MIT; bundled notice rosary-scene.js.LEGAL.txt). No generated bead image supplies its anatomy. Reference: USCCB, How to Pray the Rosary, https://www.usccb.org/how-to-pray-the-rosary , text and diagram inspected 9 November 2026. Count/order checks are structural verification, not a claim of ecclesiastical approval.
+
+## 1.6.0 ministry photographs and episode artwork
+
+Source evidence was collected on 9 November 2026. The catalog contains **57 unique programs**: 22 original video records and 35 podcast records. Four podcasts also have verified filmed editions, so the format filters return 26 videos and 35 podcasts with an overlap of four; those totals must not be added as unique programs.
+
+### Ministry photographs
+
+Six real ministry photographs were selected from the user-authorized HCFM Pixieset library and delivered as 1600px website previews. The library identifies the collection as **St. Bernadette**, not St. Benedict. Original filenames and collection identifiers are recorded in `assets/photos/SOURCES.md`; no signed delivery URLs, account details or authentication data are included. These selections are photographs, not generated people, prayer objects or a synthetic family scene. Individual photographer attribution and production reuse clearance remain to be confirmed.
+
+- `photos/family-relic-welcome.jpg`: original `St-Bernadette-Relic-at-HCFM_High-Resolution_EM_A8203.jpg`; ministry collection `126331663`.
+- `photos/mass-bernadette-2026.jpg`: original `St-Bernadette-Relic-at-HCFM-Part-2_High-Resolution_EM_A2126.jpg`; ministry collection `126529925`.
+- `photos/marian-2026.jpg`: original `St-Bernadette-Relic-at-HCFM_High-Resolution_EM_A8892.jpg`; ministry collection `126331663`.
+- `photos/mother-children-relic.jpg`: original `St-Bernadette-Relic-at-HCFM-Part-2_High-Resolution_EM_A2294.jpg`; ministry collection `126529925`.
+- `photos/family-daughters-prayer.jpg`: original `St-Bernadette-Relic-at-HCFM-Part-2_High-Resolution_EM_A2401.jpg`; ministry collection `126529925`.
+- `photos/family-children-prayer.jpg`: original `St-Bernadette-Relic-at-HCFM-Part-2_High-Resolution_EM_A2435.jpg`; ministry collection `126529925`.
+
+### How’s Your Prayer Life?
+
+The 12 editorial episode covers use four real session frames and eight real portrait crops from the original published episode artwork. No participant likeness is generated and no invented interview setting is implied. Original official covers remain in the catalog’s `local_thumbnail` and `thumbnail_url` fields ; the eight portrait compositions show those originals in details, while the four filmed conversations show actual session frames. Original covers remain available at the linked publisher pages; editorial compositions are distinguished from original published covers. Complete crop geometry and original source URLs are retained in catalog metadata.
+
+- `episodes/hypl-scott-session.jpg`: actual Scott Weeman conversation with host Allison Gingras, from https://www.youtube.com/watch?v=PAFz_GHIhSA. Actual Family Rosary video conversation frame showing Scott Weeman and Allison Gingras, captured by root at6:38.56 from https://www.youtube.com/watch?v=PAFz_GHIhSA. Native show typography is an editorial cover composition; original official episode cover retained in local_thumbnail and thumbnail_url.
+- `episodes/hypl-jessica-session.jpg`: actual Jessica Benfield conversation with host Allison Gingras, from https://www.youtube.com/watch?v=y48apHyqpiw. Actual official Family Rosary episode10 conversation frame at1:35.76, captured by root from https://www.youtube.com/watch?v=y48apHyqpiw. Guest Jessica Benfield is labelled at left; host Allison Gingras is labelled at right. Original official episode cover remains in local_thumbnail and thumbnail_url. Native show typography is an editorial cover composition.
+- `episodes/hypl-allison-auth-session.jpg`: actual Allison Auth conversation with host Allison Gingras, from https://www.youtube.com/watch?v=piuEnwRqOxI. Actual official Family Rosary episode9 video frame at approximately7:07, captured by root. Guest Allison Auth is labelled at left; host Allison Gingras is labelled at right. The two people are distinct. Native show typography is an editorial cover composition; original official cover remains in local_thumbnail and thumbnail_url.
+- `episodes/hypl-kylie-session.jpg`: actual Kylie Hein conversation with host Allison Gingras, from https://www.youtube.com/watch?v=erP2SyXzLk0. Actual official Family Rosary episode8 video frame at4:54.75, captured by root from https://www.youtube.com/watch?v=erP2SyXzLk0. Guest Kylie Hein is labelled at left; host Allison Gingras is labelled at right. Original official episode cover remains in local_thumbnail and thumbnail_url; native show typography is an editorial cover composition.
+
+Eight source-portrait compositions: Sonia Martinez-Trujillo, Stephen Driscoll, Krystal Quagliara, Deacon Pedro Guevara-Mann, Danielle Schmitz, Nicole Benjamin, Bernadette Nelson, Maria Gallagher. Each uses the portrait already present in that guest’s original official Podbean cover. Bernadette Nelson’s original image includes two people; both remain visible and the companion’s identity is not inferred.
+
+### Through the Mysteries
+
+All 23 episode backgrounds in `assets/episodes/audio-*.svg` are editable native editorial artwork, with blue and yellow/white series identity, a magnifying-glass motif and native page text for the series and episode hook. PlaylistScript supplies the “Mysteries” lettering through the existing authorized public font reference. They contain no fabricated guest portraits, quotations or session photographs. Original published episode artwork and source URLs remain in `content/media.json`; the native compositions do not claim to be original official covers.
+
+The previously credited Canva child photograph remains a baseline asset with the same source and licensing limitation above. This revision does not establish new photographer credits or blanket production licensing for any published third-party asset.
