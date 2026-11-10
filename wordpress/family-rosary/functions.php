@@ -90,6 +90,13 @@ function family_rosary_complete_experience_assets() {
  }
 }
 add_action( 'wp_enqueue_scripts', 'family_rosary_complete_experience_assets' );
+require_once get_theme_file_path( 'inc/live-prayer.php' );
+function family_rosary_live_resolver_settings() {
+ if ( wp_script_is( 'family-rosary-live-prayer', 'enqueued' ) ) {
+  wp_localize_script( 'family-rosary-live-prayer', 'frLivePrayer', array( 'scheduleURL' => esc_url_raw( rest_url( 'family-rosary/v1/live' ) ) ) );
+ }
+}
+add_action( 'wp_enqueue_scripts', 'family_rosary_live_resolver_settings', 20 );
 
 /** Responsive derivatives preserve original photography and its editorial crop. */
 function family_rosary_responsive_photos( $content ) {

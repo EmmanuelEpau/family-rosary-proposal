@@ -54,6 +54,8 @@ for slug,(path,title,desc) in routes.items():
  review='<div class="fr-proposal-note">Family Rosary website proposal · For design review · Not the live ministry website</div>'
  styles=''.join(f'<link rel="stylesheet" href="{prefix}assets/{name}.css?v={ASSET_VERSION}">' for name in dict.fromkeys(MANIFEST['common']['styles']+MANIFEST['routes'][slug]['styles']+['family-refinement']))
  scripts=''.join(f'<script defer src="{prefix}assets/{name}.js?v={ASSET_VERSION}"></script>' for name in dict.fromkeys(MANIFEST['common']['scripts']+MANIFEST['routes'][slug]['scripts']))
+ if slug in ('home','media'):
+  scripts='<script>window.frLivePrayer={scheduleURL:'+json.dumps(prefix+'live/prayer.json')+'};</script>'+scripts
  body_class=' class="home"' if slug=='home' else ''
  page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>{html.escape(title)}</title><meta name="description" content="{html.escape(desc,quote=True)}"><link rel="icon" href="{prefix}assets/logo.svg">{styles}{scripts}</head><body{body_class} data-preview="true"><a href="#main-content" class="fr-skip">Skip to content</a>{header}<main id="main-content" class="fr-main">{content}</main>{footer}{review}</body></html>'''
  (dest/'index.html').write_text(page)
@@ -70,4 +72,4 @@ program_builder=ROOT/'scripts/build-programs.py'
 if program_builder.exists():
  exec(compile(program_builder.read_text(),str(program_builder),'exec'),globals())
 
-shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.8.0"),"zip",root_dir=T.parent,base_dir=T.name)
+shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.8.1"),"zip",root_dir=T.parent,base_dir=T.name)

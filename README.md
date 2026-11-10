@@ -1,3 +1,5 @@
+Prepared1.8.1 automatic-source integration: see [AUTOMATIC-LIVE.md](AUTOMATIC-LIVE.md). This branch is not yet activated; the one-time private API connection and actual discovery verification remain pending.
+
 Current 1.8.0 refinement: on-site Daily Rosary & Mass player, seven authentic family hero photographs, a different festival age-range photo, continuous homepage Rosary photo bleed, topic-photography podcast covers, cleaner filmed conversations, blended genuine crucifix artwork and a compact footer with social icons. See the dated live-and-artwork task folder for actual checks and provider limitations.
 
 # Family Rosary proposal 1.8.0
