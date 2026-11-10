@@ -5,8 +5,8 @@ ROOT=Path(__file__).resolve().parents[1];T=ROOT/'wordpress/family-rosary';OUT=RO
 if (OUT/'assets').exists():shutil.rmtree(OUT/'assets')
 shutil.copytree(T/'assets',OUT/'assets')
 ASSET_VERSION=hashlib.sha256(b''.join(p.read_bytes() for p in sorted(T.rglob('*')) if p.is_file())).hexdigest()[:10]
-STYLES=('site','cinema-v3','resource-discovery','rosary-world','home-family','companion','prayer-by-age','print-guide-v3')
-SCRIPTS=('site','cinema','prayer-experience','resource-discovery','rosary-journey','home-family','prayer-by-age')
+STYLES=('site','cinema-v3','resource-discovery','rosary-world','home-family','companion','prayer-by-age','print-guide-v3','cinema-preview')
+SCRIPTS=('site','cinema','prayer-experience','resource-discovery','rosary-journey','home-family','prayer-by-age','cinema-preview')
 assert all((T/'assets'/f'{n}.css').exists() for n in STYLES)
 assert all((T/'assets'/f'{n}.js').exists() for n in SCRIPTS)
 routes={'prayer-by-age':('praying-with-children','Family Prayer by Age: Babies, Children & Teens | Family Rosary','Find a short prayer and a useful activity for babies, primary school children, preteens and teenagers. Follow a guided moment of family prayer together.'),'companion':('family-rosary-companion','Family Rosary Companion: Activities in English & Spanish | Family Rosary','Pray and color together with the Family Rosary Companion. Try an activity on this page and choose free English or Spanish mystery printables.'),'print-guide':('rosary-prayer-guide','Rosary Prayer Guide: Read or Print | Family Rosary','Read the Rosary prayers in English and all four sets of mysteries. Print a clear guide to keep beside you or share with your family.'),'home':('','Family Rosary | Pray Together as a Family','Find a welcoming place to learn the Rosary, pray together and discover resources for your family.'),'rosary-guide':('how-to-pray-the-rosary','How to Pray the Rosary, Step by Step | Family Rosary','Learn how to pray the Rosary, follow all five decades, read the prayers and mysteries, and find printable guides.'),'resources':('prayerresources','Family Prayer Resources & Rosary Guides | Family Rosary','Find Rosary guides, prayer book downloads and activities for children. Browse family prayer resources for home, school and parish.'),'story':('our-story','Our Story: Father Peyton and Family Prayer | Family Rosary','Discover Father Peyton’s invitation to family prayer and the worldwide mission of Family Rosary.'),'media':('watch-and-listen','Watch & Listen: Prayer, Podcasts and Reflections | Family Rosary','Watch daily prayer, explore reflections and listen to Family Rosary podcasts.')}
@@ -48,4 +48,4 @@ print('Static review exported from WordPress patterns and template parts.')
 
 # Package the current native theme alongside the static review.
 (OUT/"downloads").mkdir(exist_ok=True)
-shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.6.0"),"zip",root_dir=T.parent,base_dir=T.name)
+shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.6.1"),"zip",root_dir=T.parent,base_dir=T.name)

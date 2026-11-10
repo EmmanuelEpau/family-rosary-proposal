@@ -113,9 +113,12 @@
     "playable_in_embed": true,
     "verified_on": "2026-11-04",
     "local_thumbnail": "media/e9b9b90925f7.webp",
-    "editorial_artwork": "episodes/sign-of-cross.svg",
-    "artwork_note": "Native cross symbol; editorial instructional cover, not a video frame.",
-    "artwork_kind": "instruction-composition"
+    "editorial_artwork": "photos/crucifix-peyton-center.jpg",
+    "artwork_note": "Illustrative photograph of the actual wall crucifix and foreground monstrance at the Father Peyton Center, from HCFM’s user-authorized St. Bernadette Part2 collection. Original EM_A1990.jpg, collection126529925/set182542383/photo34of167; root inspected the actual Pixieset photograph. Full photograph is contained to retain Christ’s head, both arms and the cross without synthesizing any anatomy. This is not a still from the instructional video.",
+    "artwork_kind": "instruction-composition",
+    "instruction_art_subject": "crucifix",
+    "artwork_fit": "contain",
+    "artwork_source_url": "https://images.pixieset.com/529925621/5eee0a8c53d87e9dd894714a103ac468-xxlarge.jpg"
   },
   {
     "type": "video",

@@ -1,8 +1,14 @@
 # Family Rosary website proposal
 
-Version 1.6.0 working revision, 9 November 2026. Eight on-site routes, 54 resource cards and 57 unique media programs, built with HCFM’s Whitney, Calluna and PlaylistScript typography and official Family Rosary marks. This revision is prepared and locally verified; publication of 1.6.0 is not claimed here. The ministry website is unchanged.
+Version 1.6.1 review revision, 9 November 2026. Eight on-site routes, 54 resource cards and 57 unique media programs, built with HCFM’s Whitney, Calluna and PlaylistScript typography and official Family Rosary marks. This revision is prepared and locally verified; publication of this refinement is recorded separately in the task delivery notes. The ministry website is unchanged.
 
 [Public review website — check its displayed version](https://emmanuelepau.github.io/family-rosary-proposal/)
+
+## Watch & Listen refinement
+
+The 1.6.1 pass removes per-card information icons and repeated format captions, preserves direct playback and real guests, unifies podcast headers, repairs numberless episode-row placement, and uses a genuine ministry crucifix photograph for Sign of the Cross. The opening now bleeds beneath the ministry strip with overlaid navigation and bounded muted excerpts from the original videos. Posters remain available when previews are blocked or paused; provider behavior and advertising are outside the site’s control. The audio player exposes episode details from its controls instead of every thumbnail.
+
+Homepage photo rotation/crops, other homepage artwork, footer, story layout and resource-gallery annotations remain separate follow-through tasks after this Watch & Listen pass.
 
 ## Current revision
 
@@ -18,7 +24,7 @@ Version 1.6.0 working revision, 9 November 2026. Eight on-site routes, 54 resour
 
 Repository: EmmanuelEpau/family-rosary-proposal. Baseline commit: 5cdba2cec3493573466e811be180d3001278180c. Development is isolated in the dated task-folder clone. Native WordPress patterns, parts and assets are in wordpress/family-rosary; docs is their static review export.
 
-Run `npm ci`, then `npm run build`. The build bundles the Rosary, regenerates media and resource patterns, exports eight routes and creates downloads/family-rosary-theme-1.6.0.zip. Historical packages remain. Resource destinations and verified editorial overrides are in content/resource-destinations.json; scripts/build-resources.py preserves the original resource identities and routes internal links through WordPress’s home_url helper. Edit media metadata in content/media.json; generated pattern edits must be made in their generator. Three.js/esbuild versions are pinned and upstream notices retained.
+Run `npm ci`, then `npm run build`. The build bundles the Rosary, regenerates media and resource patterns, exports eight routes and creates downloads/family-rosary-theme-1.6.1.zip. Historical packages remain. Resource destinations and verified editorial overrides are in content/resource-destinations.json; scripts/build-resources.py preserves the original resource identities and routes internal links through WordPress’s home_url helper. Edit media metadata in content/media.json; generated pattern edits must be made in their generator. Three.js/esbuild versions are pinned and upstream notices retained.
 
 ## Verification for 1.6.0
 
