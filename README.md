@@ -1,4 +1,6 @@
-# Current proposal:1.7.0 committee corrections
+Newsletter follow-up: HubSpot verified FR | FRBlog Subscribe, form257952a0-7366-4f80-856e-dc0bef6d1ae7, published public Daily/Weekly choices and active [FR] Blog Subscribe workflow. All proposal newsletter CTAs now use that exact World at Prayer form, not the separate general email-updates form. Actual daily/Wednesdayweekly records were read; no HubSpot settings changed or signup submitted.
+
+# Current proposal:1.7.1 committee corrections
 
 10 November2026. The1.7.0 pass repairs media playback recovery, full-height interview composition, player-first dialogs, larger guest artwork, prayer entry routes, age progress, optional Fatima words, phone bead/reader transitions, focus contrast, resource filters and program discovery. It retains all48saved legacy resources within54records and57unique programs.
 
@@ -6,7 +8,7 @@ The static proposal and native package now contain57program detail documents. Na
 
 Checks: build, Python/JavaScript syntax, two structural Rosary checks; internal-browser8routes at1280/390, nooverflow/brokenloadedimages andoneH1; actualdirectvideo, episode switch, audio start/pause/stop; age-tab progress; native82documents513blocks0invalid; nativeprogramoneH1andplayingvideo; standaloneaudiooneclick advancing. Full external-Chrome/axe suite not run under user's internal-browser restriction. Historical failed suite remains historical, not passed.
 
-Editorial/source work remains open: reviewed transcripts, unclassified resource languages, exact remembered baby/Canto selections, sharper crucifix photo, fully art-directed remaining source posters, and confirmed newsletter benefits. Production migration/policy/field performance and human/ministry approval are separate from this proposal. See task FINDINGS.md and reviews for the full honest ledger. Do not call the entire broader brief finished.
+Editorial/source work remains open: reviewed transcripts, unclassified resource languages, exact remembered baby/Canto selections, sharper crucifix photo, fully art-directed remaining source posters, and broader source curation. Production migration/policy/field performance and human/ministry approval are separate from this proposal. See task FINDINGS.md and reviews for the full honest ledger. Do not call the entire broader brief finished.
 
 ---
 
