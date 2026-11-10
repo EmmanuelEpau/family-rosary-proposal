@@ -75,7 +75,7 @@
 
 /* Each homepage invitation now has a distinct job: discover media, then pray. */
 .fr-age-family-photo{margin:24px 0 28px;border-radius:12px;overflow:hidden;background:#e8f0fc}
-.fr-age-family-photo img{display:block;width:100%;height:auto;aspect-ratio:2.4;object-fit:cover;object-position:center 22%}
+.fr-age-family-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 45%}
 @media(max-width:780px){.fr-age-family-photo img{aspect-ratio:3/2;object-fit:contain}}
 .fr-age-family-photo figcaption{padding:10px 16px;color:#244a79;font-size:14px}
 /* Keep the three collection gateways on the same artwork baseline. */
@@ -90,3 +90,20 @@
 .fr-today-preview p{font-size:14px;color:#dce8ff;margin:0 auto}
 @media(min-width:1000px){.fr-today{grid-template-columns:minmax(0,1fr) minmax(0,.8fr) minmax(0,1fr);gap:32px}.fr-today h2{font-size:44px}.fr-today-prayer{padding-left:28px}.fr-today-title{font-size:32px}}
 @media(max-width:999px){.fr-today-preview{display:none}}
+
+/* Keep the people beside the invitation; extra wall area falls outside the frame. */
+@media(min-width:781px){
+ .fr-cinematic-hero{background:#062351}
+ .fr-cinematic-hero .fr-family-slide img{position:absolute;left:var(--family-photo-left,0);width:var(--family-photo-width,100%);max-width:none;mask-image:linear-gradient(90deg,transparent,#000 18%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 18%)}
+ .fr-cinematic-hero:after{background:linear-gradient(90deg,rgba(0,28,72,.94),rgba(0,28,72,.84) 25%,rgba(0,28,72,.27) 52%,transparent 77%)}
+ /* The Rosary photograph continues behind the controls to the rounded lower edge. */
+ .fr-home-media-band .fr-feature-home .fr-feature-slides{overflow:visible}
+ .fr-home-media-band .fr-home-photo-rosary{overflow:visible}
+ .fr-home-media-band .fr-home-photo-rosary .fr-feature-art{bottom:-110px!important;height:calc(100% + 110px)}
+ .fr-home-media-band .fr-home-photo-rosary .fr-feature-art>img{object-fit:contain;object-position:right bottom}
+ .fr-home-media-band .fr-home-photo-rosary:after{bottom:-110px}
+ .fr-home-media-band .fr-feature-home .fr-feature-controls{position:relative;z-index:3}
+}
+
+.fr-home-media-band .fr-feature-navigation button{background:rgba(0,32,82,.65);backdrop-filter:blur(8px)}
+.fr-home-media-band .fr-feature-navigation [data-feature-toggle]{width:44px;min-width:44px;padding:8px}

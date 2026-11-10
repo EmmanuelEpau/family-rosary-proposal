@@ -70,4 +70,4 @@ program_builder=ROOT/'scripts/build-programs.py'
 if program_builder.exists():
  exec(compile(program_builder.read_text(),str(program_builder),'exec'),globals())
 
-shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.7.4"),"zip",root_dir=T.parent,base_dir=T.name)
+shutil.make_archive(str(OUT/"downloads/family-rosary-theme-1.8.0"),"zip",root_dir=T.parent,base_dir=T.name)

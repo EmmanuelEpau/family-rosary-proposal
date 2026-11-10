@@ -27,9 +27,9 @@ function setup({reduced=false}={}){
  return {requests,photos,slides,button,hero,document,motion,window,current:()=>slides.findIndex(s=>s.classList.contains('is-current')),visible:value=>intersection([{isIntersecting:value,intersectionRatio:value?1:0}]),advance(ms){const end=now+ms;for(;;){const entry=[...timers].sort((a,b)=>a[1].at-b[1].at)[0];if(!entry||entry[1].at>end)break;timers.delete(entry[0]);now=entry[1].at;entry[1].fn();}now=end;},flush:async()=>{for(let i=0;i<10;i++)await Promise.resolve();}};
 }
 let passed=0,failed=0;async function test(name,run){try{await run();console.log('PASS '+name);passed++;}catch(error){console.error('FAIL '+name+' — '+error.message);failed++;}}
-await test('initial markup has one real hero image and three deferred images, with no eager secondary srcset',()=>{
+await test('initial markup has one real hero image and six deferred images, with no eager secondary srcset',()=>{
  const html=fs.readFileSync('wordpress/family-rosary/patterns/home.php','utf8'),figures=html.match(/<figure\b[^>]*data-family-slide[\s\S]*?<\/figure>/g);
- assert.equal(figures.length,4);assert.equal(/\ssrc="data:/.test(figures[0]),false);
+ assert.equal(figures.length,7);assert.equal(/\ssrc="data:/.test(figures[0]),false);
  for(const figure of figures.slice(1)){assert.match(figure,/\ssrc="data:image\/gif;base64,/);assert.match(figure,/\sdata-family-source=/);assert.match(figure,/\sdata-family-srcset=/);assert.equal(/\ssrcset=/.test(figure),false);}
 });
 await test('secondary photos remain deferred offscreen and while the first image is still decoding',async()=>{

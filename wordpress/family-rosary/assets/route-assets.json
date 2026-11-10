@@ -11,21 +11,25 @@
     "home": {
       "styles": [
         "home-family",
-        "cinema-v3"
+        "cinema-v3",
+        "live-prayer"
       ],
       "scripts": [
         "prayer-experience",
-        "home-family"
+        "home-family",
+        "live-prayer"
       ]
     },
     "media": {
       "styles": [
         "cinema-v3",
-        "cinema-preview"
+        "cinema-preview",
+        "live-prayer"
       ],
       "scripts": [
         "cinema",
-        "cinema-preview"
+        "cinema-preview",
+        "live-prayer"
       ]
     },
     "resources": {

@@ -1,6 +1,6 @@
-Current 1.7.4 follow-up: preserves the carousel pause target during pointer focus and fixes stalled audio retries and event races, restores failed-card recovery, preserves expanded controls, focuses completed family prayer, keeps changed phone prayer words visible, stages later hero photos, uses role-aware responsive images and preserves faces in the family-day crop. Run `npm run check:unit` for focused controller, photo, Rosary and content checks. Actual browser and native WordPress evidence is recorded in the dated audit-closure task folder. Production and editorial limitations below remain explicit.
+Current 1.8.0 refinement: on-site Daily Rosary & Mass player, seven authentic family hero photographs, a different festival age-range photo, continuous homepage Rosary photo bleed, topic-photography podcast covers, cleaner filmed conversations, blended genuine crucifix artwork and a compact footer with social icons. See the dated live-and-artwork task folder for actual checks and provider limitations.
 
-# Family Rosary proposal 1.7.4
+# Family Rosary proposal 1.8.0
 
 Public review: https://emmanuelepau.github.io/family-rosary-proposal/ . This is a proposal, not the ministry production website. Review pages retain noindex.
 
@@ -16,7 +16,7 @@ Resource language metadata now includes original-body evidence for16PDFs and rev
 
 ## Build and package
 
-Run npm ci, then npm run build. Source lives in wordpress/family-rosary, media/resource metadata in content, and generators in scripts. The build exports docs and creates docs/downloads/family-rosary-theme-1.7.4.zip. Historical packages are retained. Assets and their rights are recorded in wordpress/family-rosary/ASSET-CREDITS.md. Font binaries are not redistributed.
+Run npm ci, then npm run build. Source lives in wordpress/family-rosary, media/resource metadata in content, and generators in scripts. The build exports docs and creates docs/downloads/family-rosary-theme-1.8.0.zip. Historical packages are retained. Assets and their rights are recorded in wordpress/family-rosary/ASSET-CREDITS.md. Font binaries are not redistributed.
 
 ## Verification
 
@@ -26,7 +26,11 @@ The1.7.0–1.7.1 corrective build was inspected in the internal browser across8r
 
 The external-Chrome/axe suite was not run under the user's internal-browser-only instruction. A historical npm check failure is not reported as passed. No physical-device, screen-reader, physical-print, field-performance or complete57programplaythrough claim is made.
 
+The1.8.0 build and full unit suite pass. Fresh native WordPress parsing:82documents/473blocks,0invalid. Internal-browser playback showed the actual November10Rosary live on the website, including390px phone. Escape removed its frame and returned focus. New topic-photo cards, four actual session cutouts, family crops and compact footer were visually checked. See task evidence for the exact scope.
+
 ## Remaining limits
+
+Daily prayer uses verified dated stream IDs with automatic expiry. YouTube’s stable channel embed failed even while the dated live Rosary played. Future daily broadcasts require a maintained schedule or supported automated source; this release does not claim automatic future-day discovery.
 
 Broader editorial work remains: reviewed transcripts/caption inventory,7unclassified media languages, additional source photo curation, a sharper crucifix photograph and further source-poster art direction. The Rosary is structurally accurate and stylized, not a photorealistic crucifix. Exact remembered baby/Canto selections remain open. The original Rosaryin25Days destination requires further publisher clarification; its current destination is disclosed. Production redirects/canonicals, indexability, policy and ministry review are separate from this proposal. No ranking or engagement improvement is certified.
 
