@@ -64,13 +64,16 @@
   const pauseOnHover=!carousel.classList.contains('cinema-feature');
   const dialog=document.querySelector('#media-dialog, #cinema-dialog');
   if(slides.length<2||!toggle)return;
-  let index=0,paused=motion.matches,hovered=matchMedia('(hover: hover)').matches&&carousel.matches(':hover'),inView=true,resumedOnToggle=false,timer,toggleIntent;
+  let index=0,paused=motion.matches,hovered=matchMedia('(hover: hover)').matches&&carousel.matches(':hover'),inView=true,resumedOnToggle=false,timer,toggleIntent,renderedPaused;
   const canRotate=()=>!paused&&(!pauseOnHover||!hovered)&&inView&&!document.hidden&&!dialog?.open&&(!carousel.contains(document.activeElement)||(resumedOnToggle&&document.activeElement===toggle));
   const schedule=()=>{
    clearTimeout(timer);
    carousel.dataset.featurePaused=String(!canRotate());
-   toggle.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="'+(paused?'M8 5v14l11-7z':'M6 5h4v14H6zm8 0h4v14h-4z')+'"/></svg>';
-   toggle.setAttribute('aria-label',paused?'Resume featured selections':'Pause featured selections');
+   if(renderedPaused!==paused){
+    renderedPaused=paused;
+    toggle.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="'+(paused?'M8 5v14l11-7z':'M6 5h4v14H6zm8 0h4v14h-4z')+'"/></svg>';
+    toggle.setAttribute('aria-label',paused?'Resume featured selections':'Pause featured selections');
+   }
    if(canRotate())timer=setTimeout(()=>{
     if(canRotate())render(index+1);
     schedule();
