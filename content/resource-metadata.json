@@ -9,7 +9,20 @@
         "es"
       ],
       "section": "library",
-      "action": "Explore the Companion"
+      "action": "Explore the Companion",
+      "language_reviewed_on": "2026-11-10",
+      "audience_note": "Trace and color together",
+      "audience_evidence": {
+        "observed_on": "2026-11-09",
+        "reviewed_on": "2026-11-10",
+        "source": "https://blog.familyrosary.org/family-rosary-prayer-companion-for-families",
+        "basis": [
+          "Family Rosary Prayer Companion for Families",
+          "Family Rosary Companion - Joyful Mysteries (Actual Size 8 x 11):",
+          "Download your copy of the Family Rosary Companion below.",
+          "ROSARIO EN FAMILIA PARA ACOMPAÑAR"
+        ]
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/b4ec0b4c-01d4-4d20-8ad4-05637a1d57e4": {
       "id": "resource-mass-activities",
@@ -20,15 +33,49 @@
       ],
       "section": "library",
       "action": "Explore activities",
-      "language_evidence": "Official source page/onsite source-verified English media catalog inspected2026-11-10."
+      "language_evidence": "Official source page/onsite source-verified English media catalog inspected2026-11-10.",
+      "language_reviewed_on": "2026-11-10",
+      "audience_note": "Coloring pages and worksheets",
+      "audience_evidence": {
+        "observed_on": "2026-11-09",
+        "reviewed_on": "2026-11-10",
+        "source": "https://www.catholicmom.com/sunday-mass-activities",
+        "basis": [
+          "Catholic Gospel Coloring Pages and Worksheets for Sunday Mass",
+          "Family Rosary Companion",
+          "Mysteries of the Rosary Coloring Pages",
+          "Share the Catholic Mom Sunday Gospel Activitieswith your friends, parish, and local Catholic school!",
+          "Catholic Mom is Here for You!"
+        ]
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/06b315e1-28fc-49a9-9fdb-44af2b2c11f6": {
       "id": "resource-creation",
       "format": "pdf",
       "topics": "creation family",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/Laudato%20Si.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 40,
+        "extracted_characters": 57362,
+        "sha256": "755fbe7ac9f1645a73d6da377f90d429fe027e9d1365439d3e449ee5a879e392",
+        "text_file": "research/pdf-text/resource-creation.txt",
+        "body_excerpt": "“The family that prays together stays together.” —Father Patrick Peyton, C.S.C."
+      },
+      "audience_note": "For parents · adapt activities for your children",
+      "audience_evidence": {
+        "source": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/Laudato%20Si.pdf",
+        "observed_on": "2026-11-10",
+        "page": 6,
+        "text": "While this booklet is designed for parents, we hope that its core messages will be shared with children in a way that is appropriate to their age."
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/8cd18dfa-ee9f-4ce2-aa38-73f0fe7d50eb": {
       "id": "resource-8cd18dfa-ee9f-4ce2-aa38-73f0fe7d50eb",
@@ -39,7 +86,8 @@
       ],
       "section": "library",
       "action": "Listen to podcast",
-      "language_evidence": "Official source page/onsite source-verified English media catalog inspected2026-11-10."
+      "language_evidence": "Official source page/onsite source-verified English media catalog inspected2026-11-10.",
+      "language_reviewed_on": "2026-11-10"
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/8b67c7dc-458b-4f0a-b288-6fa7e3fd1a2e": {
       "id": "resource-8b67c7dc-458b-4f0a-b288-6fa7e3fd1a2e",
@@ -50,31 +98,65 @@
       ],
       "section": "library",
       "action": "Listen to podcast",
-      "language_evidence": "Official source page/onsite source-verified English media catalog inspected2026-11-10."
+      "language_evidence": "Official source page/onsite source-verified English media catalog inspected2026-11-10.",
+      "language_reviewed_on": "2026-11-10"
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/b57ab1ab-6e31-4c82-93d0-ea35fc507f28": {
       "id": "resource-b57ab1ab-6e31-4c82-93d0-ea35fc507f28",
       "format": "event",
       "topics": "marriage parish",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "events",
-      "action": "View current dates and details"
+      "action": "View current dates and details",
+      "language_evidence": {
+        "source_url": "https://hcfm.org/product/marriageilluminatedtraining/",
+        "observed_on": "2026-11-09",
+        "reviewed_on": "2026-11-10",
+        "scope": "English resource landing page; does not certify every linked PDF, recording, or live event language.",
+        "observed_text": "Marriage Illuminated Training – Saturday, January 30, 2027 & Saturday, April 3, 2027",
+        "record": "research/committee-v3/destination-observations.json",
+        "observation_index": 5
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/d60a398d-8802-4bf4-a1f4-40272a31f5ad": {
       "id": "resource-d60a398d-8802-4bf4-a1f4-40272a31f5ad",
       "format": "event",
       "topics": "prayer fellowship",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "events",
-      "action": "View current dates and details"
+      "action": "View current dates and details",
+      "language_evidence": {
+        "source_url": "https://www.museumoffamilyprayer.org/brothers-of-the-carpenter",
+        "observed_on": "2026-11-09",
+        "reviewed_on": "2026-11-10",
+        "scope": "English resource landing page; does not certify every linked PDF, recording, or live event language.",
+        "observed_text": "Add to Calendar",
+        "record": "research/committee-v3/destination-observations.json",
+        "observation_index": 6
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/33fd5128-590e-4cda-a496-40b1b4a96ebe": {
       "id": "resource-33fd5128-590e-4cda-a496-40b1b4a96ebe",
       "format": "event",
       "topics": "prayer rosary",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "events",
-      "action": "View current dates and details"
+      "action": "View current dates and details",
+      "language_evidence": {
+        "source_url": "https://www.familyrosary.org/the-art-of-prayer",
+        "observed_on": "2026-11-09",
+        "reviewed_on": "2026-11-10",
+        "scope": "English resource landing page; does not certify every linked PDF, recording, or live event language.",
+        "observed_text": "Discover the Art of Prayer: A Spiritual Pilgrimage",
+        "record": "research/committee-v3/destination-observations.json",
+        "observation_index": 7
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/7d0236fb-6804-4920-9ace-c9a3cdcf8be0": {
       "id": "resource-7d0236fb-6804-4920-9ace-c9a3cdcf8be0",
@@ -96,9 +178,20 @@
       "id": "resource-f387b8cc-c658-4b59-af94-f875882092ec",
       "format": "download",
       "topics": "rosary novena peyton",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Explore download"
+      "action": "Explore download",
+      "language_evidence": {
+        "source_url": "https://fatherpeyton.org/novena/",
+        "observed_on": "2026-11-09",
+        "reviewed_on": "2026-11-10",
+        "scope": "English resource landing page; does not certify every linked PDF, recording, or live event language.",
+        "observed_text": "Does Your Family Need a Miracle?Try Praying a Family Rosary Novena for Your Intentions!",
+        "record": "research/committee-v3/destination-observations.json",
+        "observation_index": 10
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/7fcbe2d8-13b9-460d-9148-28e006aa749f": {
       "id": "resource-7fcbe2d8-13b9-460d-9148-28e006aa749f",
@@ -108,7 +201,8 @@
         "es"
       ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_reviewed_on": "2026-11-10"
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/2bae07eb-28d3-4e35-88a8-4972c688dd14": {
       "id": "resource-2bae07eb-28d3-4e35-88a8-4972c688dd14",
@@ -122,9 +216,20 @@
       "id": "resource-e93d0db8-9091-4b5d-a0d6-e72d3acb49af",
       "format": "video",
       "topics": "faith rosary",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Watch videos"
+      "action": "Watch videos",
+      "language_evidence": {
+        "source_url": "https://www.catholiccentral.com/",
+        "observed_on": "2026-11-09",
+        "reviewed_on": "2026-11-10",
+        "scope": "English resource landing page; does not certify every linked PDF, recording, or live event language.",
+        "observed_text": "EnterForming* Insights on All Things Catholic",
+        "record": "research/committee-v3/destination-observations.json",
+        "observation_index": 13
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/22e0829d-8bc0-4130-92f5-1c3df46551cf": {
       "id": "resource-22e0829d-8bc0-4130-92f5-1c3df46551cf",
@@ -146,9 +251,22 @@
       "id": "resource-bc6581d0-3fdc-4f58-b548-3a319563a7a5",
       "format": "pdf",
       "topics": "rosary beginners peyton",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/FamilyRosaryWebsite/Go%20To%20Mary%20Campaign%202022/Father%20Peyton%20Explains%20the%20Rosary%20ebook.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 11,
+        "extracted_characters": 10624,
+        "sha256": "a4f02b74d744daad96404297cffaa3d26941a4b487117504e6acd9cf8327d437",
+        "text_file": "research/pdf-text/resource-bc6581d0-3fdc-4f58-b548-3a319563a7a5.txt",
+        "body_excerpt": "The Importance of Family Prayer Father Patrick Peyton preached these profound words from his heart, “The first sentence of our Holy Rosary is worth all the gold of the Earth, and this is what it is and what I heard as a little child: ‘I believe in God.’\" When it came to teaching on the Rosary and spreading the message about the importance of family prayer many said Father Peyton had a single-minde"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/1147362b-f8a9-4d20-9454-54307198bc81": {
       "id": "resource-1147362b-f8a9-4d20-9454-54307198bc81",
@@ -160,15 +278,29 @@
         "pt"
       ],
       "section": "library",
-      "action": "Read the guide"
+      "action": "Read the guide",
+      "language_reviewed_on": "2026-11-10"
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/13ed0921-b419-46ed-8012-592cb5f83ef2": {
       "id": "resource-13ed0921-b419-46ed-8012-592cb5f83ef2",
       "format": "pdf",
       "topics": "rosary beginners",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://f.hubspotusercontent30.net/hubfs/275132/Ebooks/eBooks/e%20book%20week%203_Rosary%20Tips%20for%20Rosary%20Strugglers_Oct_2020-1.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 6,
+        "extracted_characters": 10820,
+        "sha256": "d89497885389118f96a354c4a8cc85b4536d433d14317074fec2e947888bf9e3",
+        "text_file": "research/pdf-text/resource-13ed0921-b419-46ed-8012-592cb5f83ef2.txt",
+        "body_excerpt": "Welcome to Our Family There is no right or wrong when it comes to praying with your family. It may be chaotic and A Little History imperfect one day and quiet and orderly the next. Servant of God Patrick Take comfort in knowing there is no one \"correct\" Peyton began his ministry in 1942 with the goal of building way of doing it. Any family can gather in prayer and family unity through daily amazin"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/7d478eea-7ff4-4d10-acc4-49d88aab990e": {
       "id": "resource-7d478eea-7ff4-4d10-acc4-49d88aab990e",
@@ -184,17 +316,43 @@
       "id": "resource-76769c0e-eb05-4bb7-b3b6-7a11007849d8",
       "format": "pdf",
       "topics": "rosary joyful scripture",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/FamilyRosaryWebsite/Why%20the%20Rosary%202023/Joyful%20Mysteries%20Rosary%20eBook.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 12,
+        "extracted_characters": 10056,
+        "sha256": "e54f301f62cb8c1654b6ece2d8f4bf4d13d2d009c9f1e9b0ecd4aec429ccd94d",
+        "text_file": "research/pdf-text/resource-76769c0e-eb05-4bb7-b3b6-7a11007849d8.txt",
+        "body_excerpt": "Why Family Prayer? Vatican II recognized the family as the fundamental and essential building block of society and the Church. It taught that the family is a true, small, “domestic church.” The family home is the privileged place in which to come to know and love God and the saints. Family prayer invites God into family homes and hearts as the most powerful force in heaven or on earth. It is famil"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/472a384f-85a9-4bbf-9695-b923fe6fecf8": {
       "id": "resource-472a384f-85a9-4bbf-9695-b923fe6fecf8",
       "format": "pdf",
       "topics": "rosary beginners",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/FamilyRosaryWebsite/Go%20To%20Mary%20Campaign%202022/15%20Promises%20Go%20to%20Mary%20ebook.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 12,
+        "extracted_characters": 15248,
+        "sha256": "9e303b39c64e6c25347f348f3165f448052060225910723e5ed16b7ca16e54b4",
+        "text_file": "research/pdf-text/resource-472a384f-85a9-4bbf-9695-b923fe6fecf8.txt",
+        "body_excerpt": "The Importance of Family Prayer Father Patrick Peyton preached these profound words from his heart, “The first sentence of our Holy Rosary is worth all the gold of the Earth, and this is what it is and what I heard as a little child: ‘I believe in God.’\" When it came to teaching on the Rosary and spreading the message about the importance of family prayer many said Father Peyton had a single-minde"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/0653c94b-bb8c-4442-bdd1-e5fa5ec4bd59": {
       "id": "resource-0653c94b-bb8c-4442-bdd1-e5fa5ec4bd59",
@@ -250,17 +408,49 @@
       "id": "resource-f1ed195a-4fda-4d3e-8b96-63174c2d7899",
       "format": "pdf",
       "topics": "rosary glorious scripture",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/Glorious%20%20Mysteries%20Rosary%20eBook.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 12,
+        "extracted_characters": 10119,
+        "sha256": "d35fa1ffc933b108f0e4eda14c01992e08a107d66d6072669ea894453c9f4f0b",
+        "text_file": "research/pdf-text/resource-f1ed195a-4fda-4d3e-8b96-63174c2d7899.txt",
+        "body_excerpt": "Why Family Prayer? Vatican II recognized the family as the fundamental and essential building block of society and the Church. It taught that the family is a true, small, “domestic church.” The family home is the privileged place in which to come to know and love God and the saints. Family prayer invites God into family homes and hearts as the most powerful force in heaven or on earth. It is famil"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/ca011b3c-d647-4d50-8fcd-058ec2afaefa": {
       "id": "resource-ca011b3c-d647-4d50-8fcd-058ec2afaefa",
       "format": "pdf",
       "topics": "mary activity",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://cdn2.hubspot.net/hubfs/275132/Ebooks/eBooks/Mary%20Garden_2020.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 5,
+        "extracted_characters": 9389,
+        "sha256": "108124a702caad01da13fc3dac3ba8aeb55e56939dd7ff1e260f1572c2af6bfe",
+        "text_file": "research/pdf-text/resource-ca011b3c-d647-4d50-8fcd-058ec2afaefa.txt",
+        "body_excerpt": "Welcome to Our Family Venerable Patrick Peyton's work truly was All for Her, every A Little History decision and action he made was in Her name. The childhood habit of praying a daily Rosary, instilled in Father Peyton by his Father Patrick Peyton, C.S.C. parents, clearly sustained him throughout his life, which began his ministry in 1942 with the goal of building family unity allowed him to share"
+      },
+      "audience_note": "Plant and pray together as a family",
+      "audience_evidence": {
+        "observed_on": "2026-11-10",
+        "source": "https://cdn2.hubspot.net/hubfs/275132/Ebooks/eBooks/Mary%20Garden_2020.pdf",
+        "text": "Indoors or outdoors, this activity is the perfect way to do something special for our spiritual Mother."
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/6b513fa1-5788-474e-8d42-b9e29f51e044": {
       "id": "resource-6b513fa1-5788-474e-8d42-b9e29f51e044",
@@ -280,23 +470,65 @@
         "en"
       ],
       "section": "articles",
-      "action": "Read article"
+      "action": "Read article",
+      "audience_note": "For parents of small children",
+      "audience_evidence": {
+        "observed_on": "2026-11-09",
+        "reviewed_on": "2026-11-10",
+        "source": "https://blog.familyrosary.org/our-familys-prayer-routine-with-littles-0",
+        "basis": [
+          "Family Prayer Routine with Small Children",
+          "These are some ideas that work for us, and a place, perhaps, where your family can get started."
+        ]
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/2b9fbf11-bf98-4f1e-b7c9-65313ca055ca": {
       "id": "resource-2b9fbf11-bf98-4f1e-b7c9-65313ca055ca",
       "format": "pdf",
       "topics": "prayer family",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/AI-Generated%20Media/Make%20Time%20for%20Prayer.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 6,
+        "extracted_characters": 11477,
+        "sha256": "1817527fb11b3b9c90eb1f9e113daad7cb924b33a008bd87da2422e28ef4efde",
+        "text_file": "research/pdf-text/resource-2b9fbf11-bf98-4f1e-b7c9-65313ca055ca.txt",
+        "body_excerpt": "Welcome to Our Family We live in a fast and hurried world—always running from A Little History one thing to the next—school to sports to music practice to whatever the next thing is. Father Patrick Peyton, C.S.C. began his ministry in Even our summers are packed with action—visiting friends 1942 with the goal of and family and going to all sorts of camps. In such a busy building family unity world"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/fc087e45-3344-42c7-b5cd-35f3ff4ad900": {
       "id": "resource-fc087e45-3344-42c7-b5cd-35f3ff4ad900",
       "format": "pdf",
       "topics": "family prayer",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/Praying%20With%20Movies-1.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 5,
+        "extracted_characters": 9999,
+        "sha256": "46f4fc1cf0cbb76a0276fab97e7b72bd59f571bb3fb6114345dffb55900c783c",
+        "text_file": "research/pdf-text/resource-fc087e45-3344-42c7-b5cd-35f3ff4ad900.txt",
+        "body_excerpt": "Welcome to Our Family If you're struggling to make prayer a little more interesting A Little History or you're battling long groans after insisting on family prayer time, here's a way to shake up your prayer life a bit! Father Patrick Peyton, C.S.C. began his ministry in 1942 with the goal of building family unity Using something your children already love could make the through daily prayer of th"
+      },
+      "audience_note": "For parents · choose age-appropriate viewing",
+      "audience_evidence": {
+        "observed_on": "2026-11-10",
+        "source": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/Praying%20With%20Movies-1.pdf",
+        "text": "ways you can use an age-appropriate movies or TV show to think about and practice prayer with children."
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/8b2cc709-cd25-4fd5-838b-c70df6b985bf": {
       "id": "resource-growing",
@@ -306,15 +538,36 @@
         "en"
       ],
       "section": "library",
-      "action": "Try an age-by-age prayer"
+      "action": "Try an age-by-age prayer",
+      "language_reviewed_on": "2026-11-10",
+      "audience_note": "Babies to teenagers · on-site prayer plans",
+      "audience_evidence": {
+        "observed_on": "2026-11-09",
+        "reviewed_on": "2026-11-10",
+        "source": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/Navigating%20Prayer%20Time%20as%20Children%20Grow-1.pdf",
+        "basis": "On-site /praying-with-children/ provides four complete age-based prayer plans adapted from the source reflection."
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/4cf9f8fb-f222-4237-8d2e-774f1dddb812": {
       "id": "resource-4cf9f8fb-f222-4237-8d2e-774f1dddb812",
       "format": "pdf",
       "topics": "family prayer",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://f.hubspotusercontent30.net/hubfs/275132/Ebooks/eBooks/e%20book%20week%204_Want%20to%20Grow%20in%20Holiness%20as%20a%20Family_Oct_2020.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 6,
+        "extracted_characters": 10745,
+        "sha256": "2cd00e054b635d81d027480f4adc826a67c06ba4e91932acd3b98d575049ce0f",
+        "text_file": "research/pdf-text/resource-4cf9f8fb-f222-4237-8d2e-774f1dddb812.txt",
+        "body_excerpt": "Welcome to Our Family There is no right or wrong when it comes to praying with your family. It may be chaotic and A Little History imperfect one day and quiet and orderly the next. Servant of God Patrick Take comfort in knowing there is no one \"correct\" Peyton began his ministry in 1942 with the goal of building way of doing it. Any family can gather in prayer and family unity through daily amazin"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/57b8ff18-1a0e-4e96-9f32-d17afe9d3a7d": {
       "id": "resource-57b8ff18-1a0e-4e96-9f32-d17afe9d3a7d",
@@ -348,57 +601,152 @@
       "id": "resource-b7d58630-a23d-46f7-abf7-665fb6f239a0",
       "format": "podcast",
       "topics": "rosary peyton family",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Listen to podcast"
+      "action": "Listen to podcast",
+      "language_evidence": {
+        "source_url": "https://www.familyrosary.org/through-the-mysteries",
+        "observed_on": "2026-11-09",
+        "reviewed_on": "2026-11-10",
+        "scope": "English resource landing page; does not certify every linked PDF, recording, or live event language.",
+        "observed_text": "Through the Mysteries Podcast",
+        "record": "research/committee-v3/destination-observations.json",
+        "observation_index": 38
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/a44b0023-fb7f-4682-8b52-e8f60918da17": {
       "id": "resource-a44b0023-fb7f-4682-8b52-e8f60918da17",
       "format": "pdf",
       "topics": "mary chaplet",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/FamilyRosaryWebsite/September%20Minor%20Campaign%202022/The%20Chaplet%20of%20the%20Seven%20Sorrows%20Infographic.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 1,
+        "extracted_characters": 2336,
+        "sha256": "d45c9d4142ca9d64ecc3717dac26c33f60d9dd9bc7bf1b7cd8ea3988a07c776e",
+        "text_file": "research/pdf-text/resource-a44b0023-fb7f-4682-8b52-e8f60918da17.txt",
+        "body_excerpt": "PRAYING THE CHAPLET OF THE SEVEN SORROWS OF MARY HOW TO PRAY THE CHAPLET OF THE SEVEN SORROWS OF MARY Begin with the Sign of the Cross and you may add an optional Act of Contrition to remember the role our sins had in Our Lady’s sorrows. Begin each “decade” of seven with the Our Father, followed by seven Hail Marys. For each section meditate on one of the Seven Sorrows of Mary, listed below. Concl"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/2dc28ee9-90ed-4ee1-a8e7-9d8e52f678ca": {
       "id": "resource-2dc28ee9-90ed-4ee1-a8e7-9d8e52f678ca",
       "format": "pdf",
       "topics": "mary rosary sacred-art",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/FamilyRosaryWebsite/Go%20To%20Mary%20Campaign%202022/Our%20Lady%20of%20the%20Rosary%20ebook%20_final.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 16,
+        "extracted_characters": 16896,
+        "sha256": "ab87c568b992b085e2b8cfea646203ed85d3299b0786c12bf0f332547c3842b9",
+        "text_file": "research/pdf-text/resource-2dc28ee9-90ed-4ee1-a8e7-9d8e52f678ca.txt",
+        "body_excerpt": "The Importance of Family Prayer Father Patrick Peyton preached these profound words from his heart, “The first sentence of our Holy Rosary is worth all the gold of the Earth, and this is what it is and what I heard as a little child: ‘I believe in God.’\" When it came to teaching on the Rosary and spreading the message about the importance of family prayer many said Father Peyton had a single-minde"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/a81adadf-cdcf-43c3-97f8-1bf6c7aae134": {
       "id": "resource-a81adadf-cdcf-43c3-97f8-1bf6c7aae134",
       "format": "pdf",
       "topics": "lent cross sacred-art",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/FamilyRosaryWebsite/At%20the%20Foot%20of%20The%20Cross%202023/2023%20Holy%20Week%20Art%20History%20Ebook.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 15,
+        "extracted_characters": 19574,
+        "sha256": "ad9b01203f19fb2a5d3123d1f4e2980fc38abc966b7af32ec9181ccfc12c9e96",
+        "text_file": "research/pdf-text/resource-a81adadf-cdcf-43c3-97f8-1bf6c7aae134.txt",
+        "body_excerpt": "Pray as a Family this Lent The Catholic Church provides the faithful with the seasons of the liturgical year as a framework in which the mysteries of Jesus’ life, death, and resurrection can unfold. During Lent, we invite you and your family to follow Jesus into the desert through the Lenten practices of fasting, almsgiving (acts of love and service), and prayer. This Lent, Family Rosary focuses o"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/9de078dd-b468-435d-be46-355357a74164": {
       "id": "resource-9de078dd-b468-435d-be46-355357a74164",
       "format": "pdf",
       "topics": "christmas sacred-art family",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/FamilyRosaryWebsite/Advent%202023/Christmas%20Art%20eBook_2023_draft.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 15,
+        "extracted_characters": 16242,
+        "sha256": "405ca5a256daee86a2905d19a660245ccefb6f8e7345a4c2e659a7094c919231",
+        "text_file": "research/pdf-text/resource-9de078dd-b468-435d-be46-355357a74164.txt",
+        "body_excerpt": "Introduction The Word became flesh and dwelt among us, full of grace and truth; we have beheld His glory. (John 1:14) That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon and touched with our hands, concerning the Word of Life—the life was made manifest, and we saw it, and testify to it. (1 John 1:1-2) With these words, Saint John test"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/2a545dda-c947-48b2-8bb0-c7e77ced93c7": {
       "id": "resource-2a545dda-c947-48b2-8bb0-c7e77ced93c7",
       "format": "pdf",
       "topics": "christmas sacred-art",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/FamilyRosaryWebsite/Advent%202022/Power%20of%20One%20Yes%20Art%20eBook_2022_draft.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 14,
+        "extracted_characters": 14562,
+        "sha256": "99186d74ca929abd70bb56c6aac4a001ec71aefe63efda6aa61202e0b5fd506b",
+        "text_file": "research/pdf-text/resource-2a545dda-c947-48b2-8bb0-c7e77ced93c7.txt",
+        "body_excerpt": "Introduction The Word became flesh and dwelt among us, full of grace and truth; we have beheld His glory. (John 1:14) That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon and touched with our hands, concerning the Word of Life—the life was made manifest, and we saw it, and testify to it. (1 John 1:1-2) With these words, Saint John test"
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/622d7092-a7e3-456d-9387-7041936362ca": {
       "id": "resource-622d7092-a7e3-456d-9387-7041936362ca",
       "format": "pdf",
       "topics": "advent christmas children family",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_evidence": {
+        "source_url": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/2025-2026%20Advent%20Paper%20Chain%20Activities.pdf",
+        "observed_on": "2026-11-10",
+        "reviewed_on": "2026-11-10",
+        "method": "Text extracted with pdftotext from the original PDF downloaded through its observed internal-browser link; readable English body text inspected.",
+        "pages": 22,
+        "extracted_characters": 14562,
+        "sha256": "7860c5f1e8e77e36be2dfb5a14e22ae15083bf73e2d64f943e9e7e774a76f7f9",
+        "text_file": "research/pdf-text/resource-622d7092-a7e3-456d-9387-7041936362ca.txt",
+        "body_excerpt": "Sunday, November 30 First day of Advent Activity: If you haven’t already, create an Advent wreath with your family. It can be as simple or as elaborate as you like. Light the first purple candle each day this week (perhaps at dinner). Pray an “Our Father,” “Hail Mary,” and/or “Grace” together. Monday, December 1 Prompt: Ask each family member to choose a Fruit of the Holy Spirit— such as love, joy"
+      },
+      "audience_note": "Dated paper-chain edition · check calendar dates",
+      "audience_evidence": {
+        "observed_on": "2026-11-10",
+        "source": "https://275132.fs1.hubspotusercontent-na1.net/hubfs/275132/2025-2026%20Advent%20Paper%20Chain%20Activities.pdf",
+        "text": "Print this document double-sided. Color each strip, cut them out, and either loop them together to form a chain in date order or add one loop each day to decorate as you go."
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/9f8f933a-6dca-47dc-b134-32268959702b": {
       "id": "resource-9f8f933a-6dca-47dc-b134-32268959702b",
@@ -408,15 +756,27 @@
         "es"
       ],
       "section": "library",
-      "action": "Open PDF"
+      "action": "Open PDF",
+      "language_reviewed_on": "2026-11-10"
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/1c9f6045-d287-44ce-901c-c261b4b87412": {
       "id": "resource-1c9f6045-d287-44ce-901c-c261b4b87412",
       "format": "activity-collection",
       "topics": "lent children family",
-      "languages": [],
+      "languages": [
+        "en"
+      ],
       "section": "library",
-      "action": "Explore activities"
+      "action": "Explore activities",
+      "language_evidence": {
+        "source_url": "https://www.catholicmom.com/lent",
+        "observed_on": "2026-11-09",
+        "reviewed_on": "2026-11-10",
+        "scope": "English resource landing page; does not certify every linked PDF, recording, or live event language.",
+        "observed_text": "Free Lenten Resources",
+        "record": "research/committee-v3/destination-observations.json",
+        "observation_index": 46
+      }
     },
     "https://cta-redirect.hubspot.com/cta/redirect/275132/ead1ff77-1508-4e8b-9dfb-12c737837ee2": {
       "id": "resource-ead1ff77-1508-4e8b-9dfb-12c737837ee2",
