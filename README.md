@@ -1,6 +1,6 @@
 ## Static review of 1.9.6-draft.11, 11 November 2026
 
-`docs/` now holds the static design-review export of Family Rosary 1.9.6-draft.11, built from source commit `07e7f2c` in a private working copy. The source folders in this repository (`wordpress/`, `scripts/`, `src/`, `content/`) remain at 1.8.0 and do not rebuild this export.
+`docs/` now holds the static design-review export of Family Rosary 1.9.6-draft.11, built from source commit `07e7f2c` in a private working copy. The source folders in this repository (`wordpress/`, `scripts/`, `src/`, `content/`) remain at 1.8.0 and do not rebuild this export. Do not run `npm run build` here to refresh the site: it would replace `docs/` with the older 1.8.0 pages.
 
 The public review is static HTML, CSS, JavaScript, images and the PDFs its pages link to. Every page keeps the review label and noindex. Theme download archives are no longer served from `docs/downloads/`; earlier packages remain in this repository's history. GitHub Pages cannot run the WordPress live services, so the review shows the design and recorded playback.
 
