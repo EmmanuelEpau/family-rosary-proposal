@@ -6,3 +6,6 @@
 @media(max-width:780px){.fc-hero,.fc-try-heading,.fc-download-languages,.fc-together{grid-template-columns:1fr}.fc-hero{gap:2rem}.fc-cover{max-width:480px;justify-self:center}.fc-steps{grid-template-columns:1fr;gap:1rem}.fc-steps p{max-width:65ch}.fc-try-heading{gap:.5rem}.fc-prayer{padding-top:1.5rem}.fc-language li a{flex-wrap:wrap;gap:.3rem 1rem}.fc-together figure{max-width:390px}.fc-page .fr-actions{gap:1.25rem}.fc-page h1 br{display:none}}
 @media(prefers-reduced-motion:reduce){.fc-page{scroll-behavior:auto}}
 @media print{.fc-cover,.fc-together figure,.fc-language-nav{display:none}.fc-hero,.fc-steps,.fc-download-languages,.fc-together{display:block}.fc-try{background:white}.fc-page{color:black}.fc-language li a{display:block}.fc-language a span{margin-left:1rem}}
+.fc-language li {padding:.85rem 0}
+.fc-document-actions {display:flex;flex-wrap:wrap;gap:.25rem 1.2rem}
+.fc-language .fc-document-actions a {display:inline-flex;min-height:44px;padding:.35rem 0;text-decoration:underline;text-underline-offset:.2em;font-size:.92rem}

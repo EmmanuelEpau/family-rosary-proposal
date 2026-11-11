@@ -1,5 +1,5 @@
 /* Native episode compositions: real official HYPL art; exact title-led TTM audio. */
-.episode-title-art{background:#0047bb url('cinema/through-mysteries.webp') left center / 220% auto no-repeat;position:relative;overflow:hidden}
+.episode-title-art{background:#0047bb;position:relative;overflow:hidden}
 .episode-title-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .episode-native-copy{position:absolute;inset:8% 7%;display:flex;flex-direction:column;align-items:flex-start;text-align:left;color:#fff;pointer-events:none}
 .episode-native-copy .episode-show{font:600 clamp(12px,1.2vw,19px)/1.05 var(--fr-sans);color:#fff;max-width:80%}
@@ -26,7 +26,7 @@
 .cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-art>img{position:static;width:100%;height:auto;max-height:450px;object-fit:contain;display:block}
 .cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-title{position:static;background:#002c75;padding:25px 6%;max-width:none}
 .cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-art:after{display:none}
-.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-art{background:#0047bb url('cinema/through-mysteries.webp') left center / 220% auto no-repeat}
+.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-art{background:#0047bb}
 .cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-art>img{object-fit:contain}
 .cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-title{max-width:78%}
 .cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-art:after{display:none}
@@ -35,7 +35,7 @@
 .cinema-episode:focus-visible,.cinema-card-link:focus-visible,.cinema-result:focus-visible{outline:3px solid #ffb500;outline-offset:-4px;box-shadow:inset 0 0 0 6px #0047bb}
 .cinema-alternate{display:inline-block;margin-block:12px}
 @media(max-width:600px){.episode-native-copy strong{font-size:25px}.episode-native-copy .episode-show{font-size:13px}.mysteries-1 .episode-native-copy strong{font-size:31px}.mysteries-3 .episode-native-copy strong{font-size:27px}.episode-preview{width:100px}.episode-preview .episode-native-copy strong{font-size:10px}.episode-preview .episode-native-copy .episode-show{font-size:6px}.cinema-dialog[data-artwork-kind="official-episode-cover"] .cinema-detail-title{padding:20px}.cinema-dialog[data-artwork-kind="title-composition"] .cinema-detail-title{max-width:90%}}
-.cinema-feature .episode-feature-title{background:#0047bb url('cinema/through-mysteries.webp') left center / 220% auto no-repeat}
+.cinema-feature .episode-feature-title{background:#0047bb}
 .cinema-feature .episode-feature-title .cinema-feature-image{width:70%;right:0;object-fit:contain}
 .cinema-feature .episode-feature-original{background:#fff}
 .cinema-feature .episode-feature-original .cinema-feature-image{width:62%;right:0;object-fit:contain;object-position:right center}
@@ -146,7 +146,7 @@
 .fr-home-media-band .fr-home-media-cover,.fr-home-media-band .fr-media-cover{aspect-ratio:16/9}
 .fr-home-media-band .fr-feature-art>.fr-home-native-art{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto}
 .fr-home-media-band .fr-feature-audio .fr-feature-art{background:#0047bb}
-.fr-home-media-band .fr-feature-selectors img.fr-home-native-selector{background:#0047bb url('cinema/through-mysteries.webp') left center / 220% auto no-repeat;object-fit:contain}
+.fr-home-media-band .fr-feature-selectors img.fr-home-native-selector{background:#0047bb;object-fit:contain}
 .fr-home-media-band .fr-collection-art .fr-home-native-art{aspect-ratio:16/9}
 .fr-home-media-band .fr-home-media-cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px}
 .fr-home-media-band .fr-home-media-cards .fr-media-card{flex:0 0 calc((100% - 78px)/4);min-width:240px;scroll-snap-align:start}
@@ -224,7 +224,7 @@
 /* A real family and physical Rosary introduce the audio series. */
 .fr-cinema .cinema-feature .episode-feature-title{background:#001c49}
 .fr-cinema .cinema-feature .episode-feature-title .cinema-feature-image{width:65%;height:100%;object-fit:cover;object-position:center bottom}
-.fr-cinema .cinema-feature .episode-feature-title .cinema-feature-shade{background:linear-gradient(90deg,#001c49 29%,rgba(0,28,73,.88) 40%,rgba(0,28,73,.12) 72%)}
+.fr-cinema .cinema-feature .episode-feature-title .cinema-feature-shade{background:linear-gradient(0deg,#001c49 0%,rgba(0,28,73,0) 20%),linear-gradient(90deg,#001c49 29%,rgba(0,28,73,.88) 40%,rgba(0,28,73,.12) 72%)}
 @media(max-width:780px){.fr-cinema .cinema-feature .episode-feature-title .cinema-feature-image{width:100%;height:330px}.fr-cinema .cinema-feature .episode-feature-title .cinema-feature-shade{background:linear-gradient(180deg,rgba(0,28,73,.1) 150px,#001c49 335px)}}
 
 /* Topic photographs bring the audio into family life; blue keeps the titles legible. */

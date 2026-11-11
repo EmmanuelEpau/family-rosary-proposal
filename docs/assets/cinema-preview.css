@@ -4,6 +4,7 @@ body:has(.fr-cinema) .fr-header:after{content:'';position:absolute;top:100%;left
 body:has(.fr-cinema) .fr-ministry-bar{position:relative;z-index:2}
 body:has(.fr-cinema) .fr-header-inner{position:absolute;top:100%;left:0;right:0;z-index:1;background:transparent;border:0}
 body:has(.fr-cinema) .fr-brand img,body:has(.fr-cinema) .fr-header .custom-logo{filter:brightness(0) invert(1)}
+body:has(.fr-cinema) .fr-nav{color:#fff}
 body:has(.fr-cinema) .fr-nav a{color:#fff;text-shadow:0 1px 6px #00102966}
 body:has(.fr-cinema) .fr-nav-pray a{color:#fff;border-color:#fff}
 body:has(.fr-cinema) .fr-nav-pray a:hover{background:#fff;color:#0047bb;text-shadow:none}
@@ -43,3 +44,28 @@ body:has(.fr-cinema) .fr-nav .is-menu-open :focus-visible,body:has(.fr-cinema) .
  .fr-cinema .cinema-feature .episode-feature-title .cinema-feature-image{object-fit:contain}
  .fr-cinema .cinema-feature-bottom{padding-bottom:16px}
 }
+
+/* The feature reserves a clear lane for faces and plays the whole source frame. */
+.fr-cinema .cinema-feature .cinema-feature-slides{isolation:isolate}
+@media(min-width:781px){
+ .fr-cinema .cinema-feature .cinema-feature-slides .cinema-feature-slide{min-height:clamp(610px,74svh,790px)}
+ .fr-cinema .cinema-feature .cinema-feature-slides .cinema-feature-copy{padding-top:clamp(158px,22svh,222px);padding-bottom:58px}
+ .fr-cinema .cinema-feature .cinema-feature-family .cinema-feature-image{width:69%;object-position:50% 24%}
+ .fr-cinema .cinema-feature .cinema-feature-family .cinema-feature-shade{background:linear-gradient(90deg,#001c49 23%,#001c49e8 33%,#001c494d 49%,transparent 63%),linear-gradient(0deg,#001c49,transparent 23%)}
+ .fr-cinema .cinema-feature .cinema-muted-preview{inset:0 0 0 31%}
+ .fr-cinema .cinema-feature .cinema-muted-preview iframe{width:min(100cqw,177.78cqh);height:min(56.25cqw,100cqh)}
+}
+@media(max-width:780px){
+ .fr-cinema .cinema-feature .cinema-feature-slides{--cinema-photo-height:clamp(250px,60vw,390px)}
+ .fr-cinema .cinema-feature .cinema-feature-slides .cinema-feature-slide :is(.cinema-feature-image,.cinema-muted-preview,.cinema-session-portraits){height:var(--cinema-photo-height)}
+ .fr-cinema .cinema-feature .cinema-feature-slides .cinema-feature-copy{padding-top:calc(var(--cinema-photo-height) - 12px);padding-bottom:22px}
+ .fr-cinema .cinema-feature .cinema-feature-slides .cinema-feature-slide .cinema-feature-shade{background:linear-gradient(180deg,#001c4912 0,#001c4929 calc(var(--cinema-photo-height) - 90px),#001c49 var(--cinema-photo-height))}
+ .fr-cinema .cinema-feature .cinema-feature-slides .cinema-feature-slide .cinema-muted-preview iframe{width:min(100cqw,177.78cqh);height:min(56.25cqw,100cqh)}
+ .fr-cinema .cinema-feature .cinema-feature-slides .cinema-feature-copy>p:not(.cinema-feature-facts){display:block;overflow:visible}
+}
+.cinema-search-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:22px}
+.cinema-search-actions:has(>button[hidden]+button[hidden]){margin:0}
+.cinema-search-actions .cinema-scroll{min-height:44px;padding:9px 16px;width:auto;min-width:44px;font:600 16px/1.25 var(--fr-sans);color:#0047bb}
+.cinema-search-actions .cinema-scroll[hidden]{display:none}
+
+.fr-cinema .cinema-navigation a:focus-visible { outline: 2px solid #ffb500; outline-offset: 3px; }

@@ -1,3 +1,11 @@
+## Static review of 1.9.6-draft.11, 11 November 2026
+
+`docs/` now holds the static design-review export of Family Rosary 1.9.6-draft.11, built from source commit `07e7f2c` in a private working copy. The source folders in this repository (`wordpress/`, `scripts/`, `src/`, `content/`) remain at 1.8.0 and do not rebuild this export.
+
+The public review is static HTML, CSS, JavaScript, images and the PDFs its pages link to. Every page keeps the review label and noindex. Theme download archives are no longer served from `docs/downloads/`; earlier packages remain in this repository's history. GitHub Pages cannot run the WordPress live services, so the review shows the design and recorded playback. It is English only.
+
+---
+
 Current 1.8.0 refinement: on-site Daily Rosary & Mass player, seven authentic family hero photographs, a different festival age-range photo, continuous homepage Rosary photo bleed, topic-photography podcast covers, cleaner filmed conversations, blended genuine crucifix artwork and a compact footer with social icons. See the dated live-and-artwork task folder for actual checks and provider limitations.
 
 # Family Rosary proposal 1.8.0

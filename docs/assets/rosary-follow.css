@@ -1,0 +1,21 @@
+.fr-follow{display:grid;grid-template-columns:minmax(130px,.65fr) minmax(0,1.35fr);gap:24px;align-items:start;color:#002c76;background:#f1f6ff;padding:24px;border-radius:12px;font-family:var(--fr-sans)}
+.fr-follow-graphic{min-width:0;background:#002c76;border-radius:12px;padding:18px 10px}
+.fr-follow svg{display:block;width:100%;max-height:340px;overflow:visible}
+.fr-follow-chain{stroke:#b8c8e6;stroke-width:.022;stroke-linecap:round}
+.fr-follow-bead{stroke:#9cb9e8;stroke-width:.018}.fr-follow-hail{fill:#3677d0}.fr-follow-our,.fr-follow-fitting{fill:#e8c47b;stroke:#fff1c9;stroke-width:.015}
+.fr-follow-chain.is-current{stroke:#ffda86;stroke-width:.07}
+.fr-follow-marker{fill:none;stroke:#ffda86;stroke-width:.04;filter:drop-shadow(0 0 3px #ffda86)}
+.fr-follow-marker[hidden]{display:none}.fr-follow [data-anchor]{cursor:pointer}.fr-follow [data-anchor]:focus{outline:none}.fr-follow [data-anchor]:focus-visible .fr-follow-bead,.fr-follow [data-anchor]:focus-visible .fr-follow-fitting{stroke:#fff;stroke-width:.06}.fr-follow .is-current .fr-follow-bead,.fr-follow .is-current .fr-follow-fitting{fill:#fff2bf;stroke:#fff;stroke-width:.04}
+.fr-follow-status{font-size:14px;line-height:1.5;font-weight:600;margin:0 0 12px;color:#244a79}
+.fr-follow-context{font-size:14px;line-height:1.5;margin:0 0 8px;color:#244a79}
+.fr-follow-title{font:700 24px/1.2 var(--fr-sans);margin:0 0 12px}
+.fr-follow-words{font:400 21px/1.6 var(--fr-serif);margin:0;white-space:pre-line;overflow-wrap:break-word}
+.fr-follow-controls{display:flex;justify-content:space-between;gap:16px;margin-top:20px}.fr-follow-controls button{min-height:44px;padding:10px 16px;border:1px solid #0047bb;border-radius:7px;color:#0047bb;background:#fff;cursor:pointer;font:600 16px/1.35 var(--fr-sans)}
+.fr-follow-controls button:disabled{opacity:.5;cursor:default}.fr-follow-controls button:hover:enabled{background:#e2ecfc}
+.fr-follow-choose{margin-top:12px}.fr-follow-choose summary{cursor:pointer;min-height:44px;padding-block:10px;font-size:14px}.fr-follow-choose select{display:block;width:100%;min-width:0;min-height:44px;padding:8px;margin-top:8px;color:#002c76;background:white;border:1px solid #7899c5;font:400 16px var(--fr-sans)}
+.fr-follow-reading :focus-visible{outline:3px solid #0047bb;outline-offset:4px}
+.fr-follow[data-mode=waiting] .fr-follow-title,.fr-follow[data-mode=waiting] .fr-follow-words,.fr-follow-reading[data-mode=waiting] .fr-follow-title,.fr-follow-reading[data-mode=waiting] .fr-follow-words{display:none}
+@media(max-width:600px){.fr-follow{grid-template-columns:115px minmax(0,1fr);gap:16px;padding:18px 16px}.fr-follow-graphic{padding:14px 6px}.fr-follow-title{font-size:21px}.fr-follow-words{font-size:19px}.fr-follow-controls{flex-wrap:wrap;gap:8px}.fr-follow-controls button{flex:1;padding-inline:10px}.fr-follow svg{max-height:260px}}
+@media(max-width:360px){.fr-follow{grid-template-columns:1fr}.fr-follow-graphic{width:120px;justify-self:center}.fr-follow svg{max-height:200px}}
+@media(prefers-reduced-motion:reduce){.fr-follow-marker{filter:none}}
+@media(forced-colors:active){.fr-follow-graphic{background:Canvas;border:1px solid CanvasText}.fr-follow-bead,.fr-follow-fitting{fill:Canvas;stroke:CanvasText}.fr-follow-chain{stroke:CanvasText}.fr-follow .is-current .fr-follow-bead,.fr-follow .is-current .fr-follow-fitting{fill:Highlight;stroke:HighlightText}.fr-follow-marker{stroke:Highlight;filter:none}}
