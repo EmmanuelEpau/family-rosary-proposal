@@ -2,10 +2,11 @@
  'use strict';
  const list=document.querySelector('[data-age-tabs]');if(!list)return;
  document.querySelector('.pa-page')?.classList.add('is-enhanced');
+ const progressTemplate=window.frLocalization?.messages?.['Part {current} of {total}']||'Part {current} of {total}';
  const tabs=[...list.querySelectorAll('[data-age]')],panels=[...document.querySelectorAll('[data-age-panel]')],controllers=new Map();
  for(const panel of panels){
   const steps=[...panel.querySelectorAll('[data-plan-step]')],start=panel.querySelector('[data-plan-start]'),controls=panel.querySelector('[data-plan-controls]'),back=panel.querySelector('[data-plan-back]'),next=panel.querySelector('[data-plan-next]'),progress=panel.querySelector('[data-plan-progress]');let index=0,guided=false,finished=false;progress.tabIndex=-1;
-  function render(focus=false){steps.forEach((step,i)=>{step.hidden=guided&&i!==index;});controls.hidden=!guided;start.hidden=guided;back.disabled=index===0;next.disabled=finished;next.textContent=index===steps.length-1?'Finish this prayer':'Next';progress.textContent=finished?'You have reached the end. Rest here, or begin again.':`Part ${index+1} of ${steps.length}`;panel.classList.toggle('is-guided',guided);if(focus){if(finished)progress.focus();else steps[index].querySelector('h4').focus();}}
+  function render(focus=false){steps.forEach((step,i)=>{step.hidden=guided&&i!==index;});controls.hidden=!guided;start.hidden=guided;back.disabled=index===0;next.disabled=finished;next.textContent=index===steps.length-1?'Finish this prayer':'Next';progress.textContent=finished?'You have reached the end. Rest here, or begin again.':progressTemplate.replace('{current}',index+1).replace('{total}',steps.length);panel.classList.toggle('is-guided',guided);if(focus){if(finished)progress.focus();else steps[index].querySelector('h4').focus();}}
   start.hidden=false;start.addEventListener('click',()=>{guided=true;index=0;finished=false;render(true);});
   back.addEventListener('click',()=>{index=Math.max(0,index-1);finished=false;render(true);});next.addEventListener('click',()=>{if(index<steps.length-1)index++;else finished=true;render(true);});
   panel.querySelector('[data-plan-restart]').addEventListener('click',()=>{index=0;finished=false;render(true);});

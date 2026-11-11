@@ -183,3 +183,6 @@ html{scroll-padding-top:28px}body{font-size:19px;background:#fff;color:#000}h1,h
 @media(max-width:600px){.cinema-audio-dock{right:8px;bottom:8px;width:calc(100vw - 16px);padding:10px 12px}.cinema-dock-heading{flex-direction:row;gap:8px}.cinema-dock-title{font-size:13px}.cinema-dock-heading>div{gap:3px}}
 @media(prefers-reduced-motion:reduce){.cinema-dock-heading button{transition:none}}
 @media(forced-colors:active){.cinema-audio-dock,.cinema-dock-heading button{background:Canvas;color:CanvasText;border:1px solid CanvasText}}
+
+/* Native Navigation must start at HCFM rather than center its overflowing ministry list. */
+@media(max-width:780px){.fr-ministry-bar .fr-ministry-nav{justify-content:flex-start}}

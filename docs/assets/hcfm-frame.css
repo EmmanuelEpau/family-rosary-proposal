@@ -1,0 +1,174 @@
+/* The parent site's 1,440px frame, with full-bleed image and color bands. */
+:root{--fr-wide:1440px;--fr-gap:20px}
+.fr-wrap,.fr-header-inner{width:calc(100% - 40px);max-width:1440px}
+.fr-stream-library.fr-wrap{max-width:1440px}
+.fr-footer .fr-footer-shell{max-width:1440px}
+.fr-header-inner{flex-wrap:nowrap;gap:clamp(14px,1.5vw,24px);min-height:96px}
+.fr-header-inner>.fr-brand{flex:0 0 auto;margin:0!important}
+.fr-header .fr-nav{margin:0 0 0 auto!important;min-width:0}
+.fr-header .fr-nav .wp-block-navigation__container,.fr-header .fr-nav ul{gap:clamp(14px,1.5vw,24px);flex-wrap:nowrap}
+.fr-header .fr-nav a{font-size:16px;white-space:nowrap}
+.fr-header .fr-nav-pray a{padding:12px 14px}
+.fr-header-utilities{position:relative;display:flex;gap:2px;align-items:center;flex:none;margin:0!important;color:#0047bb}
+.fr-header-utilities>a,.fr-language>summary{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;border-radius:6px}
+.fr-language{position:relative}
+.fr-language>summary{gap:5px;font:500 14px/1 var(--fr-sans);padding:0 5px;list-style:none}
+.fr-language>summary::-webkit-details-marker{display:none}
+.fr-header-utilities>a:hover,.fr-language>summary:hover{background:#eaf2ff;color:#0047bb}
+.fr-language-menu{position:absolute;right:0;top:calc(100% + 8px);width:280px;padding:16px;background:#fff;color:#002c76;box-shadow:0 10px 30px #001b4633;border-radius:12px;z-index:40}
+.fr-language-menu p{font:600 14px/1.4 var(--fr-sans);margin:0 0 8px}
+.fr-language-menu ul{list-style:none;margin:0;padding:0;display:block}
+.fr-language-menu a{display:flex;justify-content:flex-start;gap:12px;align-items:center;min-height:44px;padding:8px;font:500 17px/1.3 var(--fr-sans);text-decoration:none;color:#0047bb!important}
+.fr-language-menu a:hover{background:#eaf2ff}
+.fr-language-flag{display:block;width:24px;height:18px;object-fit:cover;flex:none;border-radius:2px}
+.fr-language>summary .fr-language-flag{width:20px;height:15px}
+.fr-language-menu a[aria-current="page"]{font-weight:700;background:#eaf2ff}
+.fr-ministry-select{display:none}
+.fr-header .fr-ministry-bar{margin:0!important}
+body:is(.home,:has(.fr-cinema)) .fr-header-utilities{color:#fff}
+.fr-header-utilities :focus-visible{outline:3px solid #0047bb;outline-offset:3px}
+body:is(.home,:has(.fr-cinema)) .fr-header-utilities :focus-visible{outline-color:#ffb500}
+.fr-language-menu :focus-visible{outline-color:#0047bb!important}
+.fr-screen-reader{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%);white-space:nowrap!important;border:0!important}
+/* A single script word carries the invitation; the rest stays in Calluna. */
+.fr-cinematic-hero .fr-hero-copy h1 .fr-script{color:#ffb500;display:inline-block;line-height:.95;padding-inline:.02em}
+.fr-family-copy h2 .fr-script{display:inline-block;color:#ffb500;background:none;padding:0;line-height:1.15;-webkit-text-stroke:1.25px #0047bb;paint-order:stroke fill}
+/* Core flow spacing must not stagger siblings inside a CSS grid. */
+.fr-resource-album-grid>*,.fr-home-collections>*{margin-block-start:0!important;margin-block-end:0!important;min-width:0}
+.fr-resource-album-grid .fr-resource-cover{margin-block:0!important}
+.fr-family.fr-wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,80px);align-items:center}
+.fr-family .fr-family-photo{width:100%;max-width:660px;margin:0!important;overflow:hidden;border-radius:12px}
+.fr-family .fr-family-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 58%;border-radius:12px}
+.fr-family .fr-family-copy{margin:0!important}
+.fr-family .fr-family-copy h2{font-size:clamp(38px,4vw,58px)}
+.fr-age-family-photo img{aspect-ratio:8/3;object-fit:cover;object-position:center 45%}
+/* Put discovery before ceremony: actual resources begin in the first screen. */
+.rd-page .rd-intro{padding-top:20px;padding-bottom:0}
+.rd-intro>p:first-child{font-size:15px;margin:0 0 14px}
+.rd-intro h1{font:700 clamp(34px,4vw,58px)/1.12 var(--fr-sans);color:#0047bb;margin:0 0 16px;max-width:none;text-wrap:balance}
+.rd-intro>p{font-size:18px;line-height:1.5;margin:0;max-width:75ch}
+.rd-page .rd-start{margin-top:14px;padding:10px 0;border-top:0}
+.rd-page .rd-shortcuts{gap:24px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.rd-page .rd-shortcuts a{font-size:17px;line-height:1.3;min-height:40px;align-content:center;color:#0047bb}
+.rd-page .rd-shortcuts span{font-size:14px;line-height:1.35;margin-top:4px}
+.rd-page #resource-library{padding-top:14px}
+.rd-page .rd-filters{padding:0 0 8px;gap:0}
+.rd-page .rd-filters .rd-search{display:flex;align-items:center;gap:16px;font-size:15px;white-space:nowrap}
+.rd-page .rd-filter-details>summary{font-size:15px;min-height:36px}
+.rd-page #rd-count{font-size:14px;line-height:1.4;margin:12px 0 18px}
+.rd-page .rd-language-note{font-size:14px;line-height:1.5}
+.rd-page .rd-art{aspect-ratio:1;background:transparent}
+@media(max-width:1180px){
+ .fr-header .fr-ministry-nav{display:none!important}
+ .fr-ministry-bar{padding:12px 20px;background:#0047bb}
+ .fr-ministry-select{display:block;width:100%;max-width:1440px;margin:0 auto;min-height:40px;padding:8px 14px;background:#ffb500;color:#002c76;border:0;border-radius:4px;font:600 16px/1.4 var(--fr-sans)}
+ .fr-header-inner{min-height:86px;padding-block:12px;gap:10px}
+ .fr-header .fr-nav:not(.fr-menu-open){display:flex!important}
+ .fr-header .fr-nav .wp-block-navigation__responsive-container:not(.is-menu-open){display:none!important}
+ .fr-header .fr-nav .wp-block-navigation__responsive-container-open{display:flex!important;align-items:center;justify-content:center;width:44px;height:44px;color:inherit}
+ .fr-header .fr-nav .is-menu-open{padding:72px 24px 32px;background:#fff!important;color:#0047bb!important}
+ .fr-header .fr-nav .is-menu-open .wp-block-navigation__container{align-items:flex-start;gap:8px;flex-direction:column}
+ .fr-header .fr-nav .is-menu-open a{font-size:22px;min-height:48px;color:#0047bb!important}
+ .fr-header .fr-nav .is-menu-open .fr-nav-pray a{border-color:#0047bb}
+ .fr-header .fr-nav .is-menu-open .wp-block-navigation__responsive-container-close{color:#0047bb;width:44px;height:44px;top:12px;right:12px}
+ body:is(.home,:has(.fr-cinema)) .fr-header .fr-nav{color:#fff}
+ .fr-header .fr-mobile-toggle{display:flex;align-items:center;justify-content:center;order:2;min-width:44px;min-height:44px;margin:0 0 0 auto;color:#0047bb;border:1px solid currentColor;padding:8px 12px}
+ body:is(.home,:has(.fr-cinema)) .fr-header .fr-mobile-toggle{color:#fff}
+ .fr-header .fr-nav#main-nav:not(.fr-menu-open){display:none!important}
+ .fr-header .fr-nav#main-nav.fr-menu-open{display:block!important;position:absolute;inset:100% 20px auto;background:white;color:#0047bb;border:1px solid #acc4e6;border-radius:12px;padding:16px;z-index:40;margin:0!important}
+ .fr-header .fr-nav#main-nav.fr-menu-open ul{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+ .fr-header .fr-nav#main-nav.fr-menu-open a{color:#0047bb!important;min-height:44px;display:flex;align-items:center}
+ .fr-header .fr-nav#main-nav.fr-menu-open .fr-nav-pray a{border-color:#0047bb}
+ .fr-header-utilities{order:3}
+ .fr-header .fr-brand img{width:clamp(130px,19vw,176px)}
+}
+@media(max-width:780px){
+ .fr-header-inner{width:calc(100% - 40px);flex-wrap:nowrap;gap:4px;min-height:86px}
+ .fr-header .fr-brand img{width:clamp(118px,33vw,156px)}
+ .fr-header .fr-nav{margin-left:auto!important}
+ .fr-header-utilities{gap:0}
+ .fr-utility-account{display:none!important}
+ .fr-language>summary{gap:3px;min-width:54px}
+ .fr-family.fr-wrap{grid-template-columns:1fr;gap:28px}
+ .fr-family .fr-family-photo{max-width:540px;justify-self:center}
+ .fr-family .fr-family-photo img{aspect-ratio:4/5}
+ .fr-family .fr-family-copy h2{font-size:38px}
+ .fr-age-family-photo img{aspect-ratio:2/1;object-position:center 45%}
+ .rd-page .rd-intro{padding-top:20px}
+ .rd-intro h1{font-size:36px;margin-bottom:12px}
+ .rd-intro>p{font-size:17px}
+ .rd-page .rd-start{margin-top:12px;padding-block:8px}
+ .rd-page .rd-shortcuts{display:flex;gap:8px 20px;flex-wrap:wrap}
+ .rd-page .rd-shortcuts a{font-size:15px;min-height:36px;display:flex;align-items:center;text-decoration:underline;text-underline-offset:4px}
+ .rd-page .rd-shortcuts span{display:none}
+ .rd-page .rd-filters .rd-search{display:grid;gap:6px}
+ .rd-page #resource-library{padding-top:14px}
+ .rd-page .rd-results{gap:32px}
+}
+@media(prefers-reduced-motion:reduce){.fr-header *{scroll-behavior:auto}}
+
+.fr-cinematic-hero{isolation:isolate}
+@media(min-width:781px){.fr-cinematic-hero .fr-hero-copy{width:min(1440px,calc(100% - 40px))}}
+@media(max-width:780px){.fr-language-menu{right:-44px;max-width:calc(100vw - 40px)}}
+
+/* Correct the backlit guest feed without altering his features or the host. */
+.session-cutout .session-person-guest>img[src*="hypl-scott-session"]{filter:contrast(1.45) brightness(.95) saturate(1.1)}
+.rd-intro h1 .fr-script{color:#bf8000;font-weight:400;-webkit-text-stroke:0;paint-order:normal;text-shadow:none}
+
+/* Native flow margins must not change the size of an age invitation. */
+.fr-age-options>details{margin-block:0!important;min-width:0;align-self:start}
+.fr-age-options>details>summary{min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.home .fr-cinematic-hero .fr-hero-copy>.fr-lead{margin-top:28px!important;margin-bottom:0;line-height:1.65}
+.fr-hero-sentence{display:block;margin-top:10px}
+.home .fr-cinematic-hero .fr-hero-copy>.fr-actions{margin-top:54px!important;gap:20px}
+.fr-guide-beads .fr-rosary-stage-caption{left:0;right:0;bottom:0;color:#fff;background:linear-gradient(180deg,rgba(0,44,118,0) 0%,rgba(0,44,118,.08) 15%,rgba(0,44,118,.5) 38%,rgba(0,44,118,.88) 67%,#002c76 100%);padding:80px 28px 28px}
+.fr-cinema a:focus-visible,.fr-cinema button:focus-visible,.fr-cinema input:focus-visible{outline-color:#0047bb}
+.fr-cinema .cinema-feature :focus-visible{outline-color:#ffb500}
+.fr-cinema .cinema-card-link:focus-visible{outline-color:#0047bb}
+.fr-cinema .cinema-audio-dock :focus-visible{outline-color:#0047bb}
+@media(min-width:781px){
+ .fr-cinema .cinema-feature .cinema-feature-slide{min-height:500px}
+ .fr-cinema .cinema-feature .cinema-feature-copy{padding-top:146px;padding-bottom:36px}
+ .fr-cinema .cinema-feature-bottom{padding-bottom:16px}
+}
+@media(max-width:780px){
+ .home .fr-cinematic-hero .fr-hero-copy>.fr-lead{margin-top:22px!important}
+ .home .fr-cinematic-hero .fr-hero-copy>.fr-actions{margin-top:28px!important;gap:18px}
+ .fr-cinema .cinema-feature .cinema-feature-slide .cinema-feature-image,.fr-cinema .cinema-feature .cinema-feature-slide .cinema-muted-preview{height:240px}
+ .fr-cinema .cinema-feature .cinema-feature-slide .cinema-feature-copy{padding-top:190px;padding-bottom:20px}
+ .fr-cinema .cinema-feature-copy h2{font-size:32px;line-height:1.08;margin-bottom:14px}
+ .fr-cinema .cinema-feature-copy>p:not(.cinema-feature-facts){font-size:17px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+ .fr-cinema .cinema-feature-copy .cinema-feature-facts{font-size:14px;margin:12px 0 16px}
+ .fr-cinema .cinema-feature .cinema-feature-slide .cinema-feature-shade{background:linear-gradient(180deg,rgba(0,28,73,.08),rgba(0,28,73,.18) 140px,#001c49 245px)}
+ .fr-cinema .cinema-navigation>.fr-wrap{display:grid;gap:2px;padding-block:12px;align-items:start}
+ .fr-cinema .cinema-navigation h1{font-size:18px;line-height:1.2;margin:0;flex:none}
+ .fr-cinema .cinema-navigation nav{flex-wrap:wrap;overflow:visible;gap:0 16px;min-width:0}
+ .fr-cinema .cinema-navigation nav a{white-space:nowrap;flex:none}
+}
+
+/* Keep the age choices together; the complete prayer is a separate reading choice. */
+.rd-age-section{padding-top:44px;padding-bottom:56px}
+.rd-age-section>.rd-age-intro{margin:0 0 28px;color:var(--rd-muted)}
+.rd-page .rd-age{gap:0 36px;margin:0 0 24px}
+.rd-age-option{display:flex;flex-direction:column;align-items:flex-start;min-width:0;margin:0!important;padding:24px 0;border-top:1px solid var(--rd-line)}
+.rd-page .rd-age-option h3{margin:0 0 10px;font-size:25px;line-height:1.2}
+.rd-page .rd-age-option p{margin:0 0 20px;font-size:17px;line-height:1.55}
+.rd-age-option>.text-link{margin-top:auto;min-height:44px;display:inline-flex;align-items:center;gap:10px;font-weight:600}
+.rd-age-option>.text-link svg{flex:none}
+.rd-page .rd-prayer-words{padding:16px 0;border-block:1px solid var(--rd-line)}
+.rd-page .rd-prayer-words>summary{font-size:18px;min-height:44px;display:flex;align-items:center;gap:12px}
+.rd-prayer-words>summary:after{content:'+';margin-left:auto;font-size:24px;font-weight:400}
+.rd-prayer-words[open]>summary:after{content:'−'}
+.rd-page .rd-prayer-words>p{font-family:var(--fr-serif);font-size:21px;line-height:1.65;max-width:60ch;margin:16px 0 8px}
+.rd-page .rd-help-heading{margin-top:56px!important}
+@media(max-width:560px){.rd-page .rd-age{gap:0}.rd-age-section{padding-top:32px;padding-bottom:36px}.rd-page .rd-age-option h3{font-size:24px}.rd-page .rd-help-heading{margin-top:40px!important}}
+
+
+/* Keep translated emphasis readable when an equivalent phrase takes more room. */
+html:not([lang|="en"]) .fr-script{white-space:normal;max-width:100%}
+html[lang|="bn"] :is(.fr-script,.cinema-feature-copy h2 i,.cinema-series h3 i,.episode-show i,.session-wordmark>i){
+ font-family:PlaylistScript,"Noto Serif Bengali","Bangla MN","Nirmala UI",serif;
+ font-style:normal;
+ line-height:1.3;
+}
+html[lang|="bn"] .fr-cinematic-hero .fr-hero-copy h1 .fr-script{line-height:1.3}

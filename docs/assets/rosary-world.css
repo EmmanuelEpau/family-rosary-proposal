@@ -5,6 +5,7 @@
 .fr-rosary-world button,.fr-rosary-world select{min-height:44px;max-width:100%;font:inherit}
 .fr-rosary-world button{cursor:pointer}.fr-rosary-world button:disabled{cursor:default;opacity:.55}
 .fr-rosary-world :focus-visible{outline:3px solid #0047bb;outline-offset:4px}
+.fr-rosary-world .fr-prayer-settings :focus-visible{outline-color:#ffb500}
 .fr-rosary-world .fr-rosary-navigation{display:grid;gap:.75rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid #ccd9ee}
 .fr-rosary-world .fr-field{display:grid;gap:.4rem}.fr-rosary-world select{width:100%;color:#002c76;background:#fff;border:1px solid #7a91b6;padding:.6rem}
 .fr-rosary-materials{border:0;padding:0;margin:1rem 0;display:flex;flex-wrap:wrap;gap:.5rem}.fr-rosary-materials legend{margin-bottom:.5rem}.fr-rosary-materials button{padding:.55rem 1rem;border:1px solid #0047bb;background:#fff;color:#0047bb;border-radius:3px}.fr-rosary-materials button[aria-pressed=true]{background:#0047bb;color:#fff}.fr-rosary-materials button:hover{background:#e8f0fc;color:#002c76}

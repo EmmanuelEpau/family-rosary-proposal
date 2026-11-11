@@ -7,12 +7,25 @@
   const count = document.querySelector('#rd-count');
   const more = document.querySelector('#rd-more');
   const notice = document.querySelector('#rd-notice');
+  const localization = window.frLocalization;
+  const translate = message => localization?.messages?.[message] ?? message;
+  const number = new Intl.NumberFormat(localization?.locale || 'en');
   let limit = 12;
   let matches = [];
   const normalized = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase();
+  const topicLabels = new Map([...fields.topic.options].map(option => [
+    option.value, [option.textContent, option.getAttribute('data-search-label')].filter(Boolean).join(' '),
+  ]));
+  const searchable = card => normalized([card.textContent, ...(card.dataset.topics || '').split(' ').map(topic => topicLabels.get(topic) || topic.replaceAll('-', ' '))].join(' '));
   const read = () => {
     const params = new URLSearchParams(location.search);
-    keys.forEach(key => { fields[key].value = params.get(key) || ''; });
+    const query = params.get('q') || '';
+    const topic = [...fields.topic.options].find(option => option.getAttribute('data-search-label') === query);
+    fields.q.value = topic?.textContent || query;
+    keys.slice(1).forEach(key => {
+      const value = params.get(key);
+      fields[key].value = [...fields[key].options].some(option => option.value === value) ? value : '';
+    });
   };
   const save = () => {
     const next = new URL(location.href);
@@ -21,17 +34,25 @@
   };
   const render = () => {
     const term = normalized(fields.q.value.trim());
-    const active = ['topic','format','language','view'].filter(key=>fields[key].value);
-    const summary=form.querySelector('.rd-advanced summary');if(summary)summary.textContent=active.length?'Filters · '+active.map(key=>fields[key].selectedOptions[0].textContent).join(' · '):'Filter resources';
-    matches = cards.filter(card => (!term || normalized(card.textContent).includes(term)) &&
+    const active = keys.slice(1).filter(key => fields[key].value);
+    const summary = form.querySelector('.rd-filter-details summary');
+    if (summary) summary.textContent = active.length
+      ? translate('Filters') + ' · ' + active.map(key => fields[key].selectedOptions[0].textContent).join(' · ')
+      : translate('Filter resources');
+    matches = cards.filter(card => (!term || searchable(card).includes(term)) &&
       ['topic', 'format', 'language', 'view'].every(key => !fields[key].value ||
         (card.dataset[key === 'topic' ? 'topics' : key] || (key === 'language' ? 'unknown' : '')).split(' ').includes(fields[key].value)));
     const shown = new Set(matches.slice(0, limit));
     cards.forEach(card => { card.hidden = !shown.has(card); });
-    count.textContent = `Showing ${Math.min(limit, matches.length)} of ${matches.length} resources`;
+    count.textContent = translate('Showing {shown} of {total} resources')
+      .replace('{shown}', number.format(Math.min(limit, matches.length)))
+      .replace('{total}', number.format(matches.length));
     document.querySelector('#rd-empty').hidden = matches.length > 0;
-    more.hidden = matches.length <= limit;
-    more.textContent = `Show ${Math.min(12, Math.max(0, matches.length - limit))} more (${Math.max(0, matches.length - limit)} remaining)`;
+    const remaining = Math.max(0, matches.length - limit);
+    more.hidden = remaining === 0;
+    more.textContent = translate('Show {next} more ({remaining} remaining)')
+      .replace('{next}', number.format(Math.min(12, remaining)))
+      .replace('{remaining}', number.format(remaining));
   };
   const revealHash = (focus = false) => {
     let id;
@@ -40,7 +61,7 @@
     if (!target) return;
     if (!matches.includes(target)) {
       keys.forEach(key => { fields[key].value = ''; });
-      notice.textContent = 'Filters cleared to show the resource you opened.';
+      notice.textContent = translate('Filters cleared to show the resource you opened.');
       notice.hidden = false;
       save();
       render();

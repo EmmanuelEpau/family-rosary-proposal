@@ -1,0 +1,65 @@
+.fr-legacy-archive {
+ color: var(--fr-ink);
+ max-width: 880px;
+ overflow-wrap: anywhere;
+}
+.fr-legacy-archive h2,
+.fr-legacy-archive h3 {
+ color: var(--fr-blue);
+ margin: 1.5em 0 .45em;
+}
+.fr-legacy-archive img {
+ display: block;
+ height: auto;
+ margin: 1.15rem 0;
+ max-width: 100%;
+ border-radius: 10px;
+}
+.fr-legacy-archive a {
+ color: var(--fr-blue);
+}
+.fr-legacy-player {
+ display: block;
+ width: 100%;
+ border: 0;
+ border-radius: 10px;
+ margin: 1rem 0 2rem;
+ aspect-ratio: 16 / 9;
+}
+.fr-legacy-archive table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.fr-legacy-archive :is(td, th) {
+ padding: .5rem;
+ border: 1px solid var(--fr-line);
+}
+.fr-legacy-archive [data-fr-form] {
+ margin: 1.25rem 0;
+}
+.fr-legacy-office-filter {
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: .75rem;
+ margin: 1.2rem 0;
+}
+.fr-legacy-office-filter select {
+ padding: .55rem;
+ border: 1px solid var(--fr-blue);
+ border-radius: .3rem;
+}
+.fr-legacy-directory ul {
+ list-style: none;
+ padding: 0;
+}
+.fr-legacy-directory li {
+ padding: .75rem 0;
+ border-bottom: 1px solid var(--fr-line);
+}
+.fr-legacy-directory li[hidden] {
+ display: none;
+}
+.fr-legacy-directory li h3 {
+ margin-top: .35rem;
+}

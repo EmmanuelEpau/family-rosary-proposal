@@ -1,6 +1,12 @@
 (() => {
  'use strict';
  const $ = (s) => document.querySelector(s);
+ const ministry=document.querySelector('.fr-ministry-select');
+ ministry?.addEventListener('change',()=>{if(ministry.value)location.assign(ministry.value);});
+ window.addEventListener('pageshow',()=>{if(ministry)ministry.value='';});
+ const language=document.querySelector('.fr-language');
+ document.addEventListener('click',e=>{if(language?.open&&!language.contains(e.target))language.open=false;});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&language?.open){language.open=false;language.querySelector('summary').focus();}});
  const mysteries = {
  joyful:{name:'Joyful',summary:'Reflect on the coming of Jesus and the joy of his early life.',days:[1,6],names:['The Annunciation','The Visitation','The Nativity','The Presentation','The Finding of Jesus in the Temple'],refs:['Luke 1:26–38','Luke 1:39–56','Luke 2:1–20','Luke 2:22–38','Luke 2:41–52']},
  sorrowful:{name:'Sorrowful',summary:'Reflect on the Passion of Jesus and his love for us.',days:[2,5],names:['The Agony in the Garden','The Scourging at the Pillar','The Crowning with Thorns','The Carrying of the Cross','The Crucifixion'],refs:['Matthew 26:36–46','John 19:1','Matthew 27:27–31','John 19:16–17','Luke 23:33–46']},
@@ -61,11 +67,13 @@
   const selectors=[...carousel.querySelectorAll('[data-feature-select]')];
   const toggle=carousel.querySelector('[data-feature-toggle]');
   const status=carousel.querySelector('[data-feature-status]');
-  const pauseOnHover=!carousel.classList.contains('cinema-feature');
+  const pauseOnHover=true;
+  const header=document.querySelector('.fr-header');
+  const menuOpen=()=>Boolean(header?.querySelector('details[open], .is-menu-open, .fr-menu-open'));
   const dialog=document.querySelector('#media-dialog, #cinema-dialog');
   if(slides.length<2||!toggle)return;
   let index=0,paused=motion.matches,hovered=matchMedia('(hover: hover)').matches&&carousel.matches(':hover'),inView=true,resumedOnToggle=false,timer,toggleIntent,renderedPaused;
-  const canRotate=()=>!paused&&(!pauseOnHover||!hovered)&&inView&&!document.hidden&&!dialog?.open&&(!carousel.contains(document.activeElement)||(resumedOnToggle&&document.activeElement===toggle));
+  const canRotate=()=>!paused&&!menuOpen()&&(!pauseOnHover||!hovered)&&inView&&!document.hidden&&!dialog?.open&&(!carousel.contains(document.activeElement)||(resumedOnToggle&&document.activeElement===toggle));
   const schedule=()=>{
    clearTimeout(timer);
    carousel.dataset.featurePaused=String(!canRotate());
@@ -101,6 +109,7 @@
   motion.addEventListener('change',e=>{if(e.matches){paused=true;resumedOnToggle=false;}schedule();});
   if('IntersectionObserver' in window)new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;schedule();},{threshold:.1}).observe(carousel);
   if(dialog)new MutationObserver(schedule).observe(dialog,{attributes:true,attributeFilter:['open']});
+  if(header){header.addEventListener('toggle',schedule,true);new MutationObserver(schedule).observe(header,{subtree:true,attributes:true,attributeFilter:['class','open']});}
   render(0);carousel.classList.add('is-ready');schedule();
  });
 })();

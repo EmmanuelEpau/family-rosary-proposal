@@ -47,3 +47,46 @@
 .rd-filter-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;padding:1rem 0}
 @media(max-width:900px){.rd-filter-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.rd-filter-fields{grid-template-columns:1fr}.rd-filters{gap:.5rem;padding-block:1rem}.rd-start{margin-top:1.5rem;padding-block:1.5rem}}
+
+.fr-document {--rd-muted:#365a77;max-width:76rem;padding-block:clamp(2.25rem,6vw,5rem)}
+.fr-document-heading {max-width:48rem;margin-block:1.75rem 1.25rem}
+.fr-document-heading h1 {margin:.35rem 0 .75rem;font-size:clamp(2rem,5vw,4.25rem);line-height:1.03;text-wrap:balance}
+.fr-document-heading p {max-width:64ch;line-height:1.65}
+.fr-document-actions,.fr-document-contents {display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem}
+.fr-document-actions {margin-block-end:2.25rem}
+.fr-document-contents {padding-block:.7rem;border-block:1px solid #dce5f1;margin-block:1rem 2.25rem}
+.fr-document-contents a {display:inline-flex;align-items:center;min-height:44px;padding-inline:.35rem}
+.fr-document-reading {max-width:52rem;line-height:1.7}
+.fr-document-reading h2 {margin:2.25rem 0 .6rem;scroll-margin-top:5rem}
+.fr-document-reading li+li {margin-block-start:.55rem}
+.fr-document-reading ol {padding-inline-start:1.6rem}
+.fr-document-original {margin-block-start:2.5rem}
+.fr-document-original iframe {display:block;border:1px solid #dce5f1;background:#f5f7fb;width:100%;height:clamp(30rem,75vh,55rem);border-radius:.75rem}
+@media print {
+ .fr-document-back,.fr-document-actions,.fr-document-contents,.fr-document-original {display:none!important}
+ .fr-document {padding:0}
+}
+.rd-card-actions {display:flex;flex-wrap:wrap;align-items:center;gap:.25rem 1.15rem;margin-top:auto;padding-top:.5rem}
+.rd-card-actions a {display:inline-flex;align-items:center;min-height:44px}
+.rd-card-actions .rd-action {margin:0;padding:0}
+.rd-download {font-size:.95rem;text-underline-offset:.2em}
+.fr-resource-article-body {
+  margin-block: clamp(1.75rem, 4vw, 3rem);
+}
+.fr-resource-article-body img {
+  display: block;
+  max-width: 100%;
+  max-height: 36rem;
+  width: auto;
+  height: auto;
+  margin: 1.25rem auto;
+  border-radius: .65rem;
+}
+.fr-resource-article-body :is(h2, h3, h4) {
+  margin-block: 1.75em .6em;
+}
+.fr-resource-article-body blockquote {
+  margin-inline: 0;
+  padding-inline-start: 1.2rem;
+  border-inline-start: .2rem solid #d5a53b;
+}
