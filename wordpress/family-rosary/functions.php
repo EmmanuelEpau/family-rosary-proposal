@@ -75,6 +75,7 @@ add_filter( 'render_block_data', 'family_rosary_navigation_urls' );
 
 /** Load the same route-specific bundles used by the review exporter. */
 function family_rosary_complete_experience_assets() {
+ // phpcs:ignore WordPressVIPMinimum.Performance.FetchingRemoteData.FileGetContentsUnknown -- Fixed manifest path inside the installed theme.
  $manifest = json_decode( file_get_contents( get_theme_file_path( 'assets/route-assets.json' ) ), true );
  $route = 'story';
  if ( is_page() && wp_get_post_parent_id( get_queried_object_id() ) && get_post_field( 'post_name', wp_get_post_parent_id( get_queried_object_id() ) ) === 'programs' ) { $route = 'program'; }
@@ -94,6 +95,7 @@ add_action( 'wp_enqueue_scripts', 'family_rosary_complete_experience_assets' );
 /** Responsive derivatives preserve original photography and its editorial crop. */
 function family_rosary_responsive_photos( $content ) {
  static $layouts;
+ // phpcs:ignore WordPressVIPMinimum.Performance.FetchingRemoteData.FileGetContentsUnknown -- Fixed photo layout path inside the installed theme.
  if ( ! isset( $layouts ) ) { $layouts = json_decode( file_get_contents( get_theme_file_path( 'assets/photo-layouts.json' ) ), true ); }
  $role_size = function( $markup, $roles, $fallback ) {
   if ( preg_match( '~\bclass="([^"]*)"~i', $markup, $classes ) ) {
