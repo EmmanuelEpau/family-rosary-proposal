@@ -15,3 +15,5 @@ The ruleset uses WordPress-VIP-Go and PHPCompatibilityWP with PHP 8.3 as the com
 Two line-local PHPCS exceptions identify fixed local JSON reads. No findings are excluded globally.
 
 This branch changes the WordPress source and installs development checks. It does not update `docs`, include a theme ZIP or change hosted WordPress. Human review and private staging checks remain pending.
+
+Pull requests affecting the WordPress source or tooling run the same syntax and PHPCS checks through `Check WordPress source`. The workflow has read-only repository permissions and performs no deployment.
