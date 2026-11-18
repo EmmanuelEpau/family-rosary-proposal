@@ -1,0 +1,17 @@
+{
+    "name": "family-rosary/wordpress-checks",
+    "description": "Development-only coding checks for the Family Rosary WordPress theme and plugin.",
+    "require-dev": {
+        "automattic/vipwpcs": "^3.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpcompatibility/php-compatibility": "10.0.0-alpha2",
+        "phpcompatibility/phpcompatibility-paragonie": "2.0.0-alpha2",
+        "phpcompatibility/phpcompatibility-wp": "3.0.0-alpha2"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "sort-packages": true
+    }
+}
