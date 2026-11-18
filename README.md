@@ -6,6 +6,12 @@ The public review is static HTML, CSS, JavaScript, images and the PDFs its pages
 
 The nine main pages are available in English, Spanish, French, Bangla, Portuguese, Swahili and Italian, translated from the draft's own dictionaries. Program pages and The Art of Prayer are English only.
 
+## WordPress code review, 18 November 2026
+
+The private Draft.11 WordPress source passed PHP syntax checks and the `WordPress-VIP-Go` and `PHPCompatibilityWP` PHPCS rules on PHP 8.3.36, with zero errors and zero warnings across 83 theme and plugin files. The offline WordPress regression tests and static build passed.
+
+The PHP changes are prepared for code review. The GitHub Pages preview continues to serve the Draft.11 static export. Private staging verification is pending.
+
 ---
 
 Current 1.8.0 refinement: on-site Daily Rosary & Mass player, seven authentic family hero photographs, a different festival age-range photo, continuous homepage Rosary photo bleed, topic-photography podcast covers, cleaner filmed conversations, blended genuine crucifix artwork and a compact footer with social icons. See the dated live-and-artwork task folder for actual checks and provider limitations.
